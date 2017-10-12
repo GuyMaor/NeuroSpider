@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Guy\Documents\Verilog Projects\NeuroSpider\NeuroSpider\mod_Multiply.ncd
+OUTFILE=C:\Users\Guy\Documents\Verilog Projects\NeuroSpider\NeuroSpider\mod_Multiply.bit
+FAMILY=Spartan3E
+PART=xc3s100e-5cp132
+WORKINGDIR=C:\Users\Guy\Documents\Verilog Projects\NeuroSpider\NeuroSpider
+LICENSE=WebPack
+USER_INFO=211148699_0_0_932

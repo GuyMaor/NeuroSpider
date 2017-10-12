@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/test_Add_isim_beh.exe" -prj "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/test_Add_beh.prj" "work.test_Add" "work.glbl" 
