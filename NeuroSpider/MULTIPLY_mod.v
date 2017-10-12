@@ -18,9 +18,9 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-//module mod_Multiply(in_A,in_B,in_En,out_Out,out_Ready,clk,rst);
-module mod_Multiply(in_A,in_B,in_En,out_Out,out_Ready,clk,rst,fractionWire);//DEBUG
-	 output fractionWire;//DEBUG
+module mod_Multiply(in_A,in_B,in_En,out_Out,out_Ready,clk,rst);
+//module mod_Multiply(in_A,in_B,in_En,out_Out,out_Ready,clk,rst,fractionWire);//DEBUG 
+	 //output fractionWire;//DEBUG
     input [15:0] in_A;
     input [15:0] in_B;
     output [15:0] out_Out;

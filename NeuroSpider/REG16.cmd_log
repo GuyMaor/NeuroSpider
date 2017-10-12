@@ -1,0 +1,4 @@
+vhdtdtfi -lib work {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/REG16.v} -lang verilog -prj NeuroSpider -o REG16.spl -module REG16 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e REG16.spl {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/REG16.sym} 
+vhdtdtfi -lib work {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/REG16.v} -lang verilog -prj NeuroSpider -o REG16.spl -module REG16 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e REG16.spl {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/REG16.sym} 

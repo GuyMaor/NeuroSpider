@@ -25,7 +25,7 @@
 module test_Multiply;
 
 
-	wire [10:0] fractionWire;//DEBUG
+	//wire [10:0] fractionWire;//DEBUG
 
 	// Inputs
 	reg [15:0] in_A;
@@ -46,8 +46,8 @@ module test_Multiply;
 		.out_Out(out_Out), 
 		.out_Ready(out_Ready), 
 		.clk(clk), 
-		.rst(rst),
-		.fractionWire(fractionWire)//DEBUG
+		.rst(rst)
+		//.fractionWire(fractionWire)//DEBUG
 	);
 
 	initial begin

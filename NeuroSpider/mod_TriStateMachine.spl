@@ -1,0 +1,14 @@
+[Inputs]
+in0
+in1
+in2
+rst
+clk
+[Outputs]
+state0
+state1
+state2
+[BiDir]
+[ATTRIBUTES]
+VeriModel mod_TriStateMachine
+

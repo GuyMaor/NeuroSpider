@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Add.xst" -ofn "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Add.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 "mod_Add.ngc" mod_Add.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o mod_Add_map.ncd mod_Add.ngd mod_Add.pcf 
+par -w -intstyle ise -ol high -t 1 mod_Add_map.ncd mod_Add.ncd mod_Add.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml mod_Add.twx mod_Add.ncd -o mod_Add.twr mod_Add.pcf 

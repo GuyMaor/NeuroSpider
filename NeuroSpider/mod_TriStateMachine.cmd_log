@@ -1,0 +1,2 @@
+vhdtdtfi -lib work {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_TriStateMachine.v} -lang verilog -prj NeuroSpider -o mod_TriStateMachine.spl -module mod_TriStateMachine -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e mod_TriStateMachine.spl {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_TriStateMachine.sym} 

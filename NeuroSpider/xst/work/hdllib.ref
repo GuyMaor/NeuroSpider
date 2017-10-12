@@ -1,1 +1,3 @@
 MO mod_Multiply NULL MULTIPLY_mod.v vlg03/mod___multiply.bin 1507793966
+MO mod_Add NULL mod_Add.v vlg08/mod___add.bin 1507811940
+MO calcShift NULL calcShift.v vlg79/calc_shift.bin 1507811940
