@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -refsym mod_CacheMux {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_CacheMux.sch} {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_CacheMux.sym} 
