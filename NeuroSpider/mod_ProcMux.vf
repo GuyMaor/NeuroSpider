@@ -1,0 +1,68 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : mod_ProcMux.vf
+// /___/   /\     Timestamp : 10/13/2017 06:29:18
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ProcMux.vf" -w "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ProcMux.sch"
+//Design Name: mod_ProcMux
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module mod_ProcMux(cache1_DataOut, 
+                   cache2_DataOut, 
+                   proc_Addr, 
+                   proc_DataIn, 
+                   proc_WE, 
+                   sel, 
+                   cache1_Addr, 
+                   cache1_DataIn, 
+                   cache1_WE, 
+                   cache2_Addr, 
+                   cache2_DataIn, 
+                   cache2_WE, 
+                   proc_DataOut);
+
+    input [15:0] cache1_DataOut;
+    input [15:0] cache2_DataOut;
+    input [15:0] proc_Addr;
+    input [15:0] proc_DataIn;
+    input proc_WE;
+    input sel;
+   output [15:0] cache1_Addr;
+   output [15:0] cache1_DataIn;
+   output cache1_WE;
+   output [15:0] cache2_Addr;
+   output [15:0] cache2_DataIn;
+   output cache2_WE;
+   output [15:0] proc_DataOut;
+   
+   
+   mod_Demux16  XLXI_1 (.inPort(proc_DataIn[15:0]), 
+                       .sel(sel), 
+                       .outPort1(cache1_DataIn[15:0]), 
+                       .outPort2(cache2_DataIn[15:0]));
+   mod_Demux16  XLXI_2 (.inPort(proc_Addr[15:0]), 
+                       .sel(sel), 
+                       .outPort1(cache1_Addr[15:0]), 
+                       .outPort2(cache2_Addr[15:0]));
+   mod_Mux16  XLXI_3 (.inPort1(cache1_DataOut[15:0]), 
+                     .inPort2(cache2_DataOut[15:0]), 
+                     .sel(sel), 
+                     .outPort(proc_DataOut[15:0]));
+   mod_Demux  XLXI_4 (.inVal(proc_WE), 
+                     .sel(sel), 
+                     .out1(cache1_WE), 
+                     .out2(cache2_WE));
+endmodule

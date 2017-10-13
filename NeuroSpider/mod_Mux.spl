@@ -1,0 +1,10 @@
+[Inputs]
+in1
+in2
+sel
+[Outputs]
+outVal
+[BiDir]
+[ATTRIBUTES]
+VeriModel mod_Mux
+

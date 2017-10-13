@@ -1,0 +1,29 @@
+Command line:
+   mod_CacheMux_mod_CacheMux_sch_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  52331
+
+Fri Oct 13 06:15:57 2017
+
+
+ Elaboration Time: 0.046875 sec
+
+ Current Memory Usage: 999.662 Meg
+
+ Total Signals          : 43
+ Total Nets             : 161
+ Total Signal Drivers   : 18
+ Total Blocks           : 7
+ Total Primitive Blocks : 5
+ Total Processes        : 23
+ Total Traceable Variables  : 30
+ Total Scalar Nets and Variables : 388
+Total Line Count : 45
+
+ Total Simulation Time: 0.703125 sec
+
+ Current Memory Usage: 842.375 Meg
+
+Fri Oct 13 06:18:27 2017
+

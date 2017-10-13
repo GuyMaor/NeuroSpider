@@ -1,0 +1,6 @@
+verilog work "mod_Mux16.v"
+verilog work "mod_Demux16.v"
+verilog work "mod_Demux.v"
+verilog work "mod_ProcMux.vf"
+verilog work "test_ProcMux.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

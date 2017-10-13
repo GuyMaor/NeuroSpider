@@ -1,0 +1,10 @@
+[Inputs]
+sel
+=inPort[15:0]=
+[Outputs]
+=outPort1[15:0]=
+=outPort2[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel mod_Demux16
+

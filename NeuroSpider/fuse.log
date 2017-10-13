@@ -1,25 +1,25 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_MulStage_mod_MulStage_sch_tb_isim_beh.exe -prj C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_MulStage_mod_MulStage_sch_tb_beh.prj work.mod_MulStage_mod_MulStage_sch_tb work.glbl 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ProcMux_mod_ProcMux_sch_tb_isim_beh.exe -prj C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ProcMux_mod_ProcMux_sch_tb_beh.prj work.mod_ProcMux_mod_ProcMux_sch_tb work.glbl 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/REG16.v" into library work
-Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/MULTIPLY_mod.v" into library work
-Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_TriStateMachine.v" into library work
-Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_MulStage.vf" into library work
-Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/test_MulStage.v" into library work
+Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Mux16.v" into library work
+Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Demux16.v" into library work
+Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Demux.v" into library work
+Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ProcMux.vf" into library work
+Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/test_ProcMux.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
-Compiling module mod_TriStateMachine
-Compiling module mod_Multiply
-Compiling module REG16
-Compiling module mod_MulStage
-Compiling module mod_MulStage_mod_MulStage_sch_tb
+Compiling module mod_Demux16
+Compiling module mod_Mux16
+Compiling module mod_Demux
+Compiling module mod_ProcMux
+Compiling module mod_ProcMux_mod_ProcMux_sch_tb
 Compiling module glbl
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
 Compiled 6 Verilog Units
-Built simulation executable C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_MulStage_mod_MulStage_sch_tb_isim_beh.exe
-Fuse Memory Usage: 27608 KB
-Fuse CPU Usage: 577 ms
+Built simulation executable C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ProcMux_mod_ProcMux_sch_tb_isim_beh.exe
+Fuse Memory Usage: 27428 KB
+Fuse CPU Usage: 609 ms
