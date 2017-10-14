@@ -1,0 +1,5 @@
+sch2hdl -intstyle ise -family spartan3e -verilog mod_LayerRouter_drc.vf -w {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_LayerRouter.sch} 
+sch2sym -intstyle ise -family spartan3e -refsym mod_LayerRouter {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_LayerRouter.sch} {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_LayerRouter.sym} 
+sch2hdl -intstyle ise -family spartan3e -verilog mod_LayerRouter_drc.vf -w {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_LayerRouter.sch} 
+sch2hdl -intstyle ise -family spartan3e -verilog mod_LayerRouter.vf -w {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_LayerRouter.sch} 
+sch2hdl -intstyle ise -family spartan3e -verilog mod_LayerRouter_drc.vf -w {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_LayerRouter.sch} 

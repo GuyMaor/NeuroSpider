@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-10-12T19:48:51</DateModified>
+  <DateModified>2017-10-14T07:38:46</DateModified>
   <ModuleName>mod_Add</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/iseconfig/mod_Add.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider\</ImplementationReportsDirectory>
   <DateInitialized>2017-10-12T19:48:50</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

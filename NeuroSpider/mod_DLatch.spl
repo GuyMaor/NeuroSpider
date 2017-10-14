@@ -1,0 +1,9 @@
+[Inputs]
+dataIn
+crit
+[Outputs]
+dataOut
+[BiDir]
+[ATTRIBUTES]
+VeriModel mod_DLatch
+

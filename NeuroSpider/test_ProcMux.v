@@ -42,7 +42,7 @@ module mod_ProcMux_mod_ProcMux_sch_tb();
 // Initialize Inputs
    initial begin
 		sel = 0;
-		cache1_DataOut = 16'hffff;
+		cache1_DataOut = 16'hf0f0;
 		cache2_DataOut = 16'h0000;
 		proc_DataIn = 16'hffff;
 		proc_Addr = 16'hffff;

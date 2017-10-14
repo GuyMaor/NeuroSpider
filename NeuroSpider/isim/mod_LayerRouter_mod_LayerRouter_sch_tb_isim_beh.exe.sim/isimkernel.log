@@ -1,0 +1,29 @@
+Command line:
+   mod_LayerRouter_mod_LayerRouter_sch_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  59342
+
+Sat Oct 14 16:51:29 2017
+
+
+ Elaboration Time: 0.046875 sec
+
+ Current Memory Usage: 999.117 Meg
+
+ Total Signals          : 201
+ Total Nets             : 523
+ Total Signal Drivers   : 50
+ Total Blocks           : 32
+ Total Primitive Blocks : 25
+ Total Processes        : 71
+ Total Traceable Variables  : 56
+ Total Scalar Nets and Variables : 1106
+Total Line Count : 162
+
+ Total Simulation Time: 0.890625 sec
+
+ Current Memory Usage: 841.83 Meg
+
+Sat Oct 14 16:57:05 2017
+

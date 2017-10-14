@@ -43,7 +43,7 @@ module mod_CacheMux_mod_CacheMux_sch_tb();
    
    initial begin
 		sel = 0;
-		cache_DataOut = 16'hffff;
+		cache_DataOut = 16'hf0f0;
 		proc1_DataIn = 16'hffff;
 		proc2_DataIn = 16'h0000;
 		proc1_Addr = 16'hffff;
