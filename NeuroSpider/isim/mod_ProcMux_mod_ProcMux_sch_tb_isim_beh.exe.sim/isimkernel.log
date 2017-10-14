@@ -1,15 +1,15 @@
 Command line:
    mod_ProcMux_mod_ProcMux_sch_tb_isim_beh.exe
      -simmode  gui
-     -simrunnum  0
-     -socket  52370
+     -simrunnum  1
+     -socket  59302
 
-Fri Oct 13 06:29:25 2017
+Sat Oct 14 16:33:23 2017
 
 
  Elaboration Time: 0.046875 sec
 
- Current Memory Usage: 999.617 Meg
+ Current Memory Usage: 999.141 Meg
 
  Total Signals          : 44
  Total Nets             : 161
@@ -21,9 +21,9 @@ Fri Oct 13 06:29:25 2017
  Total Scalar Nets and Variables : 387
 Total Line Count : 48
 
- Total Simulation Time: 0.875 sec
+ Total Simulation Time: 0.09375 sec
 
- Current Memory Usage: 1314.19 Meg
+ Current Memory Usage: 1313.71 Meg
 
-Fri Oct 13 06:30:07 2017
+Sat Oct 14 16:34:08 2017
 

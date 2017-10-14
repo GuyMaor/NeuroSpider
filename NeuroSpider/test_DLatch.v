@@ -41,7 +41,7 @@ module test_DLatch;
 	initial begin
 		// Initialize Inputs
 		dataIn = 0;
-		crit = 0;
+		crit = 1;
 
 		
 		#100;

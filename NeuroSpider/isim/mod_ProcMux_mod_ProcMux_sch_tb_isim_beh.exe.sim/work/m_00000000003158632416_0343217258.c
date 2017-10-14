@@ -23,9 +23,10 @@
 #endif
 static const char *ng0 = "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/test_ProcMux.v";
 static int ng1[] = {0, 0};
-static unsigned int ng2[] = {65535U, 0U};
+static unsigned int ng2[] = {61680U, 0U};
 static unsigned int ng3[] = {0U, 0U};
-static int ng4[] = {1, 0};
+static unsigned int ng4[] = {65535U, 0U};
+static int ng5[] = {1, 0};
 
 
 
@@ -57,15 +58,15 @@ LAB4:    xsi_set_current_line(44, ng0);
     t3 = (t0 + 2728);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 16);
     xsi_set_current_line(47, ng0);
-    t2 = ((char*)((ng2)));
+    t2 = ((char*)((ng4)));
     t3 = (t0 + 2888);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 16);
     xsi_set_current_line(48, ng0);
-    t2 = ((char*)((ng2)));
+    t2 = ((char*)((ng4)));
     t3 = (t0 + 3048);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 16);
     xsi_set_current_line(49, ng0);
-    t2 = ((char*)((ng4)));
+    t2 = ((char*)((ng5)));
     t3 = (t0 + 3208);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
     xsi_set_current_line(50, ng0);
@@ -75,7 +76,7 @@ LAB4:    xsi_set_current_line(44, ng0);
 
 LAB1:    return;
 LAB5:    xsi_set_current_line(51, ng0);
-    t2 = ((char*)((ng4)));
+    t2 = ((char*)((ng5)));
     t3 = (t0 + 2408);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
     goto LAB1;

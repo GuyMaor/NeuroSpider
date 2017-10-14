@@ -1,4 +1,4 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_LayerRouter_mod_LayerRouter_sch_tb_isim_beh.exe -prj C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_LayerRouter_mod_LayerRouter_sch_tb_beh.prj work.mod_LayerRouter_mod_LayerRouter_sch_tb work.glbl 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamRouter_mod_ParamRouter_sch_tb_isim_beh.exe -prj C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamRouter_mod_ParamRouter_sch_tb_beh.prj work.mod_ParamRouter_mod_ParamRouter_sch_tb work.glbl 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
@@ -10,25 +10,26 @@ Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/Neur
 Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ProcMux.vf" into library work
 Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_DLatch.v" into library work
 Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_CacheMux.vf" into library work
-Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_LayerRouter.vf" into library work
-Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/test_LayerRouter.v" into library work
+Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/joinWires.v" into library work
+Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamRouter.vf" into library work
+Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/test_ParamRouter.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling module mod_Demux16
 Compiling module mod_Mux16
-Compiling module mod_Mux
-Compiling module mod_CacheMux_MUSER_mod_LayerRout...
 Compiling module mod_Demux
-Compiling module mod_ProcMux_MUSER_mod_LayerRoute...
+Compiling module mod_ProcMux_MUSER_mod_ParamRoute...
+Compiling module joinWires
 Compiling module mod_DLatch
-Compiling module INV
-Compiling module mod_LayerRouter
-Compiling module mod_LayerRouter_mod_LayerRouter_...
+Compiling module mod_Mux
+Compiling module mod_CacheMux_MUSER_mod_ParamRout...
+Compiling module mod_ParamRouter
+Compiling module mod_ParamRouter_mod_ParamRouter_...
 Compiling module glbl
 Time Resolution for simulation is 1ps.
 Waiting for 4 sub-compilation(s) to finish...
 Compiled 11 Verilog Units
-Built simulation executable C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_LayerRouter_mod_LayerRouter_sch_tb_isim_beh.exe
-Fuse Memory Usage: 27724 KB
-Fuse CPU Usage: 671 ms
+Built simulation executable C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamRouter_mod_ParamRouter_sch_tb_isim_beh.exe
+Fuse Memory Usage: 27760 KB
+Fuse CPU Usage: 655 ms

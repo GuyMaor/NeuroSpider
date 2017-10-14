@@ -1,0 +1,4 @@
+vhdtdtfi -lib work {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/joinWires.v} -lang verilog -prj NeuroSpider -o joinWires.spl -module joinWires -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e joinWires.spl {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/joinWires.sym} 
+vhdtdtfi -lib work {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/joinWires.v} -lang verilog -prj NeuroSpider -o joinWires.spl -module joinWires -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e joinWires.spl {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/joinWires.sym} 

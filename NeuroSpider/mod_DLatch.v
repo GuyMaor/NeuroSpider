@@ -26,7 +26,7 @@ module mod_DLatch(dataIn,dataOut,crit);
 	
 	initial
 	begin
-		dataOut = dataIn;
+		dataOut = 0;
 	end
 	
 	always @ (negedge crit,dataIn)

@@ -37,6 +37,11 @@
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="joinWires.prj"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="joinWires.spl"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="joinWires.stx"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="joinWires.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="joinWires.xst"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="mod_Add.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="mod_Add.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="mod_Add.lso"/>
@@ -87,9 +92,7 @@
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_LayerRouter.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_LayerRouter.vf"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_LayerRouter_drc.vf"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="mod_LayerRouter_mod_LayerRouter_sch_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="mod_LayerRouter_mod_LayerRouter_sch_tb_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="mod_LayerRouter_mod_LayerRouter_sch_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_MulStage.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_MulStage.vf"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_MulStage_drc.vf"/>
@@ -130,6 +133,10 @@
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_Mux.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="mod_Mux16.spl"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_Mux16.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_ParamRouter.vf"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="mod_ParamRouter_mod_ParamRouter_sch_tb_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="mod_ParamRouter_mod_ParamRouter_sch_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="mod_ParamRouter_mod_ParamRouter_sch_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_ProcMux.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_ProcMux.vf"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="mod_ProcMux_mod_ProcMux_sch_tb_isim_beh.exe"/>
@@ -160,12 +167,13 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1508017444" xil_pn:in_ck="-6787645297396983062" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1508017444">
+    <transform xil_pn:end_ts="1508024206" xil_pn:in_ck="281612799977107005" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1508024206">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="MULTIPLY_mod.v"/>
       <outfile xil_pn:name="REG16.v"/>
       <outfile xil_pn:name="calcShift.v"/>
+      <outfile xil_pn:name="joinWires.v"/>
       <outfile xil_pn:name="mod_ActivationFunc.v"/>
       <outfile xil_pn:name="mod_Add.v"/>
       <outfile xil_pn:name="mod_Cache.v"/>
@@ -186,31 +194,34 @@
       <outfile xil_pn:name="test_LayerRouter.v"/>
       <outfile xil_pn:name="test_MulStage.v"/>
       <outfile xil_pn:name="test_Multiply.v"/>
+      <outfile xil_pn:name="test_ParamRouter.v"/>
       <outfile xil_pn:name="test_ProcMux.v"/>
       <outfile xil_pn:name="test_TriStateMachine.v"/>
     </transform>
-    <transform xil_pn:end_ts="1508017291" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="795162473740773538" xil_pn:start_ts="1508017291">
+    <transform xil_pn:end_ts="1508024103" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-4841444928116290294" xil_pn:start_ts="1508024103">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1508017883" xil_pn:in_ck="-5931163898088320600" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="521495387138606436" xil_pn:start_ts="1508017880">
+    <transform xil_pn:end_ts="1508024106" xil_pn:in_ck="9034991713073606597" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-3405040920059825204" xil_pn:start_ts="1508024103">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="mod_CacheMux.vf"/>
       <outfile xil_pn:name="mod_LayerRouter.vf"/>
       <outfile xil_pn:name="mod_MulStage.vf"/>
+      <outfile xil_pn:name="mod_ParamRouter.vf"/>
       <outfile xil_pn:name="mod_ProcMux.vf"/>
     </transform>
     <transform xil_pn:end_ts="1507801662" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-7852017174022236949" xil_pn:start_ts="1507801662">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1508017883" xil_pn:in_ck="7392812168614210954" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1508017883">
+    <transform xil_pn:end_ts="1508024206" xil_pn:in_ck="1830923733929319768" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1508024206">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="MULTIPLY_mod.v"/>
       <outfile xil_pn:name="REG16.v"/>
       <outfile xil_pn:name="calcShift.v"/>
+      <outfile xil_pn:name="joinWires.v"/>
       <outfile xil_pn:name="mod_ActivationFunc.v"/>
       <outfile xil_pn:name="mod_Add.v"/>
       <outfile xil_pn:name="mod_Cache.v"/>
@@ -222,6 +233,7 @@
       <outfile xil_pn:name="mod_MulStage.vf"/>
       <outfile xil_pn:name="mod_Mux.v"/>
       <outfile xil_pn:name="mod_Mux16.v"/>
+      <outfile xil_pn:name="mod_ParamRouter.vf"/>
       <outfile xil_pn:name="mod_ProcMux.vf"/>
       <outfile xil_pn:name="mod_ReluFunc.v"/>
       <outfile xil_pn:name="mod_StepFunc.v"/>
@@ -235,25 +247,26 @@
       <outfile xil_pn:name="test_LayerRouter.v"/>
       <outfile xil_pn:name="test_MulStage.v"/>
       <outfile xil_pn:name="test_Multiply.v"/>
+      <outfile xil_pn:name="test_ParamRouter.v"/>
       <outfile xil_pn:name="test_ProcMux.v"/>
       <outfile xil_pn:name="test_TriStateMachine.v"/>
     </transform>
-    <transform xil_pn:end_ts="1508017887" xil_pn:in_ck="7392812168614210954" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-3624899587551272923" xil_pn:start_ts="1508017883">
+    <transform xil_pn:end_ts="1508024210" xil_pn:in_ck="1830923733929319768" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1346761993050065141" xil_pn:start_ts="1508024206">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="mod_LayerRouter_mod_LayerRouter_sch_tb_beh.prj"/>
-      <outfile xil_pn:name="mod_LayerRouter_mod_LayerRouter_sch_tb_isim_beh.exe"/>
+      <outfile xil_pn:name="mod_ParamRouter_mod_ParamRouter_sch_tb_beh.prj"/>
+      <outfile xil_pn:name="mod_ParamRouter_mod_ParamRouter_sch_tb_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1508017887" xil_pn:in_ck="-5596583391798327490" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="6673526094287254671" xil_pn:start_ts="1508017887">
+    <transform xil_pn:end_ts="1508024210" xil_pn:in_ck="-4384473401696777888" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-1154695042848022945" xil_pn:start_ts="1508024210">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="mod_LayerRouter_mod_LayerRouter_sch_tb_isim_beh.wdb"/>
+      <outfile xil_pn:name="mod_ParamRouter_mod_ParamRouter_sch_tb_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1507793438" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1507793438">
       <status xil_pn:value="SuccessfullyRun"/>

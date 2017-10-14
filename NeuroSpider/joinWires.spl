@@ -1,0 +1,9 @@
+[Inputs]
+=in10[1:0]=
+[Outputs]
+out1
+out0
+[BiDir]
+[ATTRIBUTES]
+VeriModel joinWires
+
