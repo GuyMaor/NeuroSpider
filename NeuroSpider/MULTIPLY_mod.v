@@ -42,7 +42,9 @@ module mod_Multiply(in_A,in_B,in_En,out_Out,out_Ready,clk,rst);
 	 reg [4:0] exponentMidReg;
 	 reg [10:0] fractionMidReg;
 	 reg readyMidReg;
-	 
+
+	
+		
 	 always @ (posedge clk, posedge rst)
 	 begin
 		if(rst)
@@ -80,7 +82,7 @@ module mod_Multiply(in_A,in_B,in_En,out_Out,out_Ready,clk,rst);
 		else
 		begin
 			out_Out = {signMidReg,exponentWireOut,fractionWireOut};
-			out_Ready = readyMidReg;
+			out_Ready = in_En ? 0 : readyMidReg;
 		end
 	 end
 	 

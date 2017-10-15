@@ -89,18 +89,7 @@ module mod_Add(in_A,in_B,in_En,out_Out,out_Ready,clk,rst);
 	 
 	 wire [12:0] valL2 = signL ? -{3'b001,valL}: {3'b001,valL};
 	 wire [12:0] valS2 = signS ? -({3'b001,valS}>>diff):{3'b001,valS}>>diff;
-	 //reg [12:0] valS2;
-	//always @ (valL,valS,signL,signS)
-	 //begin
-		//if(signL)
-	//		valL2 = -{3'b001,valL};
-	//	else
-		//	valL2 = {3'b001,valL};
-	//	if(signS)
-	//		valS2 = -({3'b001,valS}>>diff);
-	//	else
-	//		valS2 = {3'b001,valS}>>diff;			
-	// end
+
 	 
 	 //PERFORM OPERATION
 	 wire [12:0] afterAdd = valL2+valS2;
@@ -149,6 +138,7 @@ module mod_Add(in_A,in_B,in_En,out_Out,out_Ready,clk,rst);
 		else
 		begin
 			out_Out = {sign,finalExponent,finalVal};
+			//out_Ready = in_En ? 0 : oldReady;
 			out_Ready = oldReady;
 		end
 	 end
@@ -167,11 +157,13 @@ module mod_Add(in_A,in_B,in_En,out_Out,out_Ready,clk,rst);
 		begin
 			oldExponent = exponentMax;
 			oldVal = absVal;
+			//oldReady = in_En ? 0 : oldOldReady;
 			oldReady = oldOldReady;
 			sign = signWire;
 		end
 	 end
-		
+	
+	//First Stage	
     always @(posedge clk, posedge rst)
 	 begin
 		if(rst)

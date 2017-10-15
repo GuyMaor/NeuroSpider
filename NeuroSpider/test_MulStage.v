@@ -68,6 +68,22 @@ module mod_MulStage_mod_MulStage_sch_tb();
 		#100;
 		clk = 1;
 		#100;
+		clk = 0;
+		#100;
+		clk = 1;
+		#100;
+		clk = 0;		
+		#100;
+		clk = 1;
+		#100;
+		clk = 0;
+		#100;
+		clk = 1;
+		#100;
+		clk = 0;
+		#100;
+		clk = 1;
+		#100;
 		clk = 0;		
 		end
    //`endif

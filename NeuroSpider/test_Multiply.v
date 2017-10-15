@@ -74,8 +74,29 @@ module test_Multiply;
 		#100;
 		clk = 1;
 		#100;
+		clk = 0;
+		#100;
+		clk = 1;
+		#100;
 		clk = 0;		
-		
+		#100;
+		clk = 1;
+		#100;
+		clk = 0;
+		in_En = 1;
+		#100;
+		clk = 1;
+		#100;
+		clk = 0;
+		in_En = 0;
+		#100;
+		clk = 0;
+		#100;
+		clk = 1;
+		#100;
+		clk = 0;
+		#100;
+		clk = 1;			
 	end
       
 endmodule

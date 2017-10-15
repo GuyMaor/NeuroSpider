@@ -1,0 +1,13 @@
+[Inputs]
+inReady
+lastAdd
+sinAddFin
+clk
+rst
+[Outputs]
+startAdd
+allAddsFin
+[BiDir]
+[ATTRIBUTES]
+VeriModel mod_AdderFSM
+

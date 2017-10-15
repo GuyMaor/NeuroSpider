@@ -1,0 +1,13 @@
+[Inputs]
+in_En
+clk
+rst
+=in_A[15:0]=
+=in_B[15:0]=
+[Outputs]
+out_Ready
+=out_Out[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel mod_Add
+

@@ -1,0 +1,64 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : mod_AddStage.vf
+// /___/   /\     Timestamp : 10/15/2017 08:45:17
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_AddStage.vf" -w "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_AddStage.sch"
+//Design Name: mod_AddStage
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module mod_AddStage(clk, 
+                    inReady, 
+                    inValue, 
+                    newNumAdds, 
+                    rst, 
+                    outReady, 
+                    result);
+
+    input clk;
+    input inReady;
+    input [15:0] inValue;
+    input [15:0] newNumAdds;
+    input rst;
+   output outReady;
+   output [15:0] result;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_11;
+   wire [15:0] result_DUMMY;
+   
+   assign result[15:0] = result_DUMMY[15:0];
+   mod_AdderFSM  XLXI_1 (.clk(clk), 
+                        .inReady(inReady), 
+                        .lastAdd(XLXN_2), 
+                        .rst(rst), 
+                        .sinAddFin(XLXN_11), 
+                        .allAddsFin(outReady), 
+                        .startAdd(XLXN_1));
+   mod_Add  XLXI_2 (.clk(clk), 
+                   .in_A(inValue[15:0]), 
+                   .in_B(result_DUMMY[15:0]), 
+                   .in_En(XLXN_1), 
+                   .rst(rst), 
+                   .out_Out(result_DUMMY[15:0]), 
+                   .out_Ready(XLXN_11));
+   mod_numCounter  XLXI_3 (.clk(clk), 
+                          .dec(XLXN_1), 
+                          .inVal(newNumAdds[15:0]), 
+                          .rst(rst), 
+                          .isZero(XLXN_2));
+endmodule

@@ -1,0 +1,11 @@
+[Inputs]
+dec
+clk
+rst
+=inVal[15:0]=
+[Outputs]
+isZero
+[BiDir]
+[ATTRIBUTES]
+VeriModel mod_numCounter
+
