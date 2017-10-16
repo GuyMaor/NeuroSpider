@@ -1,0 +1,29 @@
+Command line:
+   test_ParamFetch_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  65072
+
+Sun Oct 15 19:16:36 2017
+
+
+ Elaboration Time: 0.046875 sec
+
+ Current Memory Usage: 999.084 Meg
+
+ Total Signals          : 31
+ Total Nets             : 162
+ Total Signal Drivers   : 19
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 29
+ Total Traceable Variables  : 35
+ Total Scalar Nets and Variables : 424
+Total Line Count : 157
+
+ Total Simulation Time: 0.578125 sec
+
+ Current Memory Usage: 841.798 Meg
+
+Sun Oct 15 19:18:49 2017
+

@@ -138,6 +138,12 @@
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_Mux.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="mod_Mux16.spl"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_Mux16.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="mod_ParamFetch.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_ParamFetch.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_ParamFetchStage.vf"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="mod_ParamFetchStage_mod_ParamFetchStage_sch_tb_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="mod_ParamFetchStage_mod_ParamFetchStage_sch_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="mod_ParamFetchStage_mod_ParamFetchStage_sch_tb_isim_beh.wdb"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_ParamRouter.vf"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="mod_ParamRouter_mod_ParamRouter_sch_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_ProcMux.sym" xil_pn:origination="imported"/>
@@ -150,9 +156,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="mod_multiply.drc" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="mod_numCounter.spl"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_numCounter.sym" xil_pn:origination="imported"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_ActivFuncStage_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_ActivFuncStage_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="test_ActivFuncStage_isim_beh.wdb"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_ActivationFunc_isim_beh.exe"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_Add_isim_beh.exe"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_AdderFSM_isim_beh.exe"/>
@@ -162,6 +166,7 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_Cache_stx_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_DLatch_isim_beh.exe"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_Multiply_isim_beh.exe"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_ParamFetch_isim_beh.exe"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_TriStateMachine_isim_beh.exe"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_numCounter_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
@@ -177,7 +182,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1508079381" xil_pn:in_ck="-6405605649382503159" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1508079380">
+    <transform xil_pn:end_ts="1508114690" xil_pn:in_ck="-5066191446631049353" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1508114689">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="MULTIPLY_mod.v"/>
@@ -194,6 +199,7 @@
       <outfile xil_pn:name="mod_Demux16.v"/>
       <outfile xil_pn:name="mod_Mux.v"/>
       <outfile xil_pn:name="mod_Mux16.v"/>
+      <outfile xil_pn:name="mod_ParamFetch.v"/>
       <outfile xil_pn:name="mod_ReluFunc.v"/>
       <outfile xil_pn:name="mod_StepFunc.v"/>
       <outfile xil_pn:name="mod_TanHFunc.v"/>
@@ -210,22 +216,25 @@
       <outfile xil_pn:name="test_LayerRouter.v"/>
       <outfile xil_pn:name="test_MulStage.v"/>
       <outfile xil_pn:name="test_Multiply.v"/>
+      <outfile xil_pn:name="test_ParamFetch.v"/>
+      <outfile xil_pn:name="test_ParamFetchStage.v"/>
       <outfile xil_pn:name="test_ParamRouter.v"/>
       <outfile xil_pn:name="test_ProcMux.v"/>
       <outfile xil_pn:name="test_TriStateMachine.v"/>
       <outfile xil_pn:name="test_numCounter.v"/>
     </transform>
-    <transform xil_pn:end_ts="1508079404" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-1330277234829326707" xil_pn:start_ts="1508079404">
+    <transform xil_pn:end_ts="1508114616" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="5863295809728384196" xil_pn:start_ts="1508114616">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1508079406" xil_pn:in_ck="5700339378946173901" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="1059040704425312271" xil_pn:start_ts="1508079404">
+    <transform xil_pn:end_ts="1508114619" xil_pn:in_ck="-8736855668458077497" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-84530467198157306" xil_pn:start_ts="1508114616">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="mod_AddStage.vf"/>
       <outfile xil_pn:name="mod_CacheMux.vf"/>
       <outfile xil_pn:name="mod_LayerRouter.vf"/>
       <outfile xil_pn:name="mod_MulStage.vf"/>
+      <outfile xil_pn:name="mod_ParamFetchStage.vf"/>
       <outfile xil_pn:name="mod_ParamRouter.vf"/>
       <outfile xil_pn:name="mod_ProcMux.vf"/>
     </transform>
@@ -233,7 +242,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1508079381" xil_pn:in_ck="6936413991024118954" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1508079381">
+    <transform xil_pn:end_ts="1508114690" xil_pn:in_ck="7539585216317323920" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1508114690">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="MULTIPLY_mod.v"/>
@@ -254,6 +263,8 @@
       <outfile xil_pn:name="mod_MulStage.vf"/>
       <outfile xil_pn:name="mod_Mux.v"/>
       <outfile xil_pn:name="mod_Mux16.v"/>
+      <outfile xil_pn:name="mod_ParamFetch.v"/>
+      <outfile xil_pn:name="mod_ParamFetchStage.vf"/>
       <outfile xil_pn:name="mod_ParamRouter.vf"/>
       <outfile xil_pn:name="mod_ProcMux.vf"/>
       <outfile xil_pn:name="mod_ReluFunc.v"/>
@@ -272,27 +283,34 @@
       <outfile xil_pn:name="test_LayerRouter.v"/>
       <outfile xil_pn:name="test_MulStage.v"/>
       <outfile xil_pn:name="test_Multiply.v"/>
+      <outfile xil_pn:name="test_ParamFetch.v"/>
+      <outfile xil_pn:name="test_ParamFetchStage.v"/>
       <outfile xil_pn:name="test_ParamRouter.v"/>
       <outfile xil_pn:name="test_ProcMux.v"/>
       <outfile xil_pn:name="test_TriStateMachine.v"/>
       <outfile xil_pn:name="test_numCounter.v"/>
     </transform>
-    <transform xil_pn:end_ts="1508079409" xil_pn:in_ck="6936413991024118954" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="313647865372272379" xil_pn:start_ts="1508079406">
+    <transform xil_pn:end_ts="1508114693" xil_pn:in_ck="7539585216317323920" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="6400357941451685737" xil_pn:start_ts="1508114690">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="test_ActivFuncStage_beh.prj"/>
-      <outfile xil_pn:name="test_ActivFuncStage_isim_beh.exe"/>
+      <outfile xil_pn:name="mod_ParamFetchStage_mod_ParamFetchStage_sch_tb_beh.prj"/>
+      <outfile xil_pn:name="mod_ParamFetchStage_mod_ParamFetchStage_sch_tb_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1508079409" xil_pn:in_ck="681169979687665777" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="5291785093992737445" xil_pn:start_ts="1508079409">
+    <transform xil_pn:end_ts="1508114693" xil_pn:in_ck="-2738071293782122762" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-646280653127055341" xil_pn:start_ts="1508114693">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="test_ActivFuncStage_isim_beh.wdb"/>
+      <outfile xil_pn:name="mod_ParamFetchStage_mod_ParamFetchStage_sch_tb_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1507793438" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1507793438">
       <status xil_pn:value="SuccessfullyRun"/>

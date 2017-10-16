@@ -1,0 +1,90 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : mod_ParamFetchStage.vf
+// /___/   /\     Timestamp : 10/15/2017 19:43:38
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamFetchStage.vf" -w "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamFetchStage.sch"
+//Design Name: mod_ParamFetchStage
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module mod_ParamFetchStage(clk, 
+                           indexVal, 
+                           inputVal, 
+                           numInputs, 
+                           readyNextParam, 
+                           rst, 
+                           weightVal, 
+                           indexAddr, 
+                           inputAddr, 
+                           neuronInput, 
+                           neuronWeight, 
+                           paramsReady, 
+                           weightAddr);
+
+    input clk;
+    input [15:0] indexVal;
+    input [15:0] inputVal;
+    input [15:0] numInputs;
+    input readyNextParam;
+    input rst;
+    input [15:0] weightVal;
+   output [15:0] indexAddr;
+   output [15:0] inputAddr;
+   output [15:0] neuronInput;
+   output [15:0] neuronWeight;
+   output paramsReady;
+   output [15:0] weightAddr;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire [15:0] XLXN_5;
+   wire [15:0] XLXN_6;
+   wire XLXN_9;
+   wire XLXN_11;
+   
+   REG16  XLXI_1 (.clk(clk), 
+                 .en(XLXN_2), 
+                 .inV(XLXN_6[15:0]), 
+                 .rst(rst), 
+                 .outV(neuronWeight[15:0]));
+   mod_ParamFetch  XLXI_2 (.clk(clk), 
+                          .indexVal(indexVal[15:0]), 
+                          .inputVal(inputVal[15:0]), 
+                          .numAdds(numInputs[15:0]), 
+                          .rst(rst), 
+                          .startFetch(XLXN_1), 
+                          .weightVal(weightVal[15:0]), 
+                          .fsmReply(XLXN_11), 
+                          .indexAddr(indexAddr[15:0]), 
+                          .inputAddr(inputAddr[15:0]), 
+                          .outVal(XLXN_5[15:0]), 
+                          .outWeight(XLXN_6[15:0]), 
+                          .WE(XLXN_9), 
+                          .weightAddr(weightAddr[15:0]));
+   mod_TriStateMachine  XLXI_3 (.clk(clk), 
+                               .in0(XLXN_11), 
+                               .in1(XLXN_9), 
+                               .in2(readyNextParam), 
+                               .rst(rst), 
+                               .state0(XLXN_1), 
+                               .state1(XLXN_2), 
+                               .state2(paramsReady));
+   REG16  XLXI_4 (.clk(clk), 
+                 .en(XLXN_2), 
+                 .inV(XLXN_5[15:0]), 
+                 .rst(rst), 
+                 .outV(neuronInput[15:0]));
+endmodule

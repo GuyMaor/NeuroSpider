@@ -14,6 +14,7 @@
         <signal name="state1" />
         <signal name="in_A(15:0)" />
         <signal name="in_B(15:0)" />
+        <signal name="XLXN_10" />
         <signal name="out_Ready" />
         <signal name="outputReadyEn" />
         <signal name="destReady" />

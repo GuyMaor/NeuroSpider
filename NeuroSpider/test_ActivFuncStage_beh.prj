@@ -1,7 +1,0 @@
-verilog work "mod_TanHFunc.v"
-verilog work "mod_StepFunc.v"
-verilog work "mod_ReluFunc.v"
-verilog work "mod_ActivationFunc.v"
-verilog work "mod_ActivFuncStage.v"
-verilog work "test_ActivFuncStage.v"
-verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

@@ -1,0 +1,20 @@
+[Inputs]
+startFetch
+rst
+clk
+=numAdds[15:0]=
+=weightVal[15:0]=
+=indexVal[15:0]=
+=inputVal[15:0]=
+[Outputs]
+fsmReply
+WE
+=weightAddr[15:0]=
+=indexAddr[15:0]=
+=inputAddr[15:0]=
+=outVal[15:0]=
+=outWeight[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel mod_ParamFetch
+
