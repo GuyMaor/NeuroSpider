@@ -144,12 +144,14 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_Controller.vf"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="mod_Controller.xst"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_Controller_drc.vf"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="mod_Controller_envsettings.html"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="mod_Controller_map.map" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="mod_Controller_map.mrp" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="mod_Controller_map.ncd" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="mod_Controller_map.ngm" xil_pn:subbranch="Map"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="mod_Controller_map.xrpt"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="mod_Controller_ngdbuild.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="mod_Controller_summary.html"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="mod_Controller_summary.xml"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="mod_Controller_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="mod_Controller_xst.xrpt"/>
@@ -165,16 +167,21 @@
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="mod_Demux16.spl"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_Demux16.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_LayerRouter.sym" xil_pn:origination="imported"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_LayerRouter.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_LayerRouter.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_LayerRouter_drc.vf"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="mod_LayerRouter_mod_LayerRouter_sch_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_Layers.sym" xil_pn:origination="imported"/>
-    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_MulStage.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_MulStage.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_MulStageNEW.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_MulStageNEW.vf"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="mod_MulStageNEW_mod_MulStageNEW_sch_tb_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="mod_MulStageNEW_mod_MulStageNEW_sch_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="mod_MulStageNEW_mod_MulStageNEW_sch_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_MulStage_drc.vf"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="mod_MulStage_mod_MulStage_sch_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="mod_MulStage_mod_MulStage_sch_tb_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="mod_MulStage_mod_MulStage_sch_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="mod_MulStage_mod_MulStage_sch_tb_stx_beh.prj"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="mod_Multiply.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="mod_Multiply.cmd_log"/>
@@ -204,6 +211,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="mod_Multiply_map.ngm" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="mod_Multiply_pad.csv" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="mod_Multiply_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="mod_Multiply_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="mod_Multiply_summary.html"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="mod_Multiply_xst.xrpt"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="mod_Mux.spl"/>
@@ -218,7 +226,10 @@
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="mod_ParamFetchStage_mod_ParamFetchStage_sch_tb_isim_beh.exe"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="mod_ParamFetch_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_ParamRouter.sym" xil_pn:origination="imported"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_ParamRouter.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_ParamRouter.vf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="mod_ParamRouter_mod_ParamRouter_sch_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_Params.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_ProcMux.sym" xil_pn:origination="imported"/>
@@ -243,6 +254,7 @@
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="test_Cache_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_Cache_stx_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_DLatch_isim_beh.exe"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_MulNEW_isim_beh.exe"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_Multiply_isim_beh.exe"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_ParamFetch_isim_beh.exe"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_TriStateMachine_isim_beh.exe"/>
@@ -260,10 +272,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1508230191" xil_pn:in_ck="-4916973229612748768" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1508230191">
+    <transform xil_pn:end_ts="1508237172" xil_pn:in_ck="-1466847781782562073" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1508237171">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="MULTIPLY_mod.v"/>
       <outfile xil_pn:name="REG16.v"/>
       <outfile xil_pn:name="calcShift.v"/>
       <outfile xil_pn:name="joinWires.v"/>
@@ -295,7 +306,9 @@
       <outfile xil_pn:name="test_CacheMux.v"/>
       <outfile xil_pn:name="test_DLatch.v"/>
       <outfile xil_pn:name="test_LayerRouter.v"/>
+      <outfile xil_pn:name="test_MulNEW.v"/>
       <outfile xil_pn:name="test_MulStage.v"/>
+      <outfile xil_pn:name="test_MulStageNEW.v"/>
       <outfile xil_pn:name="test_Multiply.v"/>
       <outfile xil_pn:name="test_ParamFetch.v"/>
       <outfile xil_pn:name="test_ParamFetchStage.v"/>
@@ -304,110 +317,67 @@
       <outfile xil_pn:name="test_TriStateMachine.v"/>
       <outfile xil_pn:name="test_numCounter.v"/>
     </transform>
-    <transform xil_pn:end_ts="1508229670" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="1135533436025567018" xil_pn:start_ts="1508229670">
+    <transform xil_pn:end_ts="1508237317" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="1451623257595771646" xil_pn:start_ts="1508237317">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1508230202" xil_pn:in_ck="-4125158312811009494" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="3717073626429416940" xil_pn:start_ts="1508230200">
+    <transform xil_pn:end_ts="1508237320" xil_pn:in_ck="-5543054038188001983" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-3384853418040699200" xil_pn:start_ts="1508237317">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="mod_AddStage.vf"/>
-      <outfile xil_pn:name="mod_CacheMux.vf"/>
-      <outfile xil_pn:name="mod_LayerRouter.vf"/>
-      <outfile xil_pn:name="mod_MulStage.vf"/>
-      <outfile xil_pn:name="mod_ParamFetchStage.vf"/>
-      <outfile xil_pn:name="mod_ParamRouter.vf"/>
-      <outfile xil_pn:name="mod_ProcMux.vf"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1508229672" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="6282807228220290086" xil_pn:start_ts="1508229672">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1508230202" xil_pn:in_ck="-6661094328028804935" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1508230202">
+    <transform xil_pn:end_ts="1508237320" xil_pn:in_ck="5528112507985423157" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1508237320">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="MULTIPLY_mod.v"/>
-      <outfile xil_pn:name="REG16.v"/>
-      <outfile xil_pn:name="calcShift.v"/>
-      <outfile xil_pn:name="joinWires.v"/>
-      <outfile xil_pn:name="mod_ActivFuncStage.v"/>
-      <outfile xil_pn:name="mod_ActivationFunc.v"/>
-      <outfile xil_pn:name="mod_Add.v"/>
-      <outfile xil_pn:name="mod_AddStage.vf"/>
-      <outfile xil_pn:name="mod_AdderFSM.v"/>
-      <outfile xil_pn:name="mod_Cache.v"/>
-      <outfile xil_pn:name="mod_CacheMux.vf"/>
-      <outfile xil_pn:name="mod_ControlFSM.v"/>
-      <outfile xil_pn:name="mod_ControlRegisters.v"/>
-      <outfile xil_pn:name="mod_DLatch.v"/>
-      <outfile xil_pn:name="mod_Demux.v"/>
-      <outfile xil_pn:name="mod_Demux16.v"/>
-      <outfile xil_pn:name="mod_LayerRouter.vf"/>
-      <outfile xil_pn:name="mod_MulStage.vf"/>
-      <outfile xil_pn:name="mod_Multiply.v"/>
-      <outfile xil_pn:name="mod_Mux.v"/>
-      <outfile xil_pn:name="mod_Mux16.v"/>
-      <outfile xil_pn:name="mod_ParamFetch.v"/>
-      <outfile xil_pn:name="mod_ParamFetchStage.vf"/>
-      <outfile xil_pn:name="mod_ParamRouter.vf"/>
-      <outfile xil_pn:name="mod_ProcMux.vf"/>
-      <outfile xil_pn:name="mod_ReluFunc.v"/>
-      <outfile xil_pn:name="mod_StepFunc.v"/>
-      <outfile xil_pn:name="mod_TanHFunc.v"/>
-      <outfile xil_pn:name="mod_TriStateMachine.v"/>
-      <outfile xil_pn:name="mod_numCounter.v"/>
-      <outfile xil_pn:name="test_ActivFuncStage.v"/>
-      <outfile xil_pn:name="test_ActivationFunc.v"/>
-      <outfile xil_pn:name="test_Add.v"/>
-      <outfile xil_pn:name="test_AddStage.v"/>
-      <outfile xil_pn:name="test_AdderFSM.v"/>
-      <outfile xil_pn:name="test_Cache.v"/>
-      <outfile xil_pn:name="test_CacheMux.v"/>
-      <outfile xil_pn:name="test_DLatch.v"/>
-      <outfile xil_pn:name="test_LayerRouter.v"/>
-      <outfile xil_pn:name="test_MulStage.v"/>
-      <outfile xil_pn:name="test_Multiply.v"/>
-      <outfile xil_pn:name="test_ParamFetch.v"/>
-      <outfile xil_pn:name="test_ParamFetchStage.v"/>
-      <outfile xil_pn:name="test_ParamRouter.v"/>
-      <outfile xil_pn:name="test_ProcMux.v"/>
-      <outfile xil_pn:name="test_TriStateMachine.v"/>
-      <outfile xil_pn:name="test_numCounter.v"/>
-    </transform>
-    <transform xil_pn:end_ts="1508230205" xil_pn:in_ck="-6661094328028804935" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="7780297996591999349" xil_pn:start_ts="1508230202">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="fuse.log"/>
-      <outfile xil_pn:name="isim"/>
-      <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="mod_MulStage_mod_MulStage_sch_tb_beh.prj"/>
-      <outfile xil_pn:name="mod_MulStage_mod_MulStage_sch_tb_isim_beh.exe"/>
-      <outfile xil_pn:name="xilinxsim.ini"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
-    <transform xil_pn:end_ts="1508230205" xil_pn:in_ck="610503010706295711" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-8275067555200826148" xil_pn:start_ts="1508230205">
+    <transform xil_pn:end_ts="1508237326" xil_pn:in_ck="5528112507985423157" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1041201454436881629" xil_pn:start_ts="1508237320">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputChanged"/>
+      <status xil_pn:value="OutputRemoved"/>
+    </transform>
+    <transform xil_pn:end_ts="1508237326" xil_pn:in_ck="5352403441223380795" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-8398361033692543996" xil_pn:start_ts="1508237326">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="isim.cmd"/>
-      <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="mod_MulStage_mod_MulStage_sch_tb_isim_beh.wdb"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1507793438" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1507793438">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1508230038" xil_pn:in_ck="-4125158312811009494" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="4493507873597732924" xil_pn:start_ts="1508230036">
+    <transform xil_pn:end_ts="1508235432" xil_pn:in_ck="-5543054038188001983" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="4493507873597732924" xil_pn:start_ts="1508235430">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
-      <outfile xil_pn:name="mod_Controller.vf"/>
-      <outfile xil_pn:name="mod_ProcMux.vf"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
-    <transform xil_pn:end_ts="1508229276" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="6282807228220290086" xil_pn:start_ts="1508229276">
+    <transform xil_pn:end_ts="1508234568" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="6282807228220290086" xil_pn:start_ts="1508234568">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -419,86 +389,60 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1507793438" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="2988080280822507185" xil_pn:start_ts="1507793438">
+    <transform xil_pn:end_ts="1508234568" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="2988080280822507185" xil_pn:start_ts="1508234568">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1508229276" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="3767367315331346608" xil_pn:start_ts="1508229276">
+    <transform xil_pn:end_ts="1508234568" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="3767367315331346608" xil_pn:start_ts="1508234568">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1508229286" xil_pn:in_ck="9136728693371981785" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="9026814300885225785" xil_pn:start_ts="1508229276">
+    <transform xil_pn:end_ts="1508235734" xil_pn:in_ck="36739206195738622" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="9026814300885225785" xil_pn:start_ts="1508235725">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name=".lso"/>
-      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="mod_Controller.jhd"/>
-      <outfile xil_pn:name="mod_Controller.lso"/>
-      <outfile xil_pn:name="mod_Controller.ngc"/>
-      <outfile xil_pn:name="mod_Controller.ngr"/>
-      <outfile xil_pn:name="mod_Controller.prj"/>
-      <outfile xil_pn:name="mod_Controller.stx"/>
-      <outfile xil_pn:name="mod_Controller.syr"/>
-      <outfile xil_pn:name="mod_Controller.xst"/>
-      <outfile xil_pn:name="mod_Controller_xst.xrpt"/>
-      <outfile xil_pn:name="webtalk_pn.xml"/>
-      <outfile xil_pn:name="xst"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1508229286" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-7669321486376919771" xil_pn:start_ts="1508229286">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1508229292" xil_pn:in_ck="3515403711043275512" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-8440014310315282391" xil_pn:start_ts="1508229286">
+    <transform xil_pn:end_ts="1508235740" xil_pn:in_ck="3515403711043275512" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-8440014310315282391" xil_pn:start_ts="1508235734">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="_ngo"/>
-      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
-      <outfile xil_pn:name="mod_Controller.bld"/>
-      <outfile xil_pn:name="mod_Controller.ngd"/>
-      <outfile xil_pn:name="mod_Controller_ngdbuild.xrpt"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
-    <transform xil_pn:end_ts="1508230053" xil_pn:in_ck="3062930582705812188" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="3236488012892527759" xil_pn:start_ts="1508230048">
+    <transform xil_pn:end_ts="1508235744" xil_pn:in_ck="3062930582705812188" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="3236488012892527759" xil_pn:start_ts="1508235740">
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
-      <outfile xil_pn:name="mod_Controller.pcf"/>
-      <outfile xil_pn:name="mod_Controller_map.map"/>
-      <outfile xil_pn:name="mod_Controller_map.mrp"/>
-      <outfile xil_pn:name="mod_Controller_map.ncd"/>
-      <outfile xil_pn:name="mod_Controller_map.ngm"/>
-      <outfile xil_pn:name="mod_Controller_map.xrpt"/>
-      <outfile xil_pn:name="mod_Controller_summary.xml"/>
-      <outfile xil_pn:name="mod_Controller_usage.xml"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1508228066" xil_pn:in_ck="235205379073124317" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="1934304854298957634" xil_pn:start_ts="1508228056">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
-      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
-      <outfile xil_pn:name="mod_ActivFuncStage.ncd"/>
-      <outfile xil_pn:name="mod_ActivFuncStage.pad"/>
-      <outfile xil_pn:name="mod_ActivFuncStage.par"/>
-      <outfile xil_pn:name="mod_ActivFuncStage.ptwx"/>
-      <outfile xil_pn:name="mod_ActivFuncStage.unroutes"/>
-      <outfile xil_pn:name="mod_ActivFuncStage.xpi"/>
-      <outfile xil_pn:name="mod_ActivFuncStage_pad.csv"/>
-      <outfile xil_pn:name="mod_ActivFuncStage_pad.txt"/>
-      <outfile xil_pn:name="mod_ActivFuncStage_par.xrpt"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1507793500" xil_pn:in_ck="-314899458662869854" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="287829442711806529" xil_pn:start_ts="1507793490">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -515,10 +459,11 @@
     <transform xil_pn:end_ts="1508228066" xil_pn:in_ck="-4943018955495408090" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1508228063">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
-      <outfile xil_pn:name="mod_ActivFuncStage.twr"/>
-      <outfile xil_pn:name="mod_ActivFuncStage.twx"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
   </transforms>
 

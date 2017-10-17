@@ -1,0 +1,3 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym mod_MulStageNEW {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_MulStageNEW.sch} {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_MulStageNEW.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym mod_MulStageNEW {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_MulStageNEW.sch} {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_MulStageNEW.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym mod_MulStageNEW {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_MulStageNEW.sch} {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_MulStageNEW.sym} 

@@ -1,0 +1,6 @@
+verilog work "REG16.v"
+verilog work "mod_TriStateMachine.v"
+verilog work "mod_Multiply.v"
+verilog work "mod_MulStageNEW.vf"
+verilog work "test_MulStageNEW.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

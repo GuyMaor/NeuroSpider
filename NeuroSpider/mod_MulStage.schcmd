@@ -1,3 +1,2 @@
-select figure at 1428 1249 8 -branches -sn=1
-select figure at 1428 1249 8 -branches -sn=1
-select figure at 1428 1249 8 -branches -all -sn=1
+select figure at 3436 1828 8 -branches -sn=1
+select all in 205 70 3436 1828 -branches -enclosed -sn=1

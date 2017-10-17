@@ -1,0 +1,69 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : mod_MulStageNEW.vf
+// /___/   /\     Timestamp : 10/17/2017 05:48:39
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_MulStageNEW.vf" -w "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_MulStageNEW.sch"
+//Design Name: mod_MulStageNEW
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module mod_MulStageNEW(clk, 
+                       destReady, 
+                       in_A, 
+                       in_B, 
+                       rst, 
+                       srcReady, 
+                       multiplicationResult, 
+                       outputReady, 
+                       readyForInput);
+
+    input clk;
+    input destReady;
+    input [15:0] in_A;
+    input [15:0] in_B;
+    input rst;
+    input srcReady;
+   output [15:0] multiplicationResult;
+   output outputReady;
+   output readyForInput;
+   
+   wire out_Ready;
+   wire state1;
+   wire [15:0] XLXN_1;
+   wire readyForInput_DUMMY;
+   
+   assign readyForInput = readyForInput_DUMMY;
+   mod_TriStateMachine  XLXI_1 (.clk(clk), 
+                               .in0(srcReady), 
+                               .in1(out_Ready), 
+                               .in2(destReady), 
+                               .rst(rst), 
+                               .state0(readyForInput_DUMMY), 
+                               .state1(state1), 
+                               .state2(outputReady));
+   REG16  XLXI_6 (.clk(clk), 
+                 .en(state1), 
+                 .inV(XLXN_1[15:0]), 
+                 .rst(rst), 
+                 .outV(multiplicationResult[15:0]));
+   mod_Multiply  XLXI_8 (.clk(clk), 
+                        .in_A(in_A[15:0]), 
+                        .in_B(in_B[15:0]), 
+                        .in_En(readyForInput_DUMMY), 
+                        .rst(rst), 
+                        .out_Out(XLXN_1[15:0]), 
+                        .out_Ready(out_Ready));
+endmodule
