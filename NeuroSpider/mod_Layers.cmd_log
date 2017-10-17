@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym mod_Layers {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Layers.sch} {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Layers.sym} 

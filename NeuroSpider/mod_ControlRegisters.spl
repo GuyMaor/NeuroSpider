@@ -1,0 +1,24 @@
+[Inputs]
+clk
+WE
+beginOp
+fsmReadyForNextOp
+=inAddr[15:0]=
+=inData[15:0]=
+=cacheDataOut[15:0]=
+[Outputs]
+weightNOTIndex
+paramNOTLayer
+writeReverse
+cacheWE
+fsmBeginOp
+readyForNextOp
+=cacheSel[1:0]=
+=actFuncSel[1:0]=
+=outData[15:0]=
+=cacheDataIn[15:0]=
+=cacheAddrIn[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel mod_ControlRegisters
+

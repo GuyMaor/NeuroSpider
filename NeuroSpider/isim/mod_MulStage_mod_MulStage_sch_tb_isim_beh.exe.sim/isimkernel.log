@@ -1,0 +1,29 @@
+Command line:
+   mod_MulStage_mod_MulStage_sch_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  59094
+
+Tue Oct 17 03:50:06 2017
+
+
+ Elaboration Time: 0.046875 sec
+
+ Current Memory Usage: 999.145 Meg
+
+ Total Signals          : 52
+ Total Nets             : 139
+ Total Signal Drivers   : 24
+ Total Blocks           : 6
+ Total Primitive Blocks : 4
+ Total Processes        : 30
+ Total Traceable Variables  : 32
+ Total Scalar Nets and Variables : 308
+Total Line Count : 122
+
+ Total Simulation Time: 0.0625 sec
+
+ Current Memory Usage: 999.145 Meg
+
+Tue Oct 17 03:50:10 2017
+

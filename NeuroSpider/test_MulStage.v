@@ -14,7 +14,7 @@ module mod_MulStage_mod_MulStage_sch_tb();
 
 // Output
    wire readyForInput;
-   wire outputReadyEn;
+   wire outputReady;
    wire [15:0] multiplicationResult;
 
 // Bidirs
@@ -27,7 +27,7 @@ module mod_MulStage_mod_MulStage_sch_tb();
 		.readyForInput(readyForInput), 
 		.in_A(in_A), 
 		.in_B(in_B), 
-		.outputReadyEn(outputReadyEn), 
+		.outputReady(outputReady), 
 		.destReady(destReady), 
 		.multiplicationResult(multiplicationResult)
    );

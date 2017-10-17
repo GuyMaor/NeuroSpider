@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : mod_MulStage_drc.vf
-// /___/   /\     Timestamp : 10/12/2017 07:47:26
+// /___/   /\     Timestamp : 10/17/2017 03:37:08
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -27,7 +27,7 @@ module mod_MulStage(clk,
                     rst, 
                     srcReady, 
                     multiplicationResult, 
-                    outputReadyEn, 
+                    outputReady, 
                     readyForInput);
 
     input clk;
@@ -37,7 +37,7 @@ module mod_MulStage(clk,
     input rst;
     input srcReady;
    output [15:0] multiplicationResult;
-   output outputReadyEn;
+   output outputReady;
    output readyForInput;
    
    wire out_Ready;
@@ -53,7 +53,7 @@ module mod_MulStage(clk,
                                .rst(rst), 
                                .state0(readyForInput_DUMMY), 
                                .state1(state1), 
-                               .state2(outputReadyEn));
+                               .state2(outputReady));
    mod_Multiply  XLXI_5 (.clk(clk), 
                         .in_A(in_A[15:0]), 
                         .in_B(in_B[15:0]), 

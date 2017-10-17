@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module mod_ActivFuncStage(inVal,sel,outVal,inDest,outDest,inWE,outWE,rst,clk);
+module mod_ActivFuncStage(inVal,sel,outVal,inDest,outDest,inWE,outWE,rst,clk,finishedNeuronOp);
 	input [15:0] inVal;
 	input [1:0] sel;
 	input [15:0] inDest;
@@ -29,7 +29,7 @@ module mod_ActivFuncStage(inVal,sel,outVal,inDest,outDest,inWE,outWE,rst,clk);
 	output [15:0] outVal;
 	reg [15:0] outVal;	
 	output outDest;
-	wire outDest = inDest;
+	wire [15:0] outDest = inDest;
 	output outWE;
 	wire outWE;
 	
@@ -38,6 +38,8 @@ module mod_ActivFuncStage(inVal,sel,outVal,inDest,outDest,inWE,outWE,rst,clk);
 	mod_ActivationFunc actFun(sel,inVal,muxOut);
 	wire writeToReg = stage == 2'b00 & inWE;
 	assign outWE = stage == 2'b01;
+	output finishedNeuronOp;
+	wire finishedNeuronOp = outWE;
 	
 	initial
 		stage = 2'b00;

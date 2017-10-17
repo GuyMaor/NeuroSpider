@@ -1,0 +1,16 @@
+[Inputs]
+inWE
+rst
+clk
+=inVal[15:0]=
+=sel[1:0]=
+=inDest[15:0]=
+[Outputs]
+outWE
+finishedNeuronOp
+=outVal[15:0]=
+=outDest[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel mod_ActivFuncStage
+

@@ -1,0 +1,6 @@
+verilog isim_temp "REG16.v"
+verilog isim_temp "MULTIPLY_mod.v"
+verilog isim_temp "mod_TriStateMachine.v"
+verilog isim_temp "mod_MulStage.vf"
+verilog isim_temp "test_MulStage.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

@@ -265,9 +265,9 @@
             <wire x2="2800" y1="400" y2="400" x1="2704" />
         </branch>
         <branch name="XLXN_7(15:0)">
-            <wire x2="480" y1="272" y2="272" x1="432" />
-            <wire x2="432" y1="272" y2="2432" x1="432" />
-            <wire x2="1424" y1="2432" y2="2432" x1="432" />
+            <wire x2="400" y1="272" y2="2432" x1="400" />
+            <wire x2="1424" y1="2432" y2="2432" x1="400" />
+            <wire x2="480" y1="272" y2="272" x1="400" />
             <wire x2="1424" y1="2272" y2="2432" x1="1424" />
         </branch>
         <branch name="user_DataOut(15:0)">
@@ -369,10 +369,12 @@
             <wire x2="480" y1="1280" y2="1280" x1="336" />
         </branch>
         <branch name="cache2_Addr(15:0)">
-            <wire x2="480" y1="1392" y2="1392" x1="272" />
+            <wire x2="464" y1="1392" y2="1392" x1="336" />
+            <wire x2="480" y1="1392" y2="1392" x1="464" />
         </branch>
         <branch name="cache2_WE">
-            <wire x2="480" y1="1504" y2="1504" x1="272" />
+            <wire x2="464" y1="1504" y2="1504" x1="240" />
+            <wire x2="480" y1="1504" y2="1504" x1="464" />
         </branch>
         <branch name="user_DataIn(15:0)">
             <wire x2="1552" y1="2272" y2="2288" x1="1552" />
@@ -427,8 +429,6 @@
         <iomarker fontsize="28" x="3152" y="656" name="proc2_Addr(15:0)" orien="R0" />
         <iomarker fontsize="28" x="3168" y="720" name="proc1_WE" orien="R0" />
         <iomarker fontsize="28" x="3152" y="784" name="proc2_WE" orien="R0" />
-        <iomarker fontsize="28" x="272" y="1392" name="cache2_Addr(15:0)" orien="R180" />
-        <iomarker fontsize="28" x="272" y="1504" name="cache2_WE" orien="R180" />
         <iomarker fontsize="28" x="368" y="496" name="cache1_DataIn(15:0)" orien="R180" />
         <iomarker fontsize="28" x="352" y="608" name="cache1_Addr(15:0)" orien="R180" />
         <iomarker fontsize="28" x="352" y="720" name="cache1_WE" orien="R180" />
@@ -512,5 +512,7 @@
             <wire x2="2720" y1="1072" y2="1072" x1="2688" />
         </branch>
         <instance x="2944" y="1104" name="XLXI_16" orien="M0" />
+        <iomarker fontsize="28" x="240" y="1504" name="cache2_WE" orien="R180" />
+        <iomarker fontsize="28" x="336" y="1392" name="cache2_Addr(15:0)" orien="R180" />
     </sheet>
 </drawing>

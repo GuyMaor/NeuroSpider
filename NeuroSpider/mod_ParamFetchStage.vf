@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : mod_ParamFetchStage.vf
-// /___/   /\     Timestamp : 10/15/2017 19:43:38
+// /___/   /\     Timestamp : 10/17/2017 00:24:31
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -24,6 +24,7 @@ module mod_ParamFetchStage(clk,
                            indexVal, 
                            inputVal, 
                            numInputs, 
+                           offset, 
                            readyNextParam, 
                            rst, 
                            weightVal, 
@@ -38,6 +39,7 @@ module mod_ParamFetchStage(clk,
     input [15:0] indexVal;
     input [15:0] inputVal;
     input [15:0] numInputs;
+    input [15:0] offset;
     input readyNextParam;
     input rst;
     input [15:0] weightVal;
@@ -60,20 +62,6 @@ module mod_ParamFetchStage(clk,
                  .inV(XLXN_6[15:0]), 
                  .rst(rst), 
                  .outV(neuronWeight[15:0]));
-   mod_ParamFetch  XLXI_2 (.clk(clk), 
-                          .indexVal(indexVal[15:0]), 
-                          .inputVal(inputVal[15:0]), 
-                          .numAdds(numInputs[15:0]), 
-                          .rst(rst), 
-                          .startFetch(XLXN_1), 
-                          .weightVal(weightVal[15:0]), 
-                          .fsmReply(XLXN_11), 
-                          .indexAddr(indexAddr[15:0]), 
-                          .inputAddr(inputAddr[15:0]), 
-                          .outVal(XLXN_5[15:0]), 
-                          .outWeight(XLXN_6[15:0]), 
-                          .WE(XLXN_9), 
-                          .weightAddr(weightAddr[15:0]));
    mod_TriStateMachine  XLXI_3 (.clk(clk), 
                                .in0(XLXN_11), 
                                .in1(XLXN_9), 
@@ -87,4 +75,19 @@ module mod_ParamFetchStage(clk,
                  .inV(XLXN_5[15:0]), 
                  .rst(rst), 
                  .outV(neuronInput[15:0]));
+   mod_ParamFetch  XLXI_5 (.clk(clk), 
+                          .indexVal(indexVal[15:0]), 
+                          .inputVal(inputVal[15:0]), 
+                          .numAdds(numInputs[15:0]), 
+                          .offset(offset[15:0]), 
+                          .rst(rst), 
+                          .startFetch(XLXN_1), 
+                          .weightVal(weightVal[15:0]), 
+                          .fsmReply(XLXN_11), 
+                          .indexAddr(indexAddr[15:0]), 
+                          .inputAddr(inputAddr[15:0]), 
+                          .outVal(XLXN_5[15:0]), 
+                          .outWeight(XLXN_6[15:0]), 
+                          .WE(XLXN_9), 
+                          .weightAddr(weightAddr[15:0]));
 endmodule

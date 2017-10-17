@@ -15,7 +15,7 @@
         <signal name="in_A(15:0)" />
         <signal name="in_B(15:0)" />
         <signal name="out_Ready" />
-        <signal name="outputReadyEn" />
+        <signal name="outputReady" />
         <signal name="destReady" />
         <signal name="multiplicationResult(15:0)" />
         <port polarity="Input" name="rst" />
@@ -24,7 +24,7 @@
         <port polarity="Output" name="readyForInput" />
         <port polarity="Input" name="in_A(15:0)" />
         <port polarity="Input" name="in_B(15:0)" />
-        <port polarity="Output" name="outputReadyEn" />
+        <port polarity="Output" name="outputReady" />
         <port polarity="Input" name="destReady" />
         <port polarity="Output" name="multiplicationResult(15:0)" />
         <blockdef name="mod_TriStateMachine">
@@ -40,7 +40,7 @@
             <line x2="384" y1="-32" y2="-32" x1="320" />
         </blockdef>
         <blockdef name="mod_Multiply">
-            <timestamp>2017-10-12T12:23:36</timestamp>
+            <timestamp>2017-10-17T8:50:22</timestamp>
             <rect width="320" x="64" y="-320" height="320" />
             <line x2="0" y1="-288" y2="-288" x1="64" />
             <line x2="0" y1="-224" y2="-224" x1="64" />
@@ -72,7 +72,7 @@
             <blockpin signalname="clk" name="clk" />
             <blockpin signalname="readyForInput" name="state0" />
             <blockpin signalname="state1" name="state1" />
-            <blockpin signalname="outputReadyEn" name="state2" />
+            <blockpin signalname="outputReady" name="state2" />
         </block>
         <block symbolname="mod_Multiply" name="XLXI_5">
             <blockpin signalname="readyForInput" name="in_En" />
@@ -104,13 +104,13 @@
         <branch name="rst">
             <wire x2="1184" y1="320" y2="320" x1="752" />
             <wire x2="1184" y1="320" y2="624" x1="1184" />
-            <wire x2="1184" y1="624" y2="896" x1="1184" />
-            <wire x2="2112" y1="896" y2="896" x1="1184" />
-            <wire x2="2112" y1="896" y2="1232" x1="2112" />
-            <wire x2="2384" y1="1232" y2="1232" x1="2112" />
-            <wire x2="1184" y1="896" y2="1280" x1="1184" />
-            <wire x2="1312" y1="1280" y2="1280" x1="1184" />
             <wire x2="1440" y1="624" y2="624" x1="1184" />
+            <wire x2="1184" y1="624" y2="864" x1="1184" />
+            <wire x2="2112" y1="864" y2="864" x1="1184" />
+            <wire x2="2112" y1="864" y2="1232" x1="2112" />
+            <wire x2="2384" y1="1232" y2="1232" x1="2112" />
+            <wire x2="1184" y1="864" y2="1280" x1="1184" />
+            <wire x2="1312" y1="1280" y2="1280" x1="1184" />
         </branch>
         <branch name="clk">
             <wire x2="1104" y1="432" y2="432" x1="752" />
@@ -129,7 +129,6 @@
             <wire x2="1440" y1="432" y2="432" x1="1296" />
         </branch>
         <branch name="readyForInput">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1024" y="800" type="branch" />
             <wire x2="1968" y1="800" y2="800" x1="1024" />
             <wire x2="1024" y1="800" y2="1152" x1="1024" />
             <wire x2="1312" y1="1152" y2="1152" x1="1024" />
@@ -149,7 +148,6 @@
             <wire x2="1312" y1="1408" y2="1408" x1="560" />
         </branch>
         <branch name="out_Ready">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1328" y="496" type="branch" />
             <wire x2="1440" y1="496" y2="496" x1="1328" />
             <wire x2="1328" y1="496" y2="1024" x1="1328" />
             <wire x2="1840" y1="1024" y2="1024" x1="1328" />
@@ -162,10 +160,10 @@
         <iomarker fontsize="28" x="560" y="1344" name="in_A(15:0)" orien="R180" />
         <iomarker fontsize="28" x="752" y="432" name="clk" orien="R180" />
         <iomarker fontsize="28" x="560" y="1408" name="in_B(15:0)" orien="R180" />
-        <branch name="outputReadyEn">
+        <branch name="outputReady">
             <wire x2="1856" y1="688" y2="688" x1="1824" />
         </branch>
-        <iomarker fontsize="28" x="1856" y="688" name="outputReadyEn" orien="R0" />
+        <iomarker fontsize="28" x="1856" y="688" name="outputReady" orien="R0" />
         <branch name="destReady">
             <wire x2="1440" y1="560" y2="560" x1="1408" />
         </branch>

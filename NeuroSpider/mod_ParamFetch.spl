@@ -3,6 +3,7 @@ startFetch
 rst
 clk
 =numAdds[15:0]=
+=offset[15:0]=
 =weightVal[15:0]=
 =indexVal[15:0]=
 =inputVal[15:0]=

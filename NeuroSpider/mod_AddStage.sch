@@ -6,19 +6,17 @@
         <trait edittrait="all:0" />
     </attr>
     <netlist>
-        <signal name="XLXN_1" />
+        <signal name="StartingAdd" />
         <signal name="XLXN_2" />
-        <signal name="XLXN_3" />
         <signal name="clk" />
-        <signal name="XLXN_5" />
         <signal name="rst" />
-        <signal name="XLXN_7" />
         <signal name="newNumAdds(15:0)" />
         <signal name="inReady" />
         <signal name="XLXN_11" />
         <signal name="outReady" />
         <signal name="result(15:0)" />
         <signal name="inValue(15:0)" />
+        <port polarity="Output" name="StartingAdd" />
         <port polarity="Input" name="clk" />
         <port polarity="Input" name="rst" />
         <port polarity="Input" name="newNumAdds(15:0)" />
@@ -27,7 +25,7 @@
         <port polarity="Output" name="result(15:0)" />
         <port polarity="Input" name="inValue(15:0)" />
         <blockdef name="mod_AdderFSM">
-            <timestamp>2017-10-15T13:33:13</timestamp>
+            <timestamp>2017-10-17T8:26:6</timestamp>
             <rect width="256" x="64" y="-320" height="320" />
             <line x2="0" y1="-288" y2="-288" x1="64" />
             <line x2="0" y1="-224" y2="-224" x1="64" />
@@ -67,11 +65,11 @@
             <blockpin signalname="XLXN_11" name="sinAddFin" />
             <blockpin signalname="clk" name="clk" />
             <blockpin signalname="rst" name="rst" />
-            <blockpin signalname="XLXN_1" name="startAdd" />
+            <blockpin signalname="StartingAdd" name="startAdd" />
             <blockpin signalname="outReady" name="allAddsFin" />
         </block>
         <block symbolname="mod_Add" name="XLXI_2">
-            <blockpin signalname="XLXN_1" name="in_En" />
+            <blockpin signalname="StartingAdd" name="in_En" />
             <blockpin signalname="clk" name="clk" />
             <blockpin signalname="rst" name="rst" />
             <blockpin signalname="inValue(15:0)" name="in_A(15:0)" />
@@ -80,7 +78,7 @@
             <blockpin signalname="result(15:0)" name="out_Out(15:0)" />
         </block>
         <block symbolname="mod_numCounter" name="XLXI_3">
-            <blockpin signalname="XLXN_1" name="dec" />
+            <blockpin signalname="StartingAdd" name="dec" />
             <blockpin signalname="clk" name="clk" />
             <blockpin signalname="rst" name="rst" />
             <blockpin signalname="newNumAdds(15:0)" name="inVal(15:0)" />
@@ -92,13 +90,14 @@
         </instance>
         <instance x="1584" y="832" name="XLXI_1" orien="R0">
         </instance>
-        <branch name="XLXN_1">
+        <branch name="StartingAdd">
             <wire x2="2048" y1="1936" y2="1936" x1="1920" />
             <wire x2="2048" y1="1248" y2="1248" x1="1936" />
             <wire x2="2048" y1="1248" y2="1936" x1="2048" />
             <wire x2="2048" y1="544" y2="544" x1="1968" />
             <wire x2="2048" y1="544" y2="576" x1="2048" />
             <wire x2="2048" y1="576" y2="1248" x1="2048" />
+            <wire x2="2128" y1="544" y2="544" x1="2048" />
         </branch>
         <instance x="1920" y="2160" name="XLXI_3" orien="M0">
         </instance>
@@ -162,5 +161,6 @@
             <wire x2="1968" y1="1440" y2="1440" x1="1936" />
         </branch>
         <iomarker fontsize="28" x="1968" y="1440" name="inValue(15:0)" orien="R0" />
+        <iomarker fontsize="28" x="2128" y="544" name="StartingAdd" orien="R0" />
     </sheet>
 </drawing>

@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym mod_ParamRouter {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamRouter.sch} {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamRouter.sym} 

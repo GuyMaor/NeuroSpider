@@ -12,6 +12,7 @@ module mod_ParamFetchStage_mod_ParamFetchStage_sch_tb();
    reg [15:0] weightVal;
    reg [15:0] indexVal;
    reg [15:0] inputVal;
+	reg [15:0] offset;
 
 // Output
    wire [15:0] neuronInput;
@@ -37,7 +38,8 @@ module mod_ParamFetchStage_mod_ParamFetchStage_sch_tb();
 		.weightVal(weightVal), 
 		.indexVal(indexVal), 
 		.inputVal(inputVal), 
-		.paramsReady(paramsReady)
+		.paramsReady(paramsReady),
+		.offset(offset)
    );
 // Initialize Inputs
    
@@ -49,6 +51,7 @@ module mod_ParamFetchStage_mod_ParamFetchStage_sch_tb();
 		weightVal = 16'haaaa;
 		indexVal = 16'hbbbb;
 		inputVal = 16'hcccc;
+		offset = 16'hfff0; 
 		
 		#100;
 		rst = 1;

@@ -1,0 +1,4 @@
+vhdtdtfi -lib work {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControlFSM.v} -lang verilog -prj NeuroSpider -o mod_ControlFSM.spl -module mod_ControlFSM -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e mod_ControlFSM.spl {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControlFSM.sym} 
+vhdtdtfi -lib work {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControlFSM.v} -lang verilog -prj NeuroSpider -o mod_ControlFSM.spl -module mod_ControlFSM -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w mod_ControlFSM.spl {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControlFSM.sym} 

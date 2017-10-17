@@ -1,1 +1,5 @@
-sch2hdl,-intstyle,ise,-family,spartan3e,-verilog,C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamFetchStage.vf,-w,C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamFetchStage.sch
+sch2hdl,-intstyle,ise,-family,spartan3e,-verilog,C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ProcMux.vf,-w,C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ProcMux.sch
+sch2hdl,-intstyle,ise,-family,spartan3e,-verilog,C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Controller.vf,-w,C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Controller.sch
+sch2hdl,-intstyle,ise,-family,spartan3e,-verilog,C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_LayerRouter.vf,-w,C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_LayerRouter.sch
+sch2hdl,-intstyle,ise,-family,spartan3e,-verilog,C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamRouter.vf,-w,C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamRouter.sch
+sch2hdl,-intstyle,ise,-family,spartan3e,-verilog,C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Controller.vf,-w,C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Controller.sch

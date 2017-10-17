@@ -1,0 +1,2 @@
+vhdtdtfi -lib work {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Cache.v} -lang verilog -prj NeuroSpider -o mod_Cache.spl -module mod_Cache -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e mod_Cache.spl {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Cache.sym} 

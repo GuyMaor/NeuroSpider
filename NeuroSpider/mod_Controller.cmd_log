@@ -1,0 +1,12 @@
+sch2hdl -intstyle ise -family spartan3e -verilog mod_Controller_drc.vf -w {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Controller.sch} 
+sch2sym -intstyle ise -family spartan3e -w -refsym mod_Controller {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Controller.sch} {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Controller.sym} 
+xst -intstyle ise -ifn "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Controller.xst" -ofn "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 "mod_Controller.ngc" mod_Controller.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o mod_Controller_map.ncd mod_Controller.ngd mod_Controller.pcf 
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o mod_Controller_map.ncd mod_Controller.ngd mod_Controller.pcf 
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o mod_Controller_map.ncd mod_Controller.ngd mod_Controller.pcf 
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o mod_Controller_map.ncd mod_Controller.ngd mod_Controller.pcf 
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o mod_Controller_map.ncd mod_Controller.ngd mod_Controller.pcf 
+xst -intstyle ise -ifn "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Controller.xst" -ofn "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 "mod_Controller.ngc" mod_Controller.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o mod_Controller_map.ncd mod_Controller.ngd mod_Controller.pcf 

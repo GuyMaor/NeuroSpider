@@ -6,7 +6,6 @@
         <trait edittrait="all:0" />
     </attr>
     <netlist>
-        <signal name="XLXN_25" />
         <signal name="XLXN_3(15:0)" />
         <signal name="XLXN_4(15:0)" />
         <signal name="XLXN_5(15:0)" />
@@ -15,20 +14,15 @@
         <signal name="XLXN_9" />
         <signal name="XLXN_11(15:0)" />
         <signal name="XLXN_12(15:0)" />
-        <signal name="XLXN_49(15:0)" />
         <signal name="cache2_DataIn(15:0)" />
         <signal name="cache3_DataIn(15:0)" />
         <signal name="cache2_Addr(15:0)" />
         <signal name="cache3_Addr(15:0)" />
-        <signal name="proc_DataIn(15:0)">
-        </signal>
-        <signal name="proc_Addr(15:0)">
-        </signal>
-        <signal name="proc_WE">
-        </signal>
+        <signal name="proc_DataIn(15:0)" />
+        <signal name="proc_Addr(15:0)" />
+        <signal name="proc_WE" />
         <signal name="XLXN_21" />
-        <signal name="proc_DataOut(15:0)">
-        </signal>
+        <signal name="proc_DataOut(15:0)" />
         <signal name="cache2_DataOut(15:0)" />
         <signal name="cache3_DataOut(15:0)" />
         <signal name="cache0_DataIn(15:0)" />
@@ -45,10 +39,7 @@
         <signal name="cache1_DataOut(15:0)" />
         <signal name="XLXN_73" />
         <signal name="XLXN_74" />
-        <signal name="XLXN_76" />
         <signal name="critical" />
-        <signal name="XLXN_78" />
-        <signal name="XLXN_79(15:0)" />
         <signal name="proce_DataOut(15:0)" />
         <signal name="user_DataOut(15:0)" />
         <signal name="user_DataIn(15:0)" />

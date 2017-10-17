@@ -1,0 +1,7 @@
+verilog work "mod_Mux16.v"
+verilog work "mod_Demux16.v"
+verilog work "mod_Demux.v"
+verilog work "mod_ProcMux.vf"
+verilog work "mod_ControlRegisters.v"
+verilog work "mod_ControlFSM.v"
+verilog work "mod_Controller.vf"

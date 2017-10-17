@@ -1,1 +1,3 @@
 sch2sym -intstyle ise -family spartan3e -refsym mod_AddStage {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_AddStage.sch} {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_AddStage.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym mod_AddStage {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_AddStage.sch} {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_AddStage.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym mod_AddStage {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_AddStage.sch} {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_AddStage.sym} 

@@ -1,2 +1,4 @@
 vhdtdtfi -lib work {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_AdderFSM.v} -lang verilog -prj NeuroSpider -o mod_AdderFSM.spl -module mod_AdderFSM -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
 spl2sym -intstyle ise -family spartan3e mod_AdderFSM.spl {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_AdderFSM.sym} 
+vhdtdtfi -lib work {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_AdderFSM.v} -lang verilog -prj NeuroSpider -o mod_AdderFSM.spl -module mod_AdderFSM -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w mod_AdderFSM.spl {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_AdderFSM.sym} 

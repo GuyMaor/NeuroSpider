@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : mod_LayerRouter_drc.vf
-// /___/   /\     Timestamp : 10/14/2017 16:21:43
+// /___/   /\     Timestamp : 10/17/2017 02:47:35
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -184,6 +184,8 @@ module mod_LayerRouter(cacheSecond,
    wire [15:0] XLXN_40;
    wire XLXN_41;
    wire XLXN_42;
+   wire [15:0] XLXN_74;
+   wire XLXN_80;
    
    mod_CacheMux_MUSER_mod_LayerRouter  XLXI_1 
          (.cache_DataOut(cache1_DataOut[15:0]), 
@@ -214,7 +216,7 @@ module mod_LayerRouter(cacheSecond,
          .cache_DataIn(cache2_DataIn[15:0]), 
                                               .cache_WE(cache2_WE), 
                                               .proc1_DataOut(XLXN_25[15:0]), 
-                                              .proc2_DataOut(XLXN_25[15:0]));
+                                              .proc2_DataOut(XLXN_74[15:0]));
    mod_ProcMux_MUSER_mod_LayerRouter  XLXI_5 (.cache1_DataOut(XLXN_7[15:0]), 
                                              .cache2_DataOut(XLXN_25[15:0]), 
                                              .proc_Addr(user_Addr[15:0]), 
@@ -243,7 +245,7 @@ module mod_LayerRouter(cacheSecond,
                                               .cache_WE(XLXN_29), 
                                               .proc1_DataOut(XLXN_19[15:0]), 
                                               .proc2_DataOut(XLXN_16[15:0]));
-   mod_CacheMux_MUSER_mod_LayerRouter  XLXI_7 (.cache_DataOut(XLXN_25[15:0]), 
+   mod_CacheMux_MUSER_mod_LayerRouter  XLXI_7 (.cache_DataOut(XLXN_74[15:0]), 
                                               .proc1_Addr(proc1_Addr[15:0]), 
                                               
          .proc1_DataIn(proc1_DataIn[15:0]), 
@@ -252,7 +254,7 @@ module mod_LayerRouter(cacheSecond,
                                               
          .proc2_DataIn(proc2_DataIn[15:0]), 
                                               .proc2_WE(proc2_WE), 
-                                              .sel(reverse), 
+                                              .sel(XLXN_80), 
                                               .cache_Addr(XLXN_34[15:0]), 
                                               .cache_DataIn(XLXN_35[15:0]), 
                                               .cache_WE(XLXN_26), 
@@ -269,4 +271,6 @@ module mod_LayerRouter(cacheSecond,
    mod_DLatch  XLXI_15 (.crit(critical), 
                        .dataIn(ReverseWrite), 
                        .dataOut(reverse));
+   INV  XLXI_16 (.I(reverse), 
+                .O(XLXN_80));
 endmodule

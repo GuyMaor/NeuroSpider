@@ -1,0 +1,12 @@
+[Inputs]
+finishedOp
+StartOp
+clk
+[Outputs]
+resetEverything
+readyNextOp
+critical
+[BiDir]
+[ATTRIBUTES]
+VeriModel mod_ControlFSM
+

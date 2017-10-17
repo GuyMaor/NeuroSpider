@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym mod_Params {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Params.sch} {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Params.sym} 

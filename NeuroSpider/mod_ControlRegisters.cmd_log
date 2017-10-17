@@ -1,0 +1,4 @@
+vhdtdtfi -lib work {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControlRegisters.v} -lang verilog -prj NeuroSpider -o mod_ControlRegisters.spl -module mod_ControlRegisters -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e mod_ControlRegisters.spl {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControlRegisters.sym} 
+vhdtdtfi -lib work {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControlRegisters.v} -lang verilog -prj NeuroSpider -o mod_ControlRegisters.spl -module mod_ControlRegisters -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w mod_ControlRegisters.spl {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControlRegisters.sym} 

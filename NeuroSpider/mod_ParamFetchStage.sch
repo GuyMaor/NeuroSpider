@@ -10,13 +10,9 @@
         <signal name="XLXN_2" />
         <signal name="XLXN_5(15:0)" />
         <signal name="XLXN_6(15:0)" />
-        <signal name="XLXN_8" />
         <signal name="XLXN_9" />
-        <signal name="XLXN_10" />
         <signal name="XLXN_11" />
         <signal name="clk" />
-        <signal name="XLXN_13" />
-        <signal name="XLXN_14" />
         <signal name="rst" />
         <signal name="readyNextParam" />
         <signal name="neuronInput(15:0)" />
@@ -29,6 +25,7 @@
         <signal name="indexVal(15:0)" />
         <signal name="inputVal(15:0)" />
         <signal name="paramsReady" />
+        <signal name="offset(15:0)" />
         <port polarity="Input" name="clk" />
         <port polarity="Input" name="rst" />
         <port polarity="Input" name="readyNextParam" />
@@ -42,6 +39,7 @@
         <port polarity="Input" name="indexVal(15:0)" />
         <port polarity="Input" name="inputVal(15:0)" />
         <port polarity="Output" name="paramsReady" />
+        <port polarity="Input" name="offset(15:0)" />
         <blockdef name="REG16">
             <timestamp>2017-10-12T12:42:9</timestamp>
             <rect width="64" x="0" y="20" height="24" />
@@ -53,9 +51,22 @@
             <line x2="0" y1="-96" y2="-96" x1="64" />
             <rect width="256" x="64" y="-256" height="320" />
         </blockdef>
+        <blockdef name="mod_TriStateMachine">
+            <timestamp>2017-10-12T12:16:33</timestamp>
+            <rect width="256" x="64" y="-320" height="320" />
+            <line x2="0" y1="-288" y2="-288" x1="64" />
+            <line x2="0" y1="-224" y2="-224" x1="64" />
+            <line x2="0" y1="-160" y2="-160" x1="64" />
+            <line x2="0" y1="-96" y2="-96" x1="64" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <line x2="384" y1="-288" y2="-288" x1="320" />
+            <line x2="384" y1="-160" y2="-160" x1="320" />
+            <line x2="384" y1="-32" y2="-32" x1="320" />
+        </blockdef>
         <blockdef name="mod_ParamFetch">
-            <timestamp>2017-10-16T0:29:41</timestamp>
-            <rect width="352" x="64" y="-448" height="448" />
+            <timestamp>2017-10-17T5:19:6</timestamp>
+            <rect width="64" x="0" y="20" height="24" />
+            <line x2="0" y1="32" y2="32" x1="64" />
             <line x2="0" y1="-416" y2="-416" x1="64" />
             <line x2="0" y1="-352" y2="-352" x1="64" />
             <line x2="0" y1="-288" y2="-288" x1="64" />
@@ -79,18 +90,7 @@
             <line x2="480" y1="-96" y2="-96" x1="416" />
             <rect width="64" x="416" y="-44" height="24" />
             <line x2="480" y1="-32" y2="-32" x1="416" />
-        </blockdef>
-        <blockdef name="mod_TriStateMachine">
-            <timestamp>2017-10-12T12:16:33</timestamp>
-            <rect width="256" x="64" y="-320" height="320" />
-            <line x2="0" y1="-288" y2="-288" x1="64" />
-            <line x2="0" y1="-224" y2="-224" x1="64" />
-            <line x2="0" y1="-160" y2="-160" x1="64" />
-            <line x2="0" y1="-96" y2="-96" x1="64" />
-            <line x2="0" y1="-32" y2="-32" x1="64" />
-            <line x2="384" y1="-288" y2="-288" x1="320" />
-            <line x2="384" y1="-160" y2="-160" x1="320" />
-            <line x2="384" y1="-32" y2="-32" x1="320" />
+            <rect width="352" x="64" y="-448" height="512" />
         </blockdef>
         <block symbolname="REG16" name="XLXI_1">
             <blockpin signalname="clk" name="clk" />
@@ -98,22 +98,6 @@
             <blockpin signalname="XLXN_2" name="en" />
             <blockpin signalname="XLXN_6(15:0)" name="inV(15:0)" />
             <blockpin signalname="neuronWeight(15:0)" name="outV(15:0)" />
-        </block>
-        <block symbolname="mod_ParamFetch" name="XLXI_2">
-            <blockpin signalname="XLXN_1" name="startFetch" />
-            <blockpin signalname="rst" name="rst" />
-            <blockpin signalname="clk" name="clk" />
-            <blockpin signalname="numInputs(15:0)" name="numAdds(15:0)" />
-            <blockpin signalname="weightVal(15:0)" name="weightVal(15:0)" />
-            <blockpin signalname="indexVal(15:0)" name="indexVal(15:0)" />
-            <blockpin signalname="inputVal(15:0)" name="inputVal(15:0)" />
-            <blockpin signalname="XLXN_11" name="fsmReply" />
-            <blockpin signalname="XLXN_9" name="WE" />
-            <blockpin signalname="weightAddr(15:0)" name="weightAddr(15:0)" />
-            <blockpin signalname="indexAddr(15:0)" name="indexAddr(15:0)" />
-            <blockpin signalname="inputAddr(15:0)" name="inputAddr(15:0)" />
-            <blockpin signalname="XLXN_5(15:0)" name="outVal(15:0)" />
-            <blockpin signalname="XLXN_6(15:0)" name="outWeight(15:0)" />
         </block>
         <block symbolname="mod_TriStateMachine" name="XLXI_3">
             <blockpin signalname="XLXN_11" name="in0" />
@@ -132,18 +116,32 @@
             <blockpin signalname="XLXN_5(15:0)" name="inV(15:0)" />
             <blockpin signalname="neuronInput(15:0)" name="outV(15:0)" />
         </block>
+        <block symbolname="mod_ParamFetch" name="XLXI_5">
+            <blockpin signalname="XLXN_1" name="startFetch" />
+            <blockpin signalname="rst" name="rst" />
+            <blockpin signalname="clk" name="clk" />
+            <blockpin signalname="numInputs(15:0)" name="numAdds(15:0)" />
+            <blockpin signalname="weightVal(15:0)" name="weightVal(15:0)" />
+            <blockpin signalname="indexVal(15:0)" name="indexVal(15:0)" />
+            <blockpin signalname="inputVal(15:0)" name="inputVal(15:0)" />
+            <blockpin signalname="XLXN_11" name="fsmReply" />
+            <blockpin signalname="XLXN_9" name="WE" />
+            <blockpin signalname="weightAddr(15:0)" name="weightAddr(15:0)" />
+            <blockpin signalname="indexAddr(15:0)" name="indexAddr(15:0)" />
+            <blockpin signalname="inputAddr(15:0)" name="inputAddr(15:0)" />
+            <blockpin signalname="XLXN_5(15:0)" name="outVal(15:0)" />
+            <blockpin signalname="XLXN_6(15:0)" name="outWeight(15:0)" />
+            <blockpin signalname="offset(15:0)" name="offset(15:0)" />
+        </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
         <instance x="1184" y="1376" name="XLXI_1" orien="M0">
-        </instance>
-        <instance x="2176" y="1264" name="XLXI_2" orien="M0">
         </instance>
         <instance x="1760" y="464" name="XLXI_3" orien="R0">
         </instance>
         <branch name="XLXN_1">
             <wire x2="2480" y1="176" y2="176" x1="2144" />
-            <wire x2="2480" y1="176" y2="528" x1="2480" />
-            <wire x2="2480" y1="528" y2="848" x1="2480" />
+            <wire x2="2480" y1="176" y2="848" x1="2480" />
             <wire x2="2480" y1="848" y2="848" x1="2176" />
         </branch>
         <instance x="1184" y="896" name="XLXI_4" orien="M0">
@@ -170,22 +168,19 @@
         </branch>
         <branch name="XLXN_9">
             <wire x2="1760" y1="240" y2="240" x1="1488" />
-            <wire x2="1488" y1="240" y2="384" x1="1488" />
-            <wire x2="1488" y1="384" y2="912" x1="1488" />
+            <wire x2="1488" y1="240" y2="912" x1="1488" />
             <wire x2="1696" y1="912" y2="912" x1="1488" />
         </branch>
         <branch name="XLXN_11">
             <wire x2="1760" y1="176" y2="176" x1="1584" />
-            <wire x2="1584" y1="176" y2="208" x1="1584" />
-            <wire x2="1584" y1="208" y2="848" x1="1584" />
+            <wire x2="1584" y1="176" y2="848" x1="1584" />
             <wire x2="1696" y1="848" y2="848" x1="1584" />
         </branch>
         <branch name="clk">
             <wire x2="1472" y1="672" y2="672" x1="1184" />
             <wire x2="1472" y1="672" y2="1152" x1="1472" />
             <wire x2="2352" y1="672" y2="672" x1="1472" />
-            <wire x2="2352" y1="672" y2="736" x1="2352" />
-            <wire x2="2352" y1="736" y2="976" x1="2352" />
+            <wire x2="2352" y1="672" y2="976" x1="2352" />
             <wire x2="1472" y1="1152" y2="1152" x1="1184" />
             <wire x2="1472" y1="432" y2="432" x1="1392" />
             <wire x2="1472" y1="432" y2="672" x1="1472" />
@@ -201,8 +196,7 @@
             <wire x2="1456" y1="368" y2="512" x1="1456" />
             <wire x2="1456" y1="512" y2="736" x1="1456" />
             <wire x2="2416" y1="512" y2="512" x1="1456" />
-            <wire x2="2416" y1="512" y2="752" x1="2416" />
-            <wire x2="2416" y1="752" y2="912" x1="2416" />
+            <wire x2="2416" y1="512" y2="912" x1="2416" />
             <wire x2="2416" y1="912" y2="912" x1="2176" />
         </branch>
         <branch name="readyNextParam">
@@ -251,5 +245,11 @@
         <iomarker fontsize="28" x="2176" y="432" name="paramsReady" orien="R0" />
         <iomarker fontsize="28" x="1392" y="368" name="rst" orien="R180" />
         <iomarker fontsize="28" x="1392" y="432" name="clk" orien="R180" />
+        <branch name="offset(15:0)">
+            <wire x2="2208" y1="1296" y2="1296" x1="2176" />
+        </branch>
+        <iomarker fontsize="28" x="2208" y="1296" name="offset(15:0)" orien="R0" />
+        <instance x="2176" y="1264" name="XLXI_5" orien="M0">
+        </instance>
     </sheet>
 </drawing>

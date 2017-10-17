@@ -1,0 +1,32 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "mod_ControlRegisters.v" in library work
+ERROR:HDLCompilers:28 - "mod_ControlRegisters.v" line 59 'clk' has not been declared
+ERROR:HDLCompilers:208 - "mod_ControlRegisters.v" line 3 Port reference 'clk' was not declared as input, inout or output
+Module <mod_ControlRegisters> compiled
+Analysis of file <"mod_ControlRegisters.prj"> failed.
+--> 
+
+Total memory usage is 277116 kilobytes
+
+Number of errors   :    2 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
