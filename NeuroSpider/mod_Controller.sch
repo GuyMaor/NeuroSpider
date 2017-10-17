@@ -43,6 +43,9 @@
         <signal name="WEWeights" />
         <signal name="critical" />
         <signal name="WriteReverse" />
+        <signal name="offset(15:0)" />
+        <signal name="ResultDest(15:0)" />
+        <signal name="numOfOps(15:0)" />
         <port polarity="Input" name="clk" />
         <port polarity="Output" name="rst" />
         <port polarity="Input" name="OpFinishMUXSIG" />
@@ -68,8 +71,17 @@
         <port polarity="Output" name="WEWeights" />
         <port polarity="Output" name="critical" />
         <port polarity="Output" name="WriteReverse" />
+        <port polarity="Output" name="offset(15:0)" />
+        <port polarity="Output" name="ResultDest(15:0)" />
+        <port polarity="Output" name="numOfOps(15:0)" />
         <blockdef name="mod_ControlRegisters">
-            <timestamp>2017-10-17T7:59:23</timestamp>
+            <timestamp>2017-10-17T11:55:12</timestamp>
+            <rect width="64" x="480" y="84" height="24" />
+            <line x2="544" y1="96" y2="96" x1="480" />
+            <rect width="64" x="480" y="148" height="24" />
+            <line x2="544" y1="160" y2="160" x1="480" />
+            <rect width="64" x="480" y="212" height="24" />
+            <line x2="544" y1="224" y2="224" x1="480" />
             <line x2="544" y1="32" y2="32" x1="480" />
             <line x2="0" y1="-608" y2="-608" x1="64" />
             <line x2="0" y1="-512" y2="-512" x1="64" />
@@ -96,7 +108,7 @@
             <line x2="544" y1="-96" y2="-96" x1="480" />
             <rect width="64" x="480" y="-44" height="24" />
             <line x2="544" y1="-32" y2="-32" x1="480" />
-            <rect width="416" x="64" y="-640" height="704" />
+            <rect width="416" x="64" y="-640" height="896" />
         </blockdef>
         <blockdef name="mod_ProcMux">
             <timestamp>2017-10-13T11:36:46</timestamp>
@@ -144,6 +156,7 @@
             <blockpin signalname="XLXN_8(15:0)" name="cacheDataOut(15:0)" />
             <blockpin signalname="XLXN_10" name="weightNOTIndex" />
             <blockpin signalname="XLXN_9" name="paramNOTLayer" />
+            <blockpin signalname="WriteReverse" name="writeReverse" />
             <blockpin signalname="XLXN_3" name="cacheWE" />
             <blockpin signalname="StartOperation" name="fsmBeginOp" />
             <blockpin signalname="ReadyForNextOperation" name="readyForNextOp" />
@@ -152,7 +165,9 @@
             <blockpin signalname="OutputData(15:0)" name="outData(15:0)" />
             <blockpin signalname="XLXN_1(15:0)" name="cacheDataIn(15:0)" />
             <blockpin signalname="XLXN_2(15:0)" name="cacheAddrIn(15:0)" />
-            <blockpin signalname="WriteReverse" name="writeReverse" />
+            <blockpin signalname="offset(15:0)" name="offsetReg(15:0)" />
+            <blockpin signalname="ResultDest(15:0)" name="destReg(15:0)" />
+            <blockpin signalname="numOfOps(15:0)" name="numOpsReg(15:0)" />
         </block>
         <block symbolname="mod_ProcMux" name="XLXI_3">
             <blockpin signalname="XLXN_10" name="sel" />
@@ -381,8 +396,28 @@
         </branch>
         <iomarker fontsize="28" x="1184" y="992" name="critical" orien="R90" />
         <branch name="WriteReverse">
-            <wire x2="2096" y1="1888" y2="1920" x1="2096" />
+            <wire x2="2048" y1="1664" y2="1904" x1="2048" />
+            <wire x2="2096" y1="1904" y2="1904" x1="2048" />
+            <wire x2="2096" y1="1904" y2="1920" x1="2096" />
         </branch>
-        <iomarker fontsize="28" x="2096" y="1888" name="WriteReverse" orien="R270" />
+        <branch name="offset(15:0)">
+            <wire x2="2160" y1="1904" y2="1920" x1="2160" />
+            <wire x2="2208" y1="1904" y2="1904" x1="2160" />
+            <wire x2="2208" y1="1872" y2="1904" x1="2208" />
+            <wire x2="2512" y1="1872" y2="1872" x1="2208" />
+            <wire x2="2512" y1="1856" y2="1872" x1="2512" />
+        </branch>
+        <branch name="ResultDest(15:0)">
+            <wire x2="2224" y1="1808" y2="1904" x1="2224" />
+            <wire x2="2224" y1="1904" y2="1920" x1="2224" />
+        </branch>
+        <branch name="numOfOps(15:0)">
+            <wire x2="2288" y1="1808" y2="1904" x1="2288" />
+            <wire x2="2288" y1="1904" y2="1920" x1="2288" />
+        </branch>
+        <iomarker fontsize="28" x="2224" y="1808" name="ResultDest(15:0)" orien="R270" />
+        <iomarker fontsize="28" x="2288" y="1808" name="numOfOps(15:0)" orien="R270" />
+        <iomarker fontsize="28" x="2512" y="1856" name="offset(15:0)" orien="R270" />
+        <iomarker fontsize="28" x="2048" y="1664" name="WriteReverse" orien="R270" />
     </sheet>
 </drawing>

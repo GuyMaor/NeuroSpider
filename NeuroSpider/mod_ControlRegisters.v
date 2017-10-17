@@ -3,7 +3,8 @@
 module mod_ControlRegisters(cacheSel,actFuncSel,weightNOTIndex,paramNOTLayer,writeReverse,clk,
 							WE,inAddr,inData,outData,
 							cacheDataOut,cacheDataIn,cacheAddrIn,cacheWE,
-							beginOp,fsmBeginOp,readyForNextOp,fsmReadyForNextOp);
+							beginOp,fsmBeginOp,readyForNextOp,fsmReadyForNextOp,
+							offsetReg,destReg,numOpsReg);
 							
 		parameter offsetRegAddr = 16'h8000;
 		parameter destRegAddr = 16'h8001;
@@ -19,10 +20,15 @@ module mod_ControlRegisters(cacheSel,actFuncSel,weightNOTIndex,paramNOTLayer,wri
 		wire fsmBeginOp = beginOp;
 		wire readyForNextOp = fsmReadyForNextOp;
 		
+		
+		output [15:0] offsetReg;
+		output [15:0] destReg;
+		output [15:0] numOpsReg;
 		reg [15:0] offsetReg;
 		reg [15:0] destReg;
 		reg [15:0] numOpsReg;
 		reg [6:0] cacheRouterReg;
+		
 		
 		//User Interface
 		input WE;

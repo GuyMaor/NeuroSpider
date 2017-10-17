@@ -1,0 +1,643 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml mod_Controller.twx mod_Controller.ncd -o
+mod_Controller.twr mod_Controller.pcf
+
+Design file:              mod_Controller.ncd
+Physical constraint file: mod_Controller.pcf
+Device,package,speed:     xc3s1600e,fg484,-5 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+--------------------+------------+------------+------------------+--------+
+                    |Max Setup to|Max Hold to |                  | Clock  |
+Source              | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+--------------------+------------+------------+------------------+--------+
+AddressInput<0>     |    9.225(R)|   -1.935(R)|clk_BUFGP         |   0.000|
+AddressInput<1>     |    8.122(R)|   -1.607(R)|clk_BUFGP         |   0.000|
+AddressInput<2>     |   10.340(R)|   -2.732(R)|clk_BUFGP         |   0.000|
+AddressInput<3>     |   10.662(R)|   -2.989(R)|clk_BUFGP         |   0.000|
+AddressInput<4>     |    9.993(R)|   -2.454(R)|clk_BUFGP         |   0.000|
+AddressInput<5>     |    9.890(R)|   -2.372(R)|clk_BUFGP         |   0.000|
+AddressInput<6>     |   10.551(R)|   -2.900(R)|clk_BUFGP         |   0.000|
+AddressInput<7>     |   10.478(R)|   -2.842(R)|clk_BUFGP         |   0.000|
+AddressInput<8>     |    9.982(R)|   -2.444(R)|clk_BUFGP         |   0.000|
+AddressInput<9>     |    9.061(R)|   -1.708(R)|clk_BUFGP         |   0.000|
+AddressInput<10>    |    9.327(R)|   -1.921(R)|clk_BUFGP         |   0.000|
+AddressInput<11>    |    8.487(R)|   -1.249(R)|clk_BUFGP         |   0.000|
+AddressInput<12>    |   10.307(R)|   -2.705(R)|clk_BUFGP         |   0.000|
+AddressInput<13>    |    9.563(R)|   -2.109(R)|clk_BUFGP         |   0.000|
+AddressInput<14>    |    9.473(R)|   -2.037(R)|clk_BUFGP         |   0.000|
+AddressInput<15>    |   10.072(R)|   -2.516(R)|clk_BUFGP         |   0.000|
+DataInput<0>        |    0.904(R)|    1.136(R)|clk_BUFGP         |   0.000|
+DataInput<1>        |    1.244(R)|    0.744(R)|clk_BUFGP         |   0.000|
+DataInput<2>        |    1.145(R)|    0.983(R)|clk_BUFGP         |   0.000|
+DataInput<3>        |    1.352(R)|    1.007(R)|clk_BUFGP         |   0.000|
+DataInput<4>        |    1.550(R)|    0.850(R)|clk_BUFGP         |   0.000|
+DataInput<5>        |    1.546(R)|    0.656(R)|clk_BUFGP         |   0.000|
+DataInput<6>        |    2.669(R)|    0.416(R)|clk_BUFGP         |   0.000|
+DataInput<7>        |    2.181(R)|   -0.348(R)|clk_BUFGP         |   0.000|
+DataInput<8>        |    2.763(R)|   -0.449(R)|clk_BUFGP         |   0.000|
+DataInput<9>        |    3.262(R)|   -1.026(R)|clk_BUFGP         |   0.000|
+DataInput<10>       |    2.367(R)|   -0.533(R)|clk_BUFGP         |   0.000|
+DataInput<11>       |    3.266(R)|   -0.907(R)|clk_BUFGP         |   0.000|
+DataInput<12>       |    2.751(R)|   -0.358(R)|clk_BUFGP         |   0.000|
+DataInput<13>       |    3.182(R)|   -0.171(R)|clk_BUFGP         |   0.000|
+DataInput<14>       |    4.330(R)|   -1.422(R)|clk_BUFGP         |   0.000|
+DataInput<15>       |    2.768(R)|   -0.547(R)|clk_BUFGP         |   0.000|
+OpFinishMUXSIG      |   -0.354(R)|    1.693(R)|clk_BUFGP         |   0.000|
+StartNeuronOperation|   -0.666(R)|    1.762(R)|clk_BUFGP         |   0.000|
+WriteEnable         |    8.549(R)|   -1.948(R)|clk_BUFGP         |   0.000|
+--------------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+---------------------+------------+------------------+--------+
+                     | clk (edge) |                  | Clock  |
+Destination          |   to PAD   |Internal Clock(s) | Phase  |
+---------------------+------------+------------------+--------+
+AddrInIndex<0>       |   11.265(R)|clk_BUFGP         |   0.000|
+AddrInIndex<1>       |   11.336(R)|clk_BUFGP         |   0.000|
+AddrInIndex<2>       |   11.524(R)|clk_BUFGP         |   0.000|
+AddrInIndex<3>       |   11.489(R)|clk_BUFGP         |   0.000|
+AddrInIndex<4>       |   11.554(R)|clk_BUFGP         |   0.000|
+AddrInIndex<5>       |   11.827(R)|clk_BUFGP         |   0.000|
+AddrInIndex<6>       |   11.077(R)|clk_BUFGP         |   0.000|
+AddrInIndex<7>       |   12.057(R)|clk_BUFGP         |   0.000|
+AddrInIndex<8>       |   11.307(R)|clk_BUFGP         |   0.000|
+AddrInIndex<9>       |   11.737(R)|clk_BUFGP         |   0.000|
+AddrInIndex<10>      |   12.187(R)|clk_BUFGP         |   0.000|
+AddrInIndex<11>      |   11.916(R)|clk_BUFGP         |   0.000|
+AddrInIndex<12>      |   11.916(R)|clk_BUFGP         |   0.000|
+AddrInIndex<13>      |   10.923(R)|clk_BUFGP         |   0.000|
+AddrInIndex<14>      |   11.653(R)|clk_BUFGP         |   0.000|
+AddrInIndex<15>      |   11.117(R)|clk_BUFGP         |   0.000|
+AddrInLayer<0>       |   11.510(R)|clk_BUFGP         |   0.000|
+AddrInLayer<1>       |   11.092(R)|clk_BUFGP         |   0.000|
+AddrInLayer<2>       |   11.022(R)|clk_BUFGP         |   0.000|
+AddrInLayer<3>       |   11.254(R)|clk_BUFGP         |   0.000|
+AddrInLayer<4>       |   11.630(R)|clk_BUFGP         |   0.000|
+AddrInLayer<5>       |   11.208(R)|clk_BUFGP         |   0.000|
+AddrInLayer<6>       |   11.660(R)|clk_BUFGP         |   0.000|
+AddrInLayer<7>       |   11.414(R)|clk_BUFGP         |   0.000|
+AddrInLayer<8>       |   10.640(R)|clk_BUFGP         |   0.000|
+AddrInLayer<9>       |   11.305(R)|clk_BUFGP         |   0.000|
+AddrInLayer<10>      |   10.476(R)|clk_BUFGP         |   0.000|
+AddrInLayer<11>      |   11.206(R)|clk_BUFGP         |   0.000|
+AddrInLayer<12>      |   11.517(R)|clk_BUFGP         |   0.000|
+AddrInLayer<13>      |   10.641(R)|clk_BUFGP         |   0.000|
+AddrInLayer<14>      |   11.680(R)|clk_BUFGP         |   0.000|
+AddrInLayer<15>      |   10.125(R)|clk_BUFGP         |   0.000|
+AddrInWeights<0>     |   10.524(R)|clk_BUFGP         |   0.000|
+AddrInWeights<1>     |   10.379(R)|clk_BUFGP         |   0.000|
+AddrInWeights<2>     |   10.539(R)|clk_BUFGP         |   0.000|
+AddrInWeights<3>     |    9.613(R)|clk_BUFGP         |   0.000|
+AddrInWeights<4>     |   10.739(R)|clk_BUFGP         |   0.000|
+AddrInWeights<5>     |   10.510(R)|clk_BUFGP         |   0.000|
+AddrInWeights<6>     |   10.105(R)|clk_BUFGP         |   0.000|
+AddrInWeights<7>     |    9.685(R)|clk_BUFGP         |   0.000|
+AddrInWeights<8>     |   10.130(R)|clk_BUFGP         |   0.000|
+AddrInWeights<9>     |   10.899(R)|clk_BUFGP         |   0.000|
+AddrInWeights<10>    |   10.799(R)|clk_BUFGP         |   0.000|
+AddrInWeights<11>    |    8.993(R)|clk_BUFGP         |   0.000|
+AddrInWeights<12>    |   10.535(R)|clk_BUFGP         |   0.000|
+AddrInWeights<13>    |   10.412(R)|clk_BUFGP         |   0.000|
+AddrInWeights<14>    |   10.810(R)|clk_BUFGP         |   0.000|
+AddrInWeights<15>    |    9.766(R)|clk_BUFGP         |   0.000|
+DataInIndex<0>       |   11.200(R)|clk_BUFGP         |   0.000|
+DataInIndex<1>       |   10.959(R)|clk_BUFGP         |   0.000|
+DataInIndex<2>       |   11.373(R)|clk_BUFGP         |   0.000|
+DataInIndex<3>       |   10.082(R)|clk_BUFGP         |   0.000|
+DataInIndex<4>       |   11.436(R)|clk_BUFGP         |   0.000|
+DataInIndex<5>       |   11.187(R)|clk_BUFGP         |   0.000|
+DataInIndex<6>       |   11.092(R)|clk_BUFGP         |   0.000|
+DataInIndex<7>       |   11.544(R)|clk_BUFGP         |   0.000|
+DataInIndex<8>       |   12.451(R)|clk_BUFGP         |   0.000|
+DataInIndex<9>       |   11.175(R)|clk_BUFGP         |   0.000|
+DataInIndex<10>      |   11.242(R)|clk_BUFGP         |   0.000|
+DataInIndex<11>      |   12.545(R)|clk_BUFGP         |   0.000|
+DataInIndex<12>      |   13.006(R)|clk_BUFGP         |   0.000|
+DataInIndex<13>      |   13.636(R)|clk_BUFGP         |   0.000|
+DataInIndex<14>      |   12.331(R)|clk_BUFGP         |   0.000|
+DataInIndex<15>      |   11.631(R)|clk_BUFGP         |   0.000|
+DataInLayer<0>       |    9.174(R)|clk_BUFGP         |   0.000|
+DataInLayer<1>       |   11.280(R)|clk_BUFGP         |   0.000|
+DataInLayer<2>       |   10.952(R)|clk_BUFGP         |   0.000|
+DataInLayer<3>       |   10.560(R)|clk_BUFGP         |   0.000|
+DataInLayer<4>       |   11.053(R)|clk_BUFGP         |   0.000|
+DataInLayer<5>       |   10.739(R)|clk_BUFGP         |   0.000|
+DataInLayer<6>       |   11.815(R)|clk_BUFGP         |   0.000|
+DataInLayer<7>       |   11.831(R)|clk_BUFGP         |   0.000|
+DataInLayer<8>       |   12.120(R)|clk_BUFGP         |   0.000|
+DataInLayer<9>       |   10.569(R)|clk_BUFGP         |   0.000|
+DataInLayer<10>      |   10.756(R)|clk_BUFGP         |   0.000|
+DataInLayer<11>      |   11.466(R)|clk_BUFGP         |   0.000|
+DataInLayer<12>      |   11.374(R)|clk_BUFGP         |   0.000|
+DataInLayer<13>      |   11.921(R)|clk_BUFGP         |   0.000|
+DataInLayer<14>      |   11.573(R)|clk_BUFGP         |   0.000|
+DataInLayer<15>      |   12.338(R)|clk_BUFGP         |   0.000|
+DataInWeights<0>     |    9.441(R)|clk_BUFGP         |   0.000|
+DataInWeights<1>     |    9.667(R)|clk_BUFGP         |   0.000|
+DataInWeights<2>     |    9.583(R)|clk_BUFGP         |   0.000|
+DataInWeights<3>     |    9.246(R)|clk_BUFGP         |   0.000|
+DataInWeights<4>     |   10.969(R)|clk_BUFGP         |   0.000|
+DataInWeights<5>     |   10.987(R)|clk_BUFGP         |   0.000|
+DataInWeights<6>     |   10.471(R)|clk_BUFGP         |   0.000|
+DataInWeights<7>     |   10.217(R)|clk_BUFGP         |   0.000|
+DataInWeights<8>     |    9.391(R)|clk_BUFGP         |   0.000|
+DataInWeights<9>     |   10.097(R)|clk_BUFGP         |   0.000|
+DataInWeights<10>    |   11.858(R)|clk_BUFGP         |   0.000|
+DataInWeights<11>    |   11.743(R)|clk_BUFGP         |   0.000|
+DataInWeights<12>    |   10.870(R)|clk_BUFGP         |   0.000|
+DataInWeights<13>    |   10.669(R)|clk_BUFGP         |   0.000|
+DataInWeights<14>    |   11.403(R)|clk_BUFGP         |   0.000|
+DataInWeights<15>    |   11.758(R)|clk_BUFGP         |   0.000|
+OutputData<0>        |   14.308(R)|clk_BUFGP         |   0.000|
+OutputData<1>        |   14.263(R)|clk_BUFGP         |   0.000|
+OutputData<2>        |   13.389(R)|clk_BUFGP         |   0.000|
+OutputData<3>        |   13.142(R)|clk_BUFGP         |   0.000|
+OutputData<4>        |   15.122(R)|clk_BUFGP         |   0.000|
+OutputData<5>        |   15.580(R)|clk_BUFGP         |   0.000|
+OutputData<6>        |   14.707(R)|clk_BUFGP         |   0.000|
+OutputData<7>        |   10.722(R)|clk_BUFGP         |   0.000|
+OutputData<8>        |   11.718(R)|clk_BUFGP         |   0.000|
+OutputData<9>        |   11.973(R)|clk_BUFGP         |   0.000|
+OutputData<10>       |   14.773(R)|clk_BUFGP         |   0.000|
+OutputData<11>       |   15.613(R)|clk_BUFGP         |   0.000|
+OutputData<12>       |   16.365(R)|clk_BUFGP         |   0.000|
+OutputData<13>       |   16.182(R)|clk_BUFGP         |   0.000|
+OutputData<14>       |   16.187(R)|clk_BUFGP         |   0.000|
+OutputData<15>       |   16.156(R)|clk_BUFGP         |   0.000|
+ReadyForNextOperation|    7.990(R)|clk_BUFGP         |   0.000|
+WEIndex              |   12.119(R)|clk_BUFGP         |   0.000|
+WELayer              |   11.966(R)|clk_BUFGP         |   0.000|
+WEWeights            |    9.598(R)|clk_BUFGP         |   0.000|
+WriteReverse         |    5.930(R)|clk_BUFGP         |   0.000|
+actFuncSel<0>        |    5.924(R)|clk_BUFGP         |   0.000|
+actFuncSel<1>        |    5.906(R)|clk_BUFGP         |   0.000|
+cacheSel<0>          |    5.898(R)|clk_BUFGP         |   0.000|
+cacheSel<1>          |    5.931(R)|clk_BUFGP         |   0.000|
+critical             |    8.163(R)|clk_BUFGP         |   0.000|
+rst                  |    7.226(R)|clk_BUFGP         |   0.000|
+---------------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.756|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+------------------+-----------------+---------+
+Source Pad        |Destination Pad  |  Delay  |
+------------------+-----------------+---------+
+AddressInput<0>   |AddrInIndex<0>   |    6.714|
+AddressInput<0>   |AddrInLayer<0>   |    6.937|
+AddressInput<0>   |AddrInWeights<0> |    9.912|
+AddressInput<0>   |OutputData<0>    |   11.344|
+AddressInput<0>   |OutputData<1>    |   11.222|
+AddressInput<0>   |OutputData<2>    |   12.719|
+AddressInput<0>   |OutputData<3>    |   12.445|
+AddressInput<0>   |OutputData<4>    |   13.283|
+AddressInput<0>   |OutputData<5>    |   13.344|
+AddressInput<0>   |OutputData<6>    |   10.712|
+AddressInput<0>   |OutputData<7>    |   10.997|
+AddressInput<0>   |OutputData<8>    |   12.626|
+AddressInput<0>   |OutputData<9>    |   11.953|
+AddressInput<0>   |OutputData<10>   |   12.547|
+AddressInput<0>   |OutputData<11>   |   11.789|
+AddressInput<0>   |OutputData<12>   |   13.309|
+AddressInput<0>   |OutputData<13>   |   12.699|
+AddressInput<0>   |OutputData<14>   |   11.938|
+AddressInput<0>   |OutputData<15>   |   12.872|
+AddressInput<1>   |AddrInIndex<1>   |    6.299|
+AddressInput<1>   |AddrInLayer<1>   |    6.049|
+AddressInput<1>   |AddrInWeights<1> |    7.934|
+AddressInput<1>   |OutputData<0>    |   11.542|
+AddressInput<1>   |OutputData<1>    |   11.909|
+AddressInput<1>   |OutputData<2>    |   12.663|
+AddressInput<1>   |OutputData<3>    |   11.802|
+AddressInput<1>   |OutputData<4>    |   12.226|
+AddressInput<1>   |OutputData<5>    |   12.696|
+AddressInput<1>   |OutputData<6>    |   10.759|
+AddressInput<1>   |OutputData<7>    |   11.429|
+AddressInput<1>   |OutputData<8>    |   12.048|
+AddressInput<1>   |OutputData<9>    |   11.659|
+AddressInput<1>   |OutputData<10>   |   12.135|
+AddressInput<1>   |OutputData<11>   |   11.910|
+AddressInput<1>   |OutputData<12>   |   12.699|
+AddressInput<1>   |OutputData<13>   |   11.788|
+AddressInput<1>   |OutputData<14>   |   11.490|
+AddressInput<1>   |OutputData<15>   |   12.012|
+AddressInput<2>   |AddrInIndex<2>   |    6.194|
+AddressInput<2>   |AddrInLayer<2>   |    5.641|
+AddressInput<2>   |AddrInWeights<2> |    8.159|
+AddressInput<2>   |OutputData<0>    |   12.724|
+AddressInput<2>   |OutputData<1>    |   12.727|
+AddressInput<2>   |OutputData<2>    |   13.080|
+AddressInput<2>   |OutputData<3>    |   13.030|
+AddressInput<2>   |OutputData<4>    |   14.146|
+AddressInput<2>   |OutputData<5>    |   14.267|
+AddressInput<2>   |OutputData<6>    |   12.268|
+AddressInput<2>   |OutputData<7>    |   12.638|
+AddressInput<2>   |OutputData<8>    |   12.926|
+AddressInput<2>   |OutputData<9>    |   13.081|
+AddressInput<2>   |OutputData<10>   |   13.959|
+AddressInput<2>   |OutputData<11>   |   14.188|
+AddressInput<2>   |OutputData<12>   |   14.597|
+AddressInput<2>   |OutputData<13>   |   14.559|
+AddressInput<2>   |OutputData<14>   |   14.247|
+AddressInput<2>   |OutputData<15>   |   13.667|
+AddressInput<3>   |AddrInIndex<3>   |    6.008|
+AddressInput<3>   |AddrInLayer<3>   |    5.785|
+AddressInput<3>   |AddrInWeights<3> |    7.775|
+AddressInput<3>   |OutputData<0>    |   13.046|
+AddressInput<3>   |OutputData<1>    |   13.049|
+AddressInput<3>   |OutputData<2>    |   13.402|
+AddressInput<3>   |OutputData<3>    |   13.352|
+AddressInput<3>   |OutputData<4>    |   14.468|
+AddressInput<3>   |OutputData<5>    |   14.589|
+AddressInput<3>   |OutputData<6>    |   12.590|
+AddressInput<3>   |OutputData<7>    |   12.960|
+AddressInput<3>   |OutputData<8>    |   13.248|
+AddressInput<3>   |OutputData<9>    |   13.403|
+AddressInput<3>   |OutputData<10>   |   14.281|
+AddressInput<3>   |OutputData<11>   |   14.510|
+AddressInput<3>   |OutputData<12>   |   14.919|
+AddressInput<3>   |OutputData<13>   |   14.881|
+AddressInput<3>   |OutputData<14>   |   14.569|
+AddressInput<3>   |OutputData<15>   |   13.989|
+AddressInput<4>   |AddrInIndex<4>   |    6.268|
+AddressInput<4>   |AddrInLayer<4>   |    6.373|
+AddressInput<4>   |AddrInWeights<4> |    7.555|
+AddressInput<4>   |OutputData<0>    |   12.377|
+AddressInput<4>   |OutputData<1>    |   12.380|
+AddressInput<4>   |OutputData<2>    |   12.733|
+AddressInput<4>   |OutputData<3>    |   12.683|
+AddressInput<4>   |OutputData<4>    |   13.799|
+AddressInput<4>   |OutputData<5>    |   13.920|
+AddressInput<4>   |OutputData<6>    |   11.921|
+AddressInput<4>   |OutputData<7>    |   12.291|
+AddressInput<4>   |OutputData<8>    |   12.579|
+AddressInput<4>   |OutputData<9>    |   12.734|
+AddressInput<4>   |OutputData<10>   |   13.612|
+AddressInput<4>   |OutputData<11>   |   13.841|
+AddressInput<4>   |OutputData<12>   |   14.250|
+AddressInput<4>   |OutputData<13>   |   14.212|
+AddressInput<4>   |OutputData<14>   |   13.900|
+AddressInput<4>   |OutputData<15>   |   13.320|
+AddressInput<5>   |AddrInIndex<5>   |    6.662|
+AddressInput<5>   |AddrInLayer<5>   |    6.020|
+AddressInput<5>   |AddrInWeights<5> |    7.111|
+AddressInput<5>   |OutputData<0>    |   12.274|
+AddressInput<5>   |OutputData<1>    |   12.277|
+AddressInput<5>   |OutputData<2>    |   12.630|
+AddressInput<5>   |OutputData<3>    |   12.580|
+AddressInput<5>   |OutputData<4>    |   13.696|
+AddressInput<5>   |OutputData<5>    |   13.817|
+AddressInput<5>   |OutputData<6>    |   11.818|
+AddressInput<5>   |OutputData<7>    |   12.188|
+AddressInput<5>   |OutputData<8>    |   12.476|
+AddressInput<5>   |OutputData<9>    |   12.631|
+AddressInput<5>   |OutputData<10>   |   13.509|
+AddressInput<5>   |OutputData<11>   |   13.738|
+AddressInput<5>   |OutputData<12>   |   14.147|
+AddressInput<5>   |OutputData<13>   |   14.109|
+AddressInput<5>   |OutputData<14>   |   13.797|
+AddressInput<5>   |OutputData<15>   |   13.217|
+AddressInput<6>   |AddrInIndex<6>   |    5.601|
+AddressInput<6>   |AddrInLayer<6>   |    6.432|
+AddressInput<6>   |AddrInWeights<6> |    7.635|
+AddressInput<6>   |OutputData<0>    |   12.935|
+AddressInput<6>   |OutputData<1>    |   12.938|
+AddressInput<6>   |OutputData<2>    |   13.291|
+AddressInput<6>   |OutputData<3>    |   13.241|
+AddressInput<6>   |OutputData<4>    |   14.357|
+AddressInput<6>   |OutputData<5>    |   14.478|
+AddressInput<6>   |OutputData<6>    |   12.479|
+AddressInput<6>   |OutputData<7>    |   12.849|
+AddressInput<6>   |OutputData<8>    |   13.137|
+AddressInput<6>   |OutputData<9>    |   13.292|
+AddressInput<6>   |OutputData<10>   |   14.170|
+AddressInput<6>   |OutputData<11>   |   14.399|
+AddressInput<6>   |OutputData<12>   |   14.808|
+AddressInput<6>   |OutputData<13>   |   14.770|
+AddressInput<6>   |OutputData<14>   |   14.458|
+AddressInput<6>   |OutputData<15>   |   13.878|
+AddressInput<7>   |AddrInIndex<7>   |    6.326|
+AddressInput<7>   |AddrInLayer<7>   |    6.368|
+AddressInput<7>   |AddrInWeights<7> |    7.325|
+AddressInput<7>   |OutputData<0>    |   12.862|
+AddressInput<7>   |OutputData<1>    |   12.865|
+AddressInput<7>   |OutputData<2>    |   13.218|
+AddressInput<7>   |OutputData<3>    |   13.168|
+AddressInput<7>   |OutputData<4>    |   14.284|
+AddressInput<7>   |OutputData<5>    |   14.405|
+AddressInput<7>   |OutputData<6>    |   12.406|
+AddressInput<7>   |OutputData<7>    |   12.776|
+AddressInput<7>   |OutputData<8>    |   13.064|
+AddressInput<7>   |OutputData<9>    |   13.219|
+AddressInput<7>   |OutputData<10>   |   14.097|
+AddressInput<7>   |OutputData<11>   |   14.326|
+AddressInput<7>   |OutputData<12>   |   14.735|
+AddressInput<7>   |OutputData<13>   |   14.697|
+AddressInput<7>   |OutputData<14>   |   14.385|
+AddressInput<7>   |OutputData<15>   |   13.805|
+AddressInput<8>   |AddrInIndex<8>   |    6.992|
+AddressInput<8>   |AddrInLayer<8>   |    6.727|
+AddressInput<8>   |AddrInWeights<8> |    6.926|
+AddressInput<8>   |OutputData<0>    |   12.366|
+AddressInput<8>   |OutputData<1>    |   12.369|
+AddressInput<8>   |OutputData<2>    |   12.722|
+AddressInput<8>   |OutputData<3>    |   12.672|
+AddressInput<8>   |OutputData<4>    |   13.788|
+AddressInput<8>   |OutputData<5>    |   13.909|
+AddressInput<8>   |OutputData<6>    |   11.910|
+AddressInput<8>   |OutputData<7>    |   12.280|
+AddressInput<8>   |OutputData<8>    |   12.568|
+AddressInput<8>   |OutputData<9>    |   12.723|
+AddressInput<8>   |OutputData<10>   |   13.601|
+AddressInput<8>   |OutputData<11>   |   13.830|
+AddressInput<8>   |OutputData<12>   |   14.239|
+AddressInput<8>   |OutputData<13>   |   14.201|
+AddressInput<8>   |OutputData<14>   |   13.889|
+AddressInput<8>   |OutputData<15>   |   13.309|
+AddressInput<9>   |AddrInIndex<9>   |    6.510|
+AddressInput<9>   |AddrInLayer<9>   |    6.903|
+AddressInput<9>   |AddrInWeights<9> |    6.313|
+AddressInput<9>   |OutputData<0>    |   11.445|
+AddressInput<9>   |OutputData<1>    |   11.448|
+AddressInput<9>   |OutputData<2>    |   11.801|
+AddressInput<9>   |OutputData<3>    |   11.751|
+AddressInput<9>   |OutputData<4>    |   12.867|
+AddressInput<9>   |OutputData<5>    |   12.988|
+AddressInput<9>   |OutputData<6>    |   10.989|
+AddressInput<9>   |OutputData<7>    |   11.359|
+AddressInput<9>   |OutputData<8>    |   11.647|
+AddressInput<9>   |OutputData<9>    |   11.802|
+AddressInput<9>   |OutputData<10>   |   12.680|
+AddressInput<9>   |OutputData<11>   |   12.909|
+AddressInput<9>   |OutputData<12>   |   13.318|
+AddressInput<9>   |OutputData<13>   |   13.280|
+AddressInput<9>   |OutputData<14>   |   12.968|
+AddressInput<9>   |OutputData<15>   |   12.388|
+AddressInput<10>  |AddrInIndex<10>  |    7.033|
+AddressInput<10>  |AddrInLayer<10>  |    6.179|
+AddressInput<10>  |AddrInWeights<10>|    5.745|
+AddressInput<10>  |OutputData<0>    |   11.711|
+AddressInput<10>  |OutputData<1>    |   11.714|
+AddressInput<10>  |OutputData<2>    |   12.067|
+AddressInput<10>  |OutputData<3>    |   12.017|
+AddressInput<10>  |OutputData<4>    |   13.133|
+AddressInput<10>  |OutputData<5>    |   13.254|
+AddressInput<10>  |OutputData<6>    |   11.255|
+AddressInput<10>  |OutputData<7>    |   11.625|
+AddressInput<10>  |OutputData<8>    |   11.913|
+AddressInput<10>  |OutputData<9>    |   12.068|
+AddressInput<10>  |OutputData<10>   |   12.946|
+AddressInput<10>  |OutputData<11>   |   13.175|
+AddressInput<10>  |OutputData<12>   |   13.584|
+AddressInput<10>  |OutputData<13>   |   13.546|
+AddressInput<10>  |OutputData<14>   |   13.234|
+AddressInput<10>  |OutputData<15>   |   12.654|
+AddressInput<11>  |AddrInIndex<11>  |    6.289|
+AddressInput<11>  |AddrInLayer<11>  |    6.318|
+AddressInput<11>  |AddrInWeights<11>|    7.469|
+AddressInput<11>  |OutputData<0>    |   10.871|
+AddressInput<11>  |OutputData<1>    |   10.874|
+AddressInput<11>  |OutputData<2>    |   11.227|
+AddressInput<11>  |OutputData<3>    |   11.177|
+AddressInput<11>  |OutputData<4>    |   12.293|
+AddressInput<11>  |OutputData<5>    |   12.414|
+AddressInput<11>  |OutputData<6>    |   10.415|
+AddressInput<11>  |OutputData<7>    |   10.785|
+AddressInput<11>  |OutputData<8>    |   11.073|
+AddressInput<11>  |OutputData<9>    |   11.228|
+AddressInput<11>  |OutputData<10>   |   12.106|
+AddressInput<11>  |OutputData<11>   |   12.335|
+AddressInput<11>  |OutputData<12>   |   12.744|
+AddressInput<11>  |OutputData<13>   |   12.706|
+AddressInput<11>  |OutputData<14>   |   12.394|
+AddressInput<11>  |OutputData<15>   |   11.814|
+AddressInput<12>  |AddrInIndex<12>  |    6.669|
+AddressInput<12>  |AddrInLayer<12>  |    7.015|
+AddressInput<12>  |AddrInWeights<12>|    8.724|
+AddressInput<12>  |OutputData<0>    |   12.691|
+AddressInput<12>  |OutputData<1>    |   12.694|
+AddressInput<12>  |OutputData<2>    |   13.047|
+AddressInput<12>  |OutputData<3>    |   12.997|
+AddressInput<12>  |OutputData<4>    |   14.113|
+AddressInput<12>  |OutputData<5>    |   14.234|
+AddressInput<12>  |OutputData<6>    |   12.235|
+AddressInput<12>  |OutputData<7>    |   12.605|
+AddressInput<12>  |OutputData<8>    |   12.893|
+AddressInput<12>  |OutputData<9>    |   13.048|
+AddressInput<12>  |OutputData<10>   |   13.926|
+AddressInput<12>  |OutputData<11>   |   14.155|
+AddressInput<12>  |OutputData<12>   |   14.564|
+AddressInput<12>  |OutputData<13>   |   14.526|
+AddressInput<12>  |OutputData<14>   |   14.214|
+AddressInput<12>  |OutputData<15>   |   13.634|
+AddressInput<13>  |AddrInIndex<13>  |    6.528|
+AddressInput<13>  |AddrInLayer<13>  |    6.269|
+AddressInput<13>  |AddrInWeights<13>|    7.922|
+AddressInput<13>  |OutputData<0>    |   11.947|
+AddressInput<13>  |OutputData<1>    |   11.950|
+AddressInput<13>  |OutputData<2>    |   12.303|
+AddressInput<13>  |OutputData<3>    |   12.253|
+AddressInput<13>  |OutputData<4>    |   13.369|
+AddressInput<13>  |OutputData<5>    |   13.490|
+AddressInput<13>  |OutputData<6>    |   11.491|
+AddressInput<13>  |OutputData<7>    |   11.861|
+AddressInput<13>  |OutputData<8>    |   12.149|
+AddressInput<13>  |OutputData<9>    |   12.304|
+AddressInput<13>  |OutputData<10>   |   13.182|
+AddressInput<13>  |OutputData<11>   |   13.411|
+AddressInput<13>  |OutputData<12>   |   13.820|
+AddressInput<13>  |OutputData<13>   |   13.782|
+AddressInput<13>  |OutputData<14>   |   13.470|
+AddressInput<13>  |OutputData<15>   |   12.890|
+AddressInput<14>  |AddrInIndex<14>  |    7.376|
+AddressInput<14>  |AddrInLayer<14>  |    7.369|
+AddressInput<14>  |AddrInWeights<14>|    6.535|
+AddressInput<14>  |OutputData<0>    |   11.857|
+AddressInput<14>  |OutputData<1>    |   11.860|
+AddressInput<14>  |OutputData<2>    |   12.213|
+AddressInput<14>  |OutputData<3>    |   12.163|
+AddressInput<14>  |OutputData<4>    |   13.279|
+AddressInput<14>  |OutputData<5>    |   13.400|
+AddressInput<14>  |OutputData<6>    |   11.401|
+AddressInput<14>  |OutputData<7>    |   11.771|
+AddressInput<14>  |OutputData<8>    |   12.059|
+AddressInput<14>  |OutputData<9>    |   12.214|
+AddressInput<14>  |OutputData<10>   |   13.092|
+AddressInput<14>  |OutputData<11>   |   13.321|
+AddressInput<14>  |OutputData<12>   |   13.730|
+AddressInput<14>  |OutputData<13>   |   13.692|
+AddressInput<14>  |OutputData<14>   |   13.380|
+AddressInput<14>  |OutputData<15>   |   12.800|
+AddressInput<15>  |AddrInIndex<15>  |    6.982|
+AddressInput<15>  |AddrInLayer<15>  |    6.188|
+AddressInput<15>  |AddrInWeights<15>|    5.764|
+AddressInput<15>  |OutputData<0>    |   12.456|
+AddressInput<15>  |OutputData<1>    |   12.459|
+AddressInput<15>  |OutputData<2>    |   12.812|
+AddressInput<15>  |OutputData<3>    |   12.762|
+AddressInput<15>  |OutputData<4>    |   13.878|
+AddressInput<15>  |OutputData<5>    |   13.999|
+AddressInput<15>  |OutputData<6>    |   12.000|
+AddressInput<15>  |OutputData<7>    |   12.370|
+AddressInput<15>  |OutputData<8>    |   12.658|
+AddressInput<15>  |OutputData<9>    |   12.813|
+AddressInput<15>  |OutputData<10>   |   13.691|
+AddressInput<15>  |OutputData<11>   |   13.920|
+AddressInput<15>  |OutputData<12>   |   14.329|
+AddressInput<15>  |OutputData<13>   |   14.291|
+AddressInput<15>  |OutputData<14>   |   13.979|
+AddressInput<15>  |OutputData<15>   |   13.399|
+DataInput<0>      |DataInIndex<0>   |    7.999|
+DataInput<0>      |DataInLayer<0>   |    5.905|
+DataInput<0>      |DataInWeights<0> |    5.845|
+DataInput<1>      |DataInIndex<1>   |    6.382|
+DataInput<1>      |DataInLayer<1>   |    6.823|
+DataInput<1>      |DataInWeights<1> |    6.911|
+DataInput<2>      |DataInIndex<2>   |    6.511|
+DataInput<2>      |DataInLayer<2>   |    6.029|
+DataInput<2>      |DataInWeights<2> |    6.950|
+DataInput<3>      |DataInIndex<3>   |    6.262|
+DataInput<3>      |DataInLayer<3>   |    6.834|
+DataInput<3>      |DataInWeights<3> |    8.301|
+DataInput<4>      |DataInIndex<4>   |    6.100|
+DataInput<4>      |DataInLayer<4>   |    5.919|
+DataInput<4>      |DataInWeights<4> |    8.795|
+DataInput<5>      |DataInIndex<5>   |    5.874|
+DataInput<5>      |DataInLayer<5>   |    5.777|
+DataInput<5>      |DataInWeights<5> |    9.288|
+DataInput<6>      |DataInIndex<6>   |    6.328|
+DataInput<6>      |DataInLayer<6>   |    6.995|
+DataInput<6>      |DataInWeights<6> |    9.827|
+DataInput<7>      |DataInIndex<7>   |    6.700|
+DataInput<7>      |DataInLayer<7>   |    7.081|
+DataInput<7>      |DataInWeights<7> |    8.676|
+DataInput<8>      |DataInIndex<8>   |    6.438|
+DataInput<8>      |DataInLayer<8>   |    6.398|
+DataInput<8>      |DataInWeights<8> |    8.555|
+DataInput<9>      |DataInIndex<9>   |    6.005|
+DataInput<9>      |DataInLayer<9>   |    5.519|
+DataInput<9>      |DataInWeights<9> |   11.223|
+DataInput<10>     |DataInIndex<10>  |    5.671|
+DataInput<10>     |DataInLayer<10>  |    5.847|
+DataInput<10>     |DataInWeights<10>|    6.957|
+DataInput<11>     |DataInIndex<11>  |    6.287|
+DataInput<11>     |DataInLayer<11>  |    6.895|
+DataInput<11>     |DataInWeights<11>|    7.141|
+DataInput<12>     |DataInIndex<12>  |    6.812|
+DataInput<12>     |DataInLayer<12>  |    6.553|
+DataInput<12>     |DataInWeights<12>|    6.016|
+DataInput<13>     |DataInIndex<13>  |    7.093|
+DataInput<13>     |DataInLayer<13>  |    7.482|
+DataInput<13>     |DataInWeights<13>|    6.199|
+DataInput<14>     |DataInIndex<14>  |    5.972|
+DataInput<14>     |DataInLayer<14>  |    6.913|
+DataInput<14>     |DataInWeights<14>|    6.618|
+DataInput<15>     |DataInIndex<15>  |    6.979|
+DataInput<15>     |DataInLayer<15>  |    5.421|
+DataInput<15>     |DataInWeights<15>|    7.128|
+DataOutIndex<0>   |OutputData<0>    |   12.704|
+DataOutIndex<1>   |OutputData<1>    |   11.045|
+DataOutIndex<2>   |OutputData<2>    |   11.779|
+DataOutIndex<3>   |OutputData<3>    |   11.354|
+DataOutIndex<4>   |OutputData<4>    |   11.429|
+DataOutIndex<5>   |OutputData<5>    |   11.905|
+DataOutIndex<6>   |OutputData<6>    |   11.088|
+DataOutIndex<7>   |OutputData<7>    |   11.345|
+DataOutIndex<8>   |OutputData<8>    |   10.755|
+DataOutIndex<9>   |OutputData<9>    |   10.522|
+DataOutIndex<10>  |OutputData<10>   |   11.440|
+DataOutIndex<11>  |OutputData<11>   |   11.182|
+DataOutIndex<12>  |OutputData<12>   |   11.354|
+DataOutIndex<13>  |OutputData<13>   |   10.906|
+DataOutIndex<14>  |OutputData<14>   |   11.124|
+DataOutIndex<15>  |OutputData<15>   |   10.566|
+DataOutLayer<0>   |OutputData<0>    |   11.868|
+DataOutLayer<1>   |OutputData<1>    |   11.049|
+DataOutLayer<2>   |OutputData<2>    |   10.716|
+DataOutLayer<3>   |OutputData<3>    |    9.516|
+DataOutLayer<4>   |OutputData<4>    |   12.157|
+DataOutLayer<5>   |OutputData<5>    |   15.307|
+DataOutLayer<6>   |OutputData<6>    |   10.891|
+DataOutLayer<7>   |OutputData<7>    |    7.799|
+DataOutLayer<8>   |OutputData<8>    |    7.705|
+DataOutLayer<9>   |OutputData<9>    |    8.003|
+DataOutLayer<10>  |OutputData<10>   |    8.359|
+DataOutLayer<11>  |OutputData<11>   |    7.451|
+DataOutLayer<12>  |OutputData<12>   |    7.377|
+DataOutLayer<13>  |OutputData<13>   |    6.949|
+DataOutLayer<14>  |OutputData<14>   |    7.563|
+DataOutLayer<15>  |OutputData<15>   |    6.746|
+DataOutWeights<0> |OutputData<0>    |   10.326|
+DataOutWeights<1> |OutputData<1>    |   10.593|
+DataOutWeights<2> |OutputData<2>    |    9.675|
+DataOutWeights<3> |OutputData<3>    |    8.361|
+DataOutWeights<4> |OutputData<4>    |   12.211|
+DataOutWeights<5> |OutputData<5>    |   12.002|
+DataOutWeights<6> |OutputData<6>    |   10.637|
+DataOutWeights<7> |OutputData<7>    |    9.660|
+DataOutWeights<8> |OutputData<8>    |   11.491|
+DataOutWeights<9> |OutputData<9>    |   10.463|
+DataOutWeights<10>|OutputData<10>   |   11.873|
+DataOutWeights<11>|OutputData<11>   |   10.904|
+DataOutWeights<12>|OutputData<12>   |   10.807|
+DataOutWeights<13>|OutputData<13>   |   11.306|
+DataOutWeights<14>|OutputData<14>   |   10.800|
+DataOutWeights<15>|OutputData<15>   |   10.184|
+WriteEnable       |WEIndex          |   12.541|
+WriteEnable       |WELayer          |   13.154|
+WriteEnable       |WEWeights        |    7.989|
+------------------+-----------------+---------+
+
+
+Analysis completed Tue Oct 17 06:38:36 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 208 MB
+
+
+

@@ -4,27 +4,27 @@
      changes made to this file may result in unpredictable
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
-<DeviceUsageSummary rev="31">
-<DesignStatistics TimeStamp="Tue Oct 17 05:22:22 2017"><group name="MiscellaneousStatistics">
-<item name="AGG_BONDED_IO" rev="31">
+<DeviceUsageSummary rev="42">
+<DesignStatistics TimeStamp="Tue Oct 17 06:38:08 2017"><group name="MiscellaneousStatistics">
+<item name="AGG_BONDED_IO" rev="42">
 <attrib name="value" value="207"/></item>
-<item name="AGG_IO" rev="31">
+<item name="AGG_IO" rev="42">
 <attrib name="value" value="207"/></item>
-<item name="AGG_SLICE" rev="31">
+<item name="AGG_SLICE" rev="42">
 <attrib name="value" value="123"/></item>
-<item name="NUM_4_INPUT_LUT" rev="31">
+<item name="NUM_4_INPUT_LUT" rev="42">
 <attrib name="value" value="181"/></item>
-<item name="NUM_BONDED_IBUF" rev="31">
+<item name="NUM_BONDED_IBUF" rev="42">
 <attrib name="value" value="84"/></item>
-<item name="NUM_BONDED_IOB" rev="31">
+<item name="NUM_BONDED_IOB" rev="42">
 <attrib name="value" value="123"/></item>
-<item name="NUM_BUFGMUX" rev="31">
+<item name="NUM_BUFGMUX" rev="42">
 <attrib name="value" value="1"/></item>
-<item name="NUM_IOB_FF" rev="31">
+<item name="NUM_IOB_FF" rev="42">
 <attrib name="value" value="5"/></item>
-<item name="NUM_SLICEL" rev="31">
+<item name="NUM_SLICEL" rev="42">
 <attrib name="value" value="123"/></item>
-<item name="NUM_SLICE_FF" rev="31">
+<item name="NUM_SLICE_FF" rev="42">
 <attrib name="value" value="57"/></item>
 </group>
 </DesignStatistics>

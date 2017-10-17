@@ -1,0 +1,3 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym mod_ParamFetchStageNEW {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamFetchStageNEW.sch} {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamFetchStageNEW.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym mod_ParamFetchStageNEW {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamFetchStageNEW.sch} {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamFetchStageNEW.sym} 
+sch2hdl -intstyle ise -family spartan3e -verilog mod_ParamFetchStageNEW_drc.vf -w {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamFetchStageNEW.sch} 

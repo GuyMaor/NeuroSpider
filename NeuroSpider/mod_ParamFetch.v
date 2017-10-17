@@ -69,7 +69,7 @@ module mod_ParamFetch(numAdds,offset,startFetch,weightAddr,weightVal,indexAddr,
 					oldOldWE = 0;
 				end
 				
-				/*always @ (posedge clk, posedge rst)
+				/*always @ (posedge clk, posedge rst) 
 				begin
 					if(rst)
 					begin
