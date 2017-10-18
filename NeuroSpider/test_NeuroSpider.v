@@ -11,7 +11,7 @@ module NeuroSpider_NeuroSpider_sch_tb();
 		parameter cacheRouterRegAddr = 16'h8003;
 		parameter floatNum1 = 16'h3c00;
 		parameter floatNum2 = 16'h4000;
-		
+		parameter floatNegNum2 = 16'hc000;
 		
 // Inputs
    reg clk;
@@ -45,6 +45,7 @@ module NeuroSpider_NeuroSpider_sch_tb();
 		WE =1;
 		Address = 16'h8000;
 		DataWrite = 16'd0;//To 0
+		//DataWrite = 16'd1;
 		
 		#100;clk = 1;#100;clk = 0;
 		
@@ -58,7 +59,8 @@ module NeuroSpider_NeuroSpider_sch_tb();
 		//set num ops
 		WE =1;
 		Address = 16'h8002;
-		DataWrite = 16'd2;//to 2 ops
+		//DataWrite = 16'd2;//to 2 ops
+		DataWrite = 16'd2;
 
 		#100;clk = 1;#100;clk = 0;
 		
@@ -120,12 +122,14 @@ module NeuroSpider_NeuroSpider_sch_tb();
 		WE =1;
 		Address = 16'h0001;//loc 1
 		DataWrite = floatNum2;//val 2
-
+		//DataWrite = floatNegNum2;
+		
 		#100;clk = 1;#100;clk = 0;
 
 		WE =1;
 		Address = 16'h8004;
-		DataWrite = 16'd0;//To 0		
+		DataWrite = 16'd0;//No Act Func
+		//DataWrite = 16'h0060; //Yes Act Func
 
 		#100;clk = 1;#100;clk = 0;
 		
