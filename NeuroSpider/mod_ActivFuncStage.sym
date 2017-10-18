@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="mod_ActivFuncStage">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2017-10-17T8:30:45</timestamp>
+    <timestamp>2017-10-18T2:3:31</timestamp>
     <attr value="mod_ActivFuncStage" name="VeriModel" />
     <pin polarity="Input" x="0" y="-352" name="inWE" />
     <pin polarity="Input" x="0" y="-288" name="rst" />

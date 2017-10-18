@@ -1,0 +1,10 @@
+[Inputs]
+sel
+=inPort1[1:0]=
+=inPort2[1:0]=
+[Outputs]
+=outPort[1:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel MUX2
+

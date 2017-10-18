@@ -1,1 +1,3 @@
 sch2sym -intstyle ise -family spartan3e -w -refsym mod_ControllerNEW {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControllerNEW.sch} {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControllerNEW.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym mod_ControllerNEW {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControllerNEW.sch} {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControllerNEW.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym mod_ControllerNEW {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControllerNEW.sch} {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControllerNEW.sym} 

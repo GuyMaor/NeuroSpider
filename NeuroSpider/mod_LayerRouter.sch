@@ -25,7 +25,7 @@
         <signal name="XLXN_31(15:0)" />
         <signal name="XLXN_34(15:0)" />
         <signal name="XLXN_35(15:0)" />
-        <signal name="reverse" />
+        <signal name="ReverseWrite" />
         <signal name="XLXN_37(15:0)" />
         <signal name="XLXN_38(15:0)" />
         <signal name="XLXN_39(15:0)" />
@@ -47,7 +47,6 @@
         <signal name="proc2_DataIn(15:0)" />
         <signal name="proc1_WE" />
         <signal name="proc2_WE" />
-        <signal name="ReverseWrite" />
         <signal name="cacheSecond" />
         <signal name="XLXN_74(15:0)" />
         <signal name="XLXN_80" />
@@ -57,6 +56,7 @@
         <port polarity="Input" name="cache2_DataOut(15:0)" />
         <port polarity="Input" name="cache1_DataOut(15:0)" />
         <port polarity="Input" name="critical" />
+        <port polarity="Input" name="ReverseWrite" />
         <port polarity="Output" name="cache1_DataIn(15:0)" />
         <port polarity="Output" name="cache1_Addr(15:0)" />
         <port polarity="Output" name="cache1_WE" />
@@ -72,7 +72,6 @@
         <port polarity="Input" name="proc2_DataIn(15:0)" />
         <port polarity="Input" name="proc1_WE" />
         <port polarity="Input" name="proc2_WE" />
-        <port polarity="Input" name="ReverseWrite" />
         <port polarity="Input" name="cacheSecond" />
         <blockdef name="mod_CacheMux">
             <timestamp>2017-10-13T11:34:53</timestamp>
@@ -137,13 +136,6 @@
             <rect width="64" x="352" y="-172" height="24" />
             <line x2="416" y1="-160" y2="-160" x1="352" />
         </blockdef>
-        <blockdef name="mod_DLatch">
-            <timestamp>2017-10-14T21:7:42</timestamp>
-            <rect width="256" x="64" y="-128" height="128" />
-            <line x2="0" y1="-96" y2="-96" x1="64" />
-            <line x2="0" y1="-32" y2="-32" x1="64" />
-            <line x2="384" y1="-96" y2="-96" x1="320" />
-        </blockdef>
         <blockdef name="inv">
             <timestamp>2000-1-1T10:10:10</timestamp>
             <line x2="64" y1="-32" y2="-32" x1="0" />
@@ -199,7 +191,7 @@
             <blockpin signalname="XLXN_42" name="cache2_WE" />
         </block>
         <block symbolname="mod_CacheMux" name="XLXI_6">
-            <blockpin signalname="reverse" name="sel" />
+            <blockpin signalname="ReverseWrite" name="sel" />
             <blockpin signalname="XLXN_5(15:0)" name="cache_DataOut(15:0)" />
             <blockpin signalname="proc1_DataIn(15:0)" name="proc1_DataIn(15:0)" />
             <blockpin signalname="proc2_DataIn(15:0)" name="proc2_DataIn(15:0)" />
@@ -229,24 +221,19 @@
             <blockpin signalname="XLXN_26" name="cache_WE" />
         </block>
         <block symbolname="mod_Mux16" name="XLXI_10">
-            <blockpin signalname="reverse" name="sel" />
+            <blockpin signalname="ReverseWrite" name="sel" />
             <blockpin signalname="XLXN_17(15:0)" name="inPort1(15:0)" />
             <blockpin signalname="XLXN_16(15:0)" name="inPort2(15:0)" />
             <blockpin signalname="proc2_DataOut(15:0)" name="outPort(15:0)" />
         </block>
         <block symbolname="mod_Mux16" name="XLXI_11">
-            <blockpin signalname="reverse" name="sel" />
+            <blockpin signalname="ReverseWrite" name="sel" />
             <blockpin signalname="XLXN_19(15:0)" name="inPort1(15:0)" />
             <blockpin signalname="XLXN_18(15:0)" name="inPort2(15:0)" />
             <blockpin signalname="proc1_DataOut(15:0)" name="outPort(15:0)" />
         </block>
-        <block symbolname="mod_DLatch" name="XLXI_15">
-            <blockpin signalname="ReverseWrite" name="dataIn" />
-            <blockpin signalname="critical" name="crit" />
-            <blockpin signalname="reverse" name="dataOut" />
-        </block>
         <block symbolname="inv" name="XLXI_16">
-            <blockpin signalname="reverse" name="I" />
+            <blockpin signalname="ReverseWrite" name="I" />
             <blockpin signalname="XLXN_80" name="O" />
         </block>
     </netlist>
@@ -369,12 +356,10 @@
             <wire x2="480" y1="1280" y2="1280" x1="336" />
         </branch>
         <branch name="cache2_Addr(15:0)">
-            <wire x2="464" y1="1392" y2="1392" x1="336" />
-            <wire x2="480" y1="1392" y2="1392" x1="464" />
+            <wire x2="480" y1="1392" y2="1392" x1="336" />
         </branch>
         <branch name="cache2_WE">
-            <wire x2="464" y1="1504" y2="1504" x1="240" />
-            <wire x2="480" y1="1504" y2="1504" x1="464" />
+            <wire x2="480" y1="1504" y2="1504" x1="240" />
         </branch>
         <branch name="user_DataIn(15:0)">
             <wire x2="1552" y1="2272" y2="2288" x1="1552" />
@@ -438,25 +423,8 @@
         <iomarker fontsize="28" x="1616" y="2288" name="user_Addr(15:0)" orien="R90" />
         <iomarker fontsize="28" x="1680" y="2304" name="user_WE" orien="R90" />
         <iomarker fontsize="28" x="1552" y="2288" name="user_DataIn(15:0)" orien="R90" />
-        <instance x="2768" y="2512" name="XLXI_15" orien="M0">
-        </instance>
-        <branch name="ReverseWrite">
-            <wire x2="2896" y1="2416" y2="2416" x1="2768" />
-        </branch>
         <iomarker fontsize="28" x="2896" y="2416" name="ReverseWrite" orien="R0" />
         <iomarker fontsize="28" x="416" y="160" name="cache1_DataOut(15:0)" orien="R180" />
-        <branch name="critical">
-            <wire x2="1120" y1="272" y2="272" x1="1056" />
-            <wire x2="1120" y1="272" y2="1056" x1="1120" />
-            <wire x2="1120" y1="1056" y2="2688" x1="1120" />
-            <wire x2="2608" y1="2688" y2="2688" x1="1120" />
-            <wire x2="2784" y1="2688" y2="2688" x1="2608" />
-            <wire x2="1120" y1="1056" y2="1056" x1="1056" />
-            <wire x2="2784" y1="2624" y2="2624" x1="2608" />
-            <wire x2="2608" y1="2624" y2="2688" x1="2608" />
-            <wire x2="2784" y1="2480" y2="2480" x1="2768" />
-            <wire x2="2784" y1="2480" y2="2624" x1="2784" />
-        </branch>
         <branch name="cacheSecond">
             <wire x2="1360" y1="2272" y2="2640" x1="1360" />
             <wire x2="1760" y1="2640" y2="2640" x1="1360" />
@@ -496,13 +464,13 @@
         </branch>
         <instance x="2688" y="1552" name="XLXI_7" orien="M0">
         </instance>
-        <branch name="reverse">
+        <branch name="ReverseWrite">
             <wire x2="2192" y1="1616" y2="1792" x1="2192" />
             <wire x2="2272" y1="1792" y2="1792" x1="2192" />
             <wire x2="2192" y1="1792" y2="2096" x1="2192" />
             <wire x2="2272" y1="2096" y2="2096" x1="2192" />
             <wire x2="2192" y1="2096" y2="2416" x1="2192" />
-            <wire x2="2384" y1="2416" y2="2416" x1="2192" />
+            <wire x2="2896" y1="2416" y2="2416" x1="2192" />
             <wire x2="2944" y1="1616" y2="1616" x1="2192" />
             <wire x2="2944" y1="336" y2="336" x1="2704" />
             <wire x2="2944" y1="336" y2="1072" x1="2944" />
@@ -514,5 +482,13 @@
         <instance x="2944" y="1104" name="XLXI_16" orien="M0" />
         <iomarker fontsize="28" x="240" y="1504" name="cache2_WE" orien="R180" />
         <iomarker fontsize="28" x="336" y="1392" name="cache2_Addr(15:0)" orien="R180" />
+        <branch name="critical">
+            <wire x2="1120" y1="272" y2="272" x1="1056" />
+            <wire x2="1120" y1="272" y2="1056" x1="1120" />
+            <wire x2="1120" y1="1056" y2="2688" x1="1120" />
+            <wire x2="2608" y1="2688" y2="2688" x1="1120" />
+            <wire x2="2784" y1="2688" y2="2688" x1="2608" />
+            <wire x2="1120" y1="1056" y2="1056" x1="1056" />
+        </branch>
     </sheet>
 </drawing>

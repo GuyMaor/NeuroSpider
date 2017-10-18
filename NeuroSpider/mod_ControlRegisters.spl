@@ -1,8 +1,9 @@
 [Inputs]
-clk
 WE
 beginOp
 fsmReadyForNextOp
+critical
+clk
 =inAddr[15:0]=
 =inData[15:0]=
 =cacheDataOut[15:0]=
@@ -13,8 +14,10 @@ writeReverse
 cacheWE
 fsmBeginOp
 readyForNextOp
-=cacheSel[1:0]=
+=cacheComSel[1:0]=
 =actFuncSel[1:0]=
+=weightOPSel[1:0]=
+=indexOPSel[1:0]=
 =outData[15:0]=
 =cacheDataIn[15:0]=
 =cacheAddrIn[15:0]=

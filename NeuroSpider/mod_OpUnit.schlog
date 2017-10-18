@@ -1,5 +1,0 @@
-select figure at 1243 1163 8 -wires -sn=1
-update symbols mod_ParamFetchStage
-select figure at 1808 505 8 -wires -sn=1
-select figure at 3002 2597 8 -wires -sn=1
-select all in 330 85 3002 2597 -wires -enclosed -sn=1

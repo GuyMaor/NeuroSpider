@@ -17,18 +17,10 @@ Total CPU time to Xst completion: 0.11 secs
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling verilog file "mod_TanHFunc.v" in library work
-Compiling verilog file "mod_StepFunc.v" in library work
-Module <mod_TanHFunc> compiled
-Compiling verilog file "mod_ReluFunc.v" in library work
-Module <mod_StepFunc> compiled
-Compiling verilog file "mod_ActivationFunc.v" in library work
-Module <mod_ReluFunc> compiled
-Compiling verilog file "mod_ActivFuncStage.v" in library work
-Module <mod_ActivationFunc> compiled
-Module <mod_ActivFuncStage> compiled
+Compiling verilog file "mod_ParamFetch.v" in library work
+Module <mod_ParamFetch> compiled
 No errors in compilation
-Analysis of file <"mod_ActivFuncStage.prj"> succeeded.
+Analysis of file <"mod_ParamFetch.prj"> succeeded.
  
 
 
@@ -37,7 +29,7 @@ Total CPU time to Xst completion: 0.13 secs
  
 --> 
 
-Total memory usage is 277144 kilobytes
+Total memory usage is 277124 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)

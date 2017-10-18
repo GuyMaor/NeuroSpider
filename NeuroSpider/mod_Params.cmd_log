@@ -1,2 +1,4 @@
 sch2sym -intstyle ise -family spartan3e -w -refsym mod_Params {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Params.sch} {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Params.sym} 
 sch2sym -intstyle ise -family spartan3e -w -refsym mod_Params {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Params.sch} {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Params.sym} 
+sch2hdl -intstyle ise -family spartan3e -verilog mod_Params_drc.vf -w {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Params.sch} 
+sch2sym -intstyle ise -family spartan3e -w -refsym mod_Params {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Params.sch} {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Params.sym} 

@@ -1,18 +1,26 @@
 `timescale 1ns / 1ps
-
-module mod_ControlRegisters(cacheSel,actFuncSel,weightNOTIndex,paramNOTLayer,writeReverse,clk,
+//BAD!!!
+module mod_ControlRegisters(cacheComSel,weightNOTIndex,paramNOTLayer,//Com
+							actFuncSel,writeReverse,weightOPSel,indexOPSel,//Cont
 							WE,inAddr,inData,outData,
 							cacheDataOut,cacheDataIn,cacheAddrIn,cacheWE,
 							beginOp,fsmBeginOp,readyForNextOp,fsmReadyForNextOp,
-							offsetReg,destReg,numOpsReg);
-							
+							offsetReg,destReg,numOpsReg,critical,clk);//CHANGE critical
+
+
+		//GOOD
 		parameter offsetRegAddr = 16'h8000;
 		parameter destRegAddr = 16'h8001;
 		parameter numOpsRegAddr = 16'h8002;
-		parameter cacheRouterRegAddr = 16'h8003;
-		
+		parameter cacheComRegAddr = 16'h8003;
+		parameter controlRegAddr = 16'h8004;
+
+		//GOOD
 		input clk;
-		
+		input critical;//CHANGE
+
+
+		//GOOD
 		input beginOp;
 		input fsmReadyForNextOp;
 		output fsmBeginOp;
@@ -20,15 +28,17 @@ module mod_ControlRegisters(cacheSel,actFuncSel,weightNOTIndex,paramNOTLayer,wri
 		wire fsmBeginOp = beginOp;
 		wire readyForNextOp = fsmReadyForNextOp;
 		
-		
+
+		//Might need to increase control Reg if more param	
 		output [15:0] offsetReg;
 		output [15:0] destReg;
 		output [15:0] numOpsReg;
 		reg [15:0] offsetReg;
 		reg [15:0] destReg;
 		reg [15:0] numOpsReg;
-		reg [6:0] cacheRouterReg;
-		
+		//reg [6:0] cacheComReg;
+		reg [3:0] cacheComReg;
+		reg [6:0] controlReg;
 		
 		//User Interface
 		input WE;
@@ -47,48 +57,67 @@ module mod_ControlRegisters(cacheSel,actFuncSel,weightNOTIndex,paramNOTLayer,wri
 		wire cacheWE = WE;
 
 		
-		output cacheSel;
-		output actFuncSel;
-		output weightNOTIndex;
-		output paramNOTLayer;
-		output writeReverse;
-		wire [1:0] cacheSel = cacheRouterReg[3:2];
-		wire [1:0] actFuncSel = cacheRouterReg[5:4];
-		wire weightNOTIndex = cacheRouterReg[1];//if 0, index. Otherwise wieghts.
-		wire paramNOTLayer = cacheRouterReg[0];//if 0, layer. Otherwise params.
-		wire writeReverse = cacheRouterReg[6];
-
+		
+		//com vals
+		output cacheComSel;	 //2
+		output weightNOTIndex; //1
+		output paramNOTLayer; //1
+		
+		
+		//control vals
+		output actFuncSel; //2
+		output writeReverse; //1
+		output weightOPSel; //2
+		output indexOPSel; //2
+		
+		
+		//Communication
+		wire paramNOTLayer = cacheComReg[0];
+		wire weightNOTIndex = cacheComReg[1];
+		wire [1:0] cacheComSel = cacheComReg[3:2];
+		
+		//Controls
+		
+		
+		wire [1:0] indexOPSel = controlReg[1:0];
+		wire [1:0] weightOPSel = controlReg[3:2];
+		wire writeReverse = controlReg[4];
+		wire [1:0] actFuncSel = controlReg[6:5];
+		
 
 		initial
 		begin
 				offsetReg = 16'd0;
 				destReg = 16'd0;
 				numOpsReg = 16'd0;
-				cacheRouterReg = 7'd0;	
+				cacheComReg = 4'd0;
+				controlReg = 7'd0;
 		end
 
 		always @ (posedge clk)
 		begin
-			if(WE)
+			if(WE & (~critical))
 			begin
 				case(inAddr)
 					offsetRegAddr : offsetReg = inData;
 					destRegAddr :	destReg = inData;
 					numOpsRegAddr :	numOpsReg = inData;
-					cacheRouterRegAddr : cacheRouterReg = inData[6:0];
+					cacheComRegAddr : cacheComReg = inData[4:0];
+					controlRegAddr : controlReg = inData[6:0];
 				endcase
 			end
 		end
 		
 		
 		
-		always @ (offsetReg,destReg,numOpsReg,cacheRouterReg,cacheDataOut,inAddr)
+		always @ (offsetReg,destReg,numOpsReg,cacheComReg,controlReg,cacheDataOut,inAddr)
 		begin
 			case(inAddr)
 				offsetRegAddr : outData = offsetReg;
 				destRegAddr :	outData = destReg;
 				numOpsRegAddr :	outData = numOpsReg;
-				cacheRouterRegAddr : outData = {9'd0,cacheRouterReg};
+				cacheComRegAddr : outData = {12'd0,cacheComReg};
+				controlRegAddr : outData = {9'd0,controlReg[6:0]};
 				default: outData = cacheDataOut;
 			endcase
 		end		

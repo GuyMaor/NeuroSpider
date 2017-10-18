@@ -26,12 +26,6 @@
         <signal name="inputVal(15:0)" />
         <signal name="paramsReady" />
         <signal name="offset(15:0)" />
-        <signal name="XLXN_12(15:0)" />
-        <signal name="XLXN_13" />
-        <signal name="XLXN_14" />
-        <signal name="XLXN_15(15:0)" />
-        <signal name="XLXN_16" />
-        <signal name="XLXN_17" />
         <port polarity="Input" name="clk" />
         <port polarity="Input" name="rst" />
         <port polarity="Input" name="readyNextParam" />
@@ -70,7 +64,7 @@
             <line x2="384" y1="-32" y2="-32" x1="320" />
         </blockdef>
         <blockdef name="mod_ParamFetch">
-            <timestamp>2017-10-17T11:42:8</timestamp>
+            <timestamp>2017-10-18T2:3:52</timestamp>
             <rect width="64" x="0" y="20" height="24" />
             <line x2="0" y1="32" y2="32" x1="64" />
             <line x2="0" y1="-416" y2="-416" x1="64" />

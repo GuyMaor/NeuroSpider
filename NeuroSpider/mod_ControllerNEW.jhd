@@ -1,6 +1,6 @@
 MODULE mod_ControllerNEW
 	SUBMODULE mod_ControlRegisters
-		INSTANCE XLXI_1
+		INSTANCE XLXI_6
 	SUBMODULE mod_ProcMux
 		INSTANCE XLXI_2
 	SUBMODULE mod_ProcMux

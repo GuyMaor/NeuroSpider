@@ -29,21 +29,30 @@ module mod_ActivFuncStage(inVal,sel,outVal,inDest,outDest,inWE,outWE,rst,clk,fin
 	output [15:0] outVal;
 	reg [15:0] outVal;	
 	output outDest;
-	wire [15:0] outDest = inDest;
+	
 	output outWE;
 	wire outWE;
 	
 	reg [1:0] stage;
 	wire [15:0] muxOut;
+	
+
+	
 	mod_ActivationFunc actFun(sel,inVal,muxOut);
 	wire writeToReg = stage == 2'b00 & inWE;
 	assign outWE = stage == 2'b01;
 	output finishedNeuronOp;
-	wire finishedNeuronOp = outWE;
+	wire finishedNeuronOp = outWE; 
 	
 	initial
 		stage = 2'b00;
-		
+	
+	reg [15:0] outDest;
+	initial
+		outDest = 16'd0;
+	always @ (posedge rst)
+		outDest = inDest;
+	
 	always @ (posedge clk, posedge rst)
 	begin
 		if(rst)

@@ -22,7 +22,6 @@
         <signal name="AddressInput(15:0)" />
         <signal name="DataInput(15:0)" />
         <signal name="ReadyForNextOperation" />
-        <signal name="cacheSel(1:0)" />
         <signal name="actFuncSel(1:0)" />
         <signal name="OutputData(15:0)" />
         <signal name="DataOutLayer(15:0)" />
@@ -46,6 +45,9 @@
         <signal name="offset(15:0)" />
         <signal name="ResultDest(15:0)" />
         <signal name="numOfOps(15:0)" />
+        <signal name="userCacheSel(1:0)" />
+        <signal name="indexCacheSel(1:0)" />
+        <signal name="weightCacheSel(1:0)" />
         <port polarity="Input" name="clk" />
         <port polarity="Output" name="rst" />
         <port polarity="Input" name="OpFinishMUXSIG" />
@@ -54,7 +56,6 @@
         <port polarity="Input" name="AddressInput(15:0)" />
         <port polarity="Input" name="DataInput(15:0)" />
         <port polarity="Output" name="ReadyForNextOperation" />
-        <port polarity="Output" name="cacheSel(1:0)" />
         <port polarity="Output" name="actFuncSel(1:0)" />
         <port polarity="Output" name="OutputData(15:0)" />
         <port polarity="Input" name="DataOutLayer(15:0)" />
@@ -74,8 +75,18 @@
         <port polarity="Output" name="offset(15:0)" />
         <port polarity="Output" name="ResultDest(15:0)" />
         <port polarity="Output" name="numOfOps(15:0)" />
+        <port polarity="Output" name="userCacheSel(1:0)" />
+        <port polarity="Output" name="indexCacheSel(1:0)" />
+        <port polarity="Output" name="weightCacheSel(1:0)" />
         <blockdef name="mod_ControlRegisters">
-            <timestamp>2017-10-17T11:55:12</timestamp>
+            <timestamp>2017-10-18T2:11:42</timestamp>
+            <rect width="64" x="480" y="468" height="24" />
+            <line x2="544" y1="480" y2="480" x1="480" />
+            <line x2="0" y1="288" y2="288" x1="64" />
+            <rect width="64" x="480" y="340" height="24" />
+            <line x2="544" y1="352" y2="352" x1="480" />
+            <rect width="64" x="480" y="404" height="24" />
+            <line x2="544" y1="416" y2="416" x1="480" />
             <rect width="64" x="480" y="84" height="24" />
             <line x2="544" y1="96" y2="96" x1="480" />
             <rect width="64" x="480" y="148" height="24" />
@@ -98,8 +109,6 @@
             <line x2="544" y1="-480" y2="-480" x1="480" />
             <line x2="544" y1="-416" y2="-416" x1="480" />
             <line x2="544" y1="-352" y2="-352" x1="480" />
-            <rect width="64" x="480" y="-300" height="24" />
-            <line x2="544" y1="-288" y2="-288" x1="480" />
             <rect width="64" x="480" y="-236" height="24" />
             <line x2="544" y1="-224" y2="-224" x1="480" />
             <rect width="64" x="480" y="-172" height="24" />
@@ -108,7 +117,7 @@
             <line x2="544" y1="-96" y2="-96" x1="480" />
             <rect width="64" x="480" y="-44" height="24" />
             <line x2="544" y1="-32" y2="-32" x1="480" />
-            <rect width="416" x="64" y="-640" height="896" />
+            <rect width="416" x="64" y="-640" height="1152" />
         </blockdef>
         <blockdef name="mod_ProcMux">
             <timestamp>2017-10-13T11:36:46</timestamp>
@@ -147,10 +156,11 @@
             <rect width="288" x="64" y="-192" height="256" />
         </blockdef>
         <block symbolname="mod_ControlRegisters" name="XLXI_1">
-            <blockpin signalname="clk" name="clk" />
             <blockpin signalname="WriteEnable" name="WE" />
             <blockpin signalname="StartNeuronOperation" name="beginOp" />
             <blockpin signalname="ReadyForNextOp" name="fsmReadyForNextOp" />
+            <blockpin signalname="critical" name="critical" />
+            <blockpin signalname="clk" name="clk" />
             <blockpin signalname="AddressInput(15:0)" name="inAddr(15:0)" />
             <blockpin signalname="DataInput(15:0)" name="inData(15:0)" />
             <blockpin signalname="XLXN_8(15:0)" name="cacheDataOut(15:0)" />
@@ -160,14 +170,16 @@
             <blockpin signalname="XLXN_3" name="cacheWE" />
             <blockpin signalname="StartOperation" name="fsmBeginOp" />
             <blockpin signalname="ReadyForNextOperation" name="readyForNextOp" />
-            <blockpin signalname="cacheSel(1:0)" name="cacheSel(1:0)" />
+            <blockpin signalname="userCacheSel(1:0)" name="cacheComSel(1:0)" />
             <blockpin signalname="actFuncSel(1:0)" name="actFuncSel(1:0)" />
+            <blockpin signalname="indexCacheSel(1:0)" name="indexOPSel(1:0)" />
             <blockpin signalname="OutputData(15:0)" name="outData(15:0)" />
             <blockpin signalname="XLXN_1(15:0)" name="cacheDataIn(15:0)" />
             <blockpin signalname="XLXN_2(15:0)" name="cacheAddrIn(15:0)" />
             <blockpin signalname="offset(15:0)" name="offsetReg(15:0)" />
             <blockpin signalname="ResultDest(15:0)" name="destReg(15:0)" />
             <blockpin signalname="numOfOps(15:0)" name="numOpsReg(15:0)" />
+            <blockpin signalname="weightCacheSel(1:0)" name="weightOPSel(1:0)" />
         </block>
         <block symbolname="mod_ProcMux" name="XLXI_3">
             <blockpin signalname="XLXN_10" name="sel" />
@@ -300,10 +312,6 @@
             <wire x2="1712" y1="1904" y2="1920" x1="1712" />
         </branch>
         <iomarker fontsize="28" x="1248" y="1728" name="ReadyForNextOperation" orien="R270" />
-        <branch name="cacheSel(1:0)">
-            <wire x2="1776" y1="1888" y2="1920" x1="1776" />
-        </branch>
-        <iomarker fontsize="28" x="1776" y="1888" name="cacheSel(1:0)" orien="R270" />
         <branch name="actFuncSel(1:0)">
             <wire x2="1840" y1="1888" y2="1920" x1="1840" />
         </branch>
@@ -393,19 +401,22 @@
             <wire x2="1136" y1="976" y2="992" x1="1136" />
             <wire x2="1184" y1="976" y2="976" x1="1136" />
             <wire x2="1184" y1="976" y2="992" x1="1184" />
+            <wire x2="1184" y1="992" y2="2480" x1="1184" />
+            <wire x2="2016" y1="2480" y2="2480" x1="1184" />
+            <wire x2="2352" y1="2480" y2="2480" x1="2016" />
+            <wire x2="1216" y1="976" y2="976" x1="1184" />
+            <wire x2="2352" y1="2464" y2="2480" x1="2352" />
         </branch>
-        <iomarker fontsize="28" x="1184" y="992" name="critical" orien="R90" />
         <branch name="WriteReverse">
             <wire x2="2048" y1="1664" y2="1904" x1="2048" />
             <wire x2="2096" y1="1904" y2="1904" x1="2048" />
             <wire x2="2096" y1="1904" y2="1920" x1="2096" />
         </branch>
         <branch name="offset(15:0)">
+            <wire x2="2160" y1="1888" y2="1904" x1="2160" />
             <wire x2="2160" y1="1904" y2="1920" x1="2160" />
-            <wire x2="2208" y1="1904" y2="1904" x1="2160" />
-            <wire x2="2208" y1="1872" y2="1904" x1="2208" />
-            <wire x2="2512" y1="1872" y2="1872" x1="2208" />
-            <wire x2="2512" y1="1856" y2="1872" x1="2512" />
+            <wire x2="2352" y1="1888" y2="1888" x1="2160" />
+            <wire x2="2352" y1="1872" y2="1888" x1="2352" />
         </branch>
         <branch name="ResultDest(15:0)">
             <wire x2="2224" y1="1808" y2="1904" x1="2224" />
@@ -417,7 +428,20 @@
         </branch>
         <iomarker fontsize="28" x="2224" y="1808" name="ResultDest(15:0)" orien="R270" />
         <iomarker fontsize="28" x="2288" y="1808" name="numOfOps(15:0)" orien="R270" />
-        <iomarker fontsize="28" x="2512" y="1856" name="offset(15:0)" orien="R270" />
         <iomarker fontsize="28" x="2048" y="1664" name="WriteReverse" orien="R270" />
+        <iomarker fontsize="28" x="2352" y="1872" name="offset(15:0)" orien="R270" />
+        <branch name="userCacheSel(1:0)">
+            <wire x2="2416" y1="1888" y2="1920" x1="2416" />
+        </branch>
+        <iomarker fontsize="28" x="2416" y="1888" name="userCacheSel(1:0)" orien="R270" />
+        <branch name="indexCacheSel(1:0)">
+            <wire x2="2480" y1="1888" y2="1920" x1="2480" />
+        </branch>
+        <iomarker fontsize="28" x="2480" y="1888" name="indexCacheSel(1:0)" orien="R270" />
+        <branch name="weightCacheSel(1:0)">
+            <wire x2="2544" y1="1888" y2="1920" x1="2544" />
+        </branch>
+        <iomarker fontsize="28" x="2544" y="1888" name="weightCacheSel(1:0)" orien="R270" />
+        <iomarker fontsize="28" x="1216" y="976" name="critical" orien="R0" />
     </sheet>
 </drawing>

@@ -23,7 +23,6 @@
         <signal name="XLXN_16(15:0)" />
         <signal name="XLXN_17(15:0)" />
         <signal name="clk" />
-        <signal name="sel(1:0)" />
         <signal name="critical" />
         <signal name="userDataIn(15:0)" />
         <signal name="procDataIn(15:0)" />
@@ -33,8 +32,9 @@
         <signal name="procWE" />
         <signal name="procDataOut(15:0)" />
         <signal name="userDataOut(15:0)" />
+        <signal name="userSel(1:0)" />
+        <signal name="procSel(1:0)" />
         <port polarity="Input" name="clk" />
-        <port polarity="Input" name="sel(1:0)" />
         <port polarity="Input" name="critical" />
         <port polarity="Input" name="userDataIn(15:0)" />
         <port polarity="Input" name="procDataIn(15:0)" />
@@ -44,15 +44,18 @@
         <port polarity="Input" name="procWE" />
         <port polarity="Output" name="procDataOut(15:0)" />
         <port polarity="Output" name="userDataOut(15:0)" />
+        <port polarity="Input" name="userSel(1:0)" />
+        <port polarity="Input" name="procSel(1:0)" />
         <blockdef name="mod_ParamRouter">
-            <timestamp>2017-10-17T8:4:8</timestamp>
-            <rect width="464" x="64" y="-896" height="896" />
+            <timestamp>2017-10-18T2:30:40</timestamp>
+            <rect width="64" x="0" y="20" height="24" />
+            <line x2="0" y1="32" y2="32" x1="64" />
+            <rect width="64" x="0" y="84" height="24" />
+            <line x2="0" y1="96" y2="96" x1="64" />
             <rect width="64" x="0" y="-876" height="24" />
             <line x2="0" y1="-864" y2="-864" x1="64" />
             <rect width="64" x="0" y="-812" height="24" />
             <line x2="0" y1="-800" y2="-800" x1="64" />
-            <rect width="64" x="0" y="-748" height="24" />
-            <line x2="0" y1="-736" y2="-736" x1="64" />
             <rect width="64" x="0" y="-684" height="24" />
             <line x2="0" y1="-672" y2="-672" x1="64" />
             <rect width="64" x="0" y="-620" height="24" />
@@ -92,6 +95,7 @@
             <line x2="592" y1="-96" y2="-96" x1="528" />
             <rect width="64" x="528" y="-44" height="24" />
             <line x2="592" y1="-32" y2="-32" x1="528" />
+            <rect width="464" x="64" y="-896" height="1024" />
         </blockdef>
         <blockdef name="mod_Cache">
             <timestamp>2017-10-17T7:40:54</timestamp>
@@ -108,7 +112,6 @@
         <block symbolname="mod_ParamRouter" name="XLXI_1">
             <blockpin signalname="XLXN_12(15:0)" name="cache2_DataOut(15:0)" />
             <blockpin signalname="XLXN_13(15:0)" name="cache3_DataOut(15:0)" />
-            <blockpin signalname="sel(1:0)" name="sel(1:0)" />
             <blockpin signalname="XLXN_9(15:0)" name="cache0_DataOut(15:0)" />
             <blockpin signalname="XLXN_10(15:0)" name="cache1_DataOut(15:0)" />
             <blockpin signalname="critical" name="critical" />
@@ -132,6 +135,8 @@
             <blockpin signalname="XLXN_4" name="cache3_WE" />
             <blockpin signalname="procDataOut(15:0)" name="proce_DataOut(15:0)" />
             <blockpin signalname="userDataOut(15:0)" name="user_DataOut(15:0)" />
+            <blockpin signalname="userSel(1:0)" name="userSel(1:0)" />
+            <blockpin signalname="procSel(1:0)" name="procSel(1:0)" />
         </block>
         <block symbolname="mod_Cache" name="XLXI_2">
             <blockpin signalname="XLXN_1" name="WE" />
@@ -272,10 +277,6 @@
             <wire x2="2480" y1="1616" y2="1616" x1="2464" />
         </branch>
         <iomarker fontsize="28" x="2464" y="272" name="clk" orien="R270" />
-        <branch name="sel(1:0)">
-            <wire x2="1408" y1="720" y2="720" x1="1376" />
-        </branch>
-        <iomarker fontsize="28" x="1376" y="720" name="sel(1:0)" orien="R180" />
         <branch name="critical">
             <wire x2="1408" y1="912" y2="912" x1="1376" />
         </branch>
@@ -312,5 +313,13 @@
             <wire x2="2032" y1="1424" y2="1424" x1="2000" />
         </branch>
         <iomarker fontsize="28" x="2032" y="1424" name="userDataOut(15:0)" orien="R0" />
+        <branch name="userSel(1:0)">
+            <wire x2="1408" y1="1488" y2="1488" x1="1376" />
+        </branch>
+        <iomarker fontsize="28" x="1376" y="1488" name="userSel(1:0)" orien="R180" />
+        <branch name="procSel(1:0)">
+            <wire x2="1408" y1="1552" y2="1552" x1="1376" />
+        </branch>
+        <iomarker fontsize="28" x="1376" y="1552" name="procSel(1:0)" orien="R180" />
     </sheet>
 </drawing>

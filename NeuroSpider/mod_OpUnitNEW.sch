@@ -8,17 +8,12 @@
     <netlist>
         <signal name="rst" />
         <signal name="XLXN_8" />
-        <signal name="XLXN_3" />
         <signal name="XLXN_4" />
         <signal name="XLXN_10(15:0)" />
-        <signal name="XLXN_6(15:0)" />
         <signal name="XLXN_11(15:0)" />
-        <signal name="XLXN_8(15:0)" />
         <signal name="XLXN_15" />
-        <signal name="XLXN_10" />
         <signal name="XLXN_16" />
         <signal name="XLXN_12(15:0)" />
-        <signal name="XLXN_13(15:0)" />
         <signal name="actFuncSel(1:0)" />
         <signal name="resultDestinationIn(15:0)" />
         <signal name="resultDestinationOut(15:0)" />
@@ -26,8 +21,6 @@
         <signal name="ResultWE" />
         <signal name="finishedNeuronOp" />
         <signal name="XLXN_20(15:0)" />
-        <signal name="XLXN_21(15:0)" />
-        <signal name="XLXN_22" />
         <signal name="XLXN_28" />
         <signal name="newNumInputs(15:0)" />
         <signal name="weightDataIn(15:0)" />
@@ -55,7 +48,7 @@
         <port polarity="Output" name="inputAddr(15:0)" />
         <port polarity="Output" name="weightAddr(15:0)" />
         <blockdef name="mod_ActivFuncStage">
-            <timestamp>2017-10-17T8:30:45</timestamp>
+            <timestamp>2017-10-18T2:3:31</timestamp>
             <rect width="64" x="400" y="20" height="24" />
             <line x2="464" y1="32" y2="32" x1="400" />
             <line x2="0" y1="-352" y2="-352" x1="64" />
@@ -105,7 +98,7 @@
             <line x2="512" y1="-32" y2="-32" x1="448" />
         </blockdef>
         <blockdef name="mod_ParamFetchStage">
-            <timestamp>2017-10-17T11:44:39</timestamp>
+            <timestamp>2017-10-18T2:4:25</timestamp>
             <rect width="384" x="64" y="-512" height="512" />
             <line x2="0" y1="-480" y2="-480" x1="64" />
             <line x2="0" y1="-416" y2="-416" x1="64" />

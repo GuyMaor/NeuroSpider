@@ -18,15 +18,20 @@ Total CPU time to Xst completion: 0.11 secs
 *                          HDL Compilation                              *
 =========================================================================
 Compiling verilog file "mod_ControlRegisters.v" in library work
-ERROR:HDLCompilers:28 - "mod_ControlRegisters.v" line 59 'clk' has not been declared
-ERROR:HDLCompilers:208 - "mod_ControlRegisters.v" line 3 Port reference 'clk' was not declared as input, inout or output
 Module <mod_ControlRegisters> compiled
-Analysis of file <"mod_ControlRegisters.prj"> failed.
+No errors in compilation
+Analysis of file <"mod_ControlRegisters.prj"> succeeded.
+ 
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
 --> 
 
-Total memory usage is 277116 kilobytes
+Total memory usage is 277220 kilobytes
 
-Number of errors   :    2 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

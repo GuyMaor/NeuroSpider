@@ -114,10 +114,11 @@ module mod_ParamFetch(numAdds,offset,startFetch,weightAddr,weightVal,indexAddr,
 					end
 				end*/
 
+
 				wire [15:0] inputAddr = indexReg+offset;
 				
 				reg [15:0] outWeight;
-				reg [15:0] outVal;
+				reg [15:0] outVal; 
 				reg WE;
 				
 				initial

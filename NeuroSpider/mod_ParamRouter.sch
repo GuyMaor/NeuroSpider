@@ -34,7 +34,8 @@
         <signal name="cache2_WE" />
         <signal name="cache3_WE" />
         <signal name="XLXN_34" />
-        <signal name="sel(1:0)" />
+        <signal name="sel(1:0)">
+        </signal>
         <signal name="cache0_DataOut(15:0)" />
         <signal name="cache1_DataOut(15:0)" />
         <signal name="XLXN_73" />
@@ -48,6 +49,8 @@
         <signal name="proce_Addr(15:0)" />
         <signal name="user_WE" />
         <signal name="proce_WE" />
+        <signal name="userSel(1:0)" />
+        <signal name="procSel(1:0)" />
         <port polarity="Output" name="cache2_DataIn(15:0)" />
         <port polarity="Output" name="cache3_DataIn(15:0)" />
         <port polarity="Output" name="cache2_Addr(15:0)" />
@@ -62,7 +65,6 @@
         <port polarity="Output" name="cache1_WE" />
         <port polarity="Output" name="cache2_WE" />
         <port polarity="Output" name="cache3_WE" />
-        <port polarity="Input" name="sel(1:0)" />
         <port polarity="Input" name="cache0_DataOut(15:0)" />
         <port polarity="Input" name="cache1_DataOut(15:0)" />
         <port polarity="Input" name="critical" />
@@ -74,6 +76,8 @@
         <port polarity="Input" name="proce_Addr(15:0)" />
         <port polarity="Input" name="user_WE" />
         <port polarity="Input" name="proce_WE" />
+        <port polarity="Input" name="userSel(1:0)" />
+        <port polarity="Input" name="procSel(1:0)" />
         <blockdef name="mod_ProcMux">
             <timestamp>2017-10-13T11:36:46</timestamp>
             <rect width="464" x="64" y="-448" height="448" />
@@ -108,13 +112,6 @@
             <line x2="384" y1="96" y2="96" x1="320" />
             <rect width="256" x="64" y="-128" height="256" />
         </blockdef>
-        <blockdef name="mod_DLatch">
-            <timestamp>2017-10-14T21:7:42</timestamp>
-            <rect width="256" x="64" y="-128" height="128" />
-            <line x2="0" y1="-96" y2="-96" x1="64" />
-            <line x2="0" y1="-32" y2="-32" x1="64" />
-            <line x2="384" y1="-96" y2="-96" x1="320" />
-        </blockdef>
         <blockdef name="mod_CacheMux">
             <timestamp>2017-10-13T11:34:53</timestamp>
             <rect width="448" x="64" y="-512" height="512" />
@@ -140,6 +137,17 @@
             <rect width="64" x="512" y="-156" height="24" />
             <line x2="576" y1="-144" y2="-144" x1="512" />
             <line x2="576" y1="-32" y2="-32" x1="512" />
+        </blockdef>
+        <blockdef name="MUX2">
+            <timestamp>2017-10-18T1:52:56</timestamp>
+            <rect width="256" x="64" y="-192" height="192" />
+            <line x2="0" y1="-160" y2="-160" x1="64" />
+            <rect width="64" x="0" y="-108" height="24" />
+            <line x2="0" y1="-96" y2="-96" x1="64" />
+            <rect width="64" x="0" y="-44" height="24" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <rect width="64" x="320" y="-172" height="24" />
+            <line x2="384" y1="-160" y2="-160" x1="320" />
         </blockdef>
         <block symbolname="mod_ProcMux" name="XLXI_16">
             <blockpin signalname="XLXN_34" name="sel" />
@@ -188,18 +196,8 @@
         </block>
         <block symbolname="joinWires" name="XLXI_20">
             <blockpin signalname="sel(1:0)" name="in10(1:0)" />
-            <blockpin signalname="XLXN_73" name="out1" />
-            <blockpin signalname="XLXN_74" name="out0" />
-        </block>
-        <block symbolname="mod_DLatch" name="XLXI_25">
-            <blockpin signalname="XLXN_74" name="dataIn" />
-            <blockpin signalname="critical" name="crit" />
-            <blockpin signalname="XLXN_34" name="dataOut" />
-        </block>
-        <block symbolname="mod_DLatch" name="XLXI_26">
-            <blockpin signalname="XLXN_73" name="dataIn" />
-            <blockpin signalname="critical" name="crit" />
-            <blockpin signalname="XLXN_21" name="dataOut" />
+            <blockpin signalname="XLXN_21" name="out1" />
+            <blockpin signalname="XLXN_34" name="out0" />
         </block>
         <block symbolname="mod_CacheMux" name="XLXI_27">
             <blockpin signalname="critical" name="sel" />
@@ -215,6 +213,12 @@
             <blockpin signalname="proc_DataIn(15:0)" name="cache_DataIn(15:0)" />
             <blockpin signalname="proc_Addr(15:0)" name="cache_Addr(15:0)" />
             <blockpin signalname="proc_WE" name="cache_WE" />
+        </block>
+        <block symbolname="MUX2" name="XLXI_29">
+            <blockpin signalname="critical" name="sel" />
+            <blockpin signalname="userSel(1:0)" name="inPort1(1:0)" />
+            <blockpin signalname="procSel(1:0)" name="inPort2(1:0)" />
+            <blockpin signalname="sel(1:0)" name="outPort(1:0)" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -330,9 +334,6 @@
         <branch name="cache3_WE">
             <wire x2="3072" y1="1760" y2="1760" x1="2944" />
         </branch>
-        <branch name="sel(1:0)">
-            <wire x2="3040" y1="2288" y2="2288" x1="2928" />
-        </branch>
         <branch name="cache0_DataOut(15:0)">
             <wire x2="2368" y1="624" y2="624" x1="2096" />
         </branch>
@@ -345,9 +346,6 @@
         </instance>
         <instance x="1216" y="1392" name="XLXI_18" orien="R0">
         </instance>
-        <instance x="2928" y="2256" name="XLXI_20" orien="M0">
-        </instance>
-        <iomarker fontsize="28" x="3040" y="2288" name="sel(1:0)" orien="R0" />
         <iomarker fontsize="28" x="3056" y="624" name="cache0_DataIn(15:0)" orien="R0" />
         <iomarker fontsize="28" x="3056" y="688" name="cache1_DataIn(15:0)" orien="R0" />
         <iomarker fontsize="28" x="3056" y="752" name="cache0_Addr(15:0)" orien="R0" />
@@ -367,40 +365,20 @@
         <branch name="XLXN_21">
             <wire x2="1216" y1="976" y2="976" x1="1024" />
             <wire x2="1024" y1="976" y2="2224" x1="1024" />
-            <wire x2="1216" y1="2224" y2="2224" x1="1024" />
+            <wire x2="1984" y1="2224" y2="2224" x1="1024" />
+            <wire x2="1984" y1="2224" y2="2304" x1="1984" />
+            <wire x2="2352" y1="2304" y2="2304" x1="1984" />
         </branch>
-        <branch name="XLXN_73">
-            <wire x2="2544" y1="2224" y2="2224" x1="1600" />
-            <wire x2="2544" y1="2224" y2="2288" x1="2544" />
-        </branch>
-        <instance x="1600" y="2320" name="XLXI_26" orien="M0">
-        </instance>
         <branch name="XLXN_34">
             <wire x2="2224" y1="1376" y2="1376" x1="1920" />
             <wire x2="2352" y1="1376" y2="1376" x1="2224" />
             <wire x2="1920" y1="1376" y2="2432" x1="1920" />
+            <wire x2="2320" y1="2432" y2="2432" x1="1920" />
             <wire x2="2368" y1="560" y2="560" x1="2224" />
             <wire x2="2224" y1="560" y2="1376" x1="2224" />
+            <wire x2="2352" y1="2368" y2="2368" x1="2320" />
+            <wire x2="2320" y1="2368" y2="2432" x1="2320" />
         </branch>
-        <branch name="XLXN_74">
-            <wire x2="2544" y1="2432" y2="2432" x1="2304" />
-            <wire x2="2544" y1="2352" y2="2432" x1="2544" />
-        </branch>
-        <instance x="2304" y="2528" name="XLXI_25" orien="M0">
-        </instance>
-        <branch name="critical">
-            <wire x2="992" y1="816" y2="816" x1="336" />
-            <wire x2="992" y1="816" y2="2592" x1="992" />
-            <wire x2="1616" y1="2592" y2="2592" x1="992" />
-            <wire x2="2320" y1="2592" y2="2592" x1="1616" />
-            <wire x2="2432" y1="2592" y2="2592" x1="2320" />
-            <wire x2="336" y1="816" y2="944" x1="336" />
-            <wire x2="1616" y1="2288" y2="2288" x1="1600" />
-            <wire x2="1616" y1="2288" y2="2592" x1="1616" />
-            <wire x2="2320" y1="2496" y2="2496" x1="2304" />
-            <wire x2="2320" y1="2496" y2="2592" x1="2320" />
-        </branch>
-        <iomarker fontsize="28" x="2432" y="2592" name="critical" orien="R0" />
         <instance x="336" y="1424" name="XLXI_27" orien="R0">
         </instance>
         <branch name="proce_DataOut(15:0)">
@@ -439,5 +417,32 @@
         <iomarker fontsize="28" x="272" y="1264" name="proce_Addr(15:0)" orien="R180" />
         <iomarker fontsize="28" x="304" y="1328" name="user_WE" orien="R180" />
         <iomarker fontsize="28" x="304" y="1392" name="proce_WE" orien="R180" />
+        <branch name="sel(1:0)">
+            <wire x2="2784" y1="2304" y2="2304" x1="2736" />
+        </branch>
+        <instance x="2736" y="2272" name="XLXI_20" orien="M0">
+        </instance>
+        <instance x="3168" y="2464" name="XLXI_29" orien="M0">
+        </instance>
+        <branch name="critical">
+            <wire x2="336" y1="928" y2="928" x1="320" />
+            <wire x2="336" y1="928" y2="944" x1="336" />
+            <wire x2="320" y1="928" y2="1488" x1="320" />
+            <wire x2="336" y1="1488" y2="1488" x1="320" />
+            <wire x2="336" y1="1488" y2="2592" x1="336" />
+            <wire x2="3280" y1="2592" y2="2592" x1="336" />
+            <wire x2="3376" y1="2592" y2="2592" x1="3280" />
+            <wire x2="3280" y1="2304" y2="2304" x1="3168" />
+            <wire x2="3280" y1="2304" y2="2592" x1="3280" />
+        </branch>
+        <iomarker fontsize="28" x="3376" y="2592" name="critical" orien="R0" />
+        <branch name="userSel(1:0)">
+            <wire x2="3200" y1="2368" y2="2368" x1="3168" />
+        </branch>
+        <iomarker fontsize="28" x="3200" y="2368" name="userSel(1:0)" orien="R0" />
+        <branch name="procSel(1:0)">
+            <wire x2="3200" y1="2432" y2="2432" x1="3168" />
+        </branch>
+        <iomarker fontsize="28" x="3200" y="2432" name="procSel(1:0)" orien="R0" />
     </sheet>
 </drawing>
