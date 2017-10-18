@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : mod_AddStage.vf
-// /___/   /\     Timestamp : 10/15/2017 08:45:17
+// /___/   /\     Timestamp : 10/17/2017 23:40:25
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -26,7 +26,8 @@ module mod_AddStage(clk,
                     newNumAdds, 
                     rst, 
                     outReady, 
-                    result);
+                    result, 
+                    StartingAdd);
 
     input clk;
     input inReady;
@@ -35,29 +36,31 @@ module mod_AddStage(clk,
     input rst;
    output outReady;
    output [15:0] result;
+   output StartingAdd;
    
-   wire XLXN_1;
    wire XLXN_2;
    wire XLXN_11;
+   wire StartingAdd_DUMMY;
    wire [15:0] result_DUMMY;
    
    assign result[15:0] = result_DUMMY[15:0];
+   assign StartingAdd = StartingAdd_DUMMY;
    mod_AdderFSM  XLXI_1 (.clk(clk), 
                         .inReady(inReady), 
                         .lastAdd(XLXN_2), 
                         .rst(rst), 
                         .sinAddFin(XLXN_11), 
                         .allAddsFin(outReady), 
-                        .startAdd(XLXN_1));
+                        .startAdd(StartingAdd_DUMMY));
    mod_Add  XLXI_2 (.clk(clk), 
                    .in_A(inValue[15:0]), 
                    .in_B(result_DUMMY[15:0]), 
-                   .in_En(XLXN_1), 
+                   .in_En(StartingAdd_DUMMY), 
                    .rst(rst), 
                    .out_Out(result_DUMMY[15:0]), 
                    .out_Ready(XLXN_11));
    mod_numCounter  XLXI_3 (.clk(clk), 
-                          .dec(XLXN_1), 
+                          .dec(StartingAdd_DUMMY), 
                           .inVal(newNumAdds[15:0]), 
                           .rst(rst), 
                           .isZero(XLXN_2));

@@ -121,7 +121,55 @@ module NeuroSpider_NeuroSpider_sch_tb();
 		Address = 16'h0001;//loc 1
 		DataWrite = floatNum2;//val 2
 
+		#100;clk = 1;#100;clk = 0;
+
+		WE =1;
+		Address = 16'h8004;
+		DataWrite = 16'd0;//To 0		
+
+		#100;clk = 1;#100;clk = 0;
+		
+		/*RUN Op*/
+		WE = 0;
+		StartOperation = 1;
+		
+		#100;clk = 1;#100;clk = 0;
+		StartOperation = 0;
+		#100;clk = 1;#100;clk = 0;
+		#100;clk = 1;#100;clk = 0;
+		#100;clk = 1;#100;clk = 0;
+		#100;clk = 1;#100;clk = 0;
+		#100;clk = 1;#100;clk = 0;
+		#100;clk = 1;#100;clk = 0;
+		#100;clk = 1;#100;clk = 0;
+		#100;clk = 1;#100;clk = 0;
+		#100;clk = 1;#100;clk = 0;
+		#100;clk = 1;#100;clk = 0;
+		#100;clk = 1;#100;clk = 0;
+		#100;clk = 1;#100;clk = 0;
+		#100;clk = 1;#100;clk = 0;
+		#100;clk = 1;#100;clk = 0;
+		#100;clk = 1;#100;clk = 0;
+		#100;clk = 1;#100;clk = 0;
+		#100;clk = 1;#100;clk = 0;
+		#100;clk = 1;#100;clk = 0;
+		#100;clk = 1;#100;clk = 0;
+		#100;clk = 1;#100;clk = 0;
+		#100;clk = 1;#100;clk = 0;
+		#100;clk = 1;#100;clk = 0;
+		
+		WE =1;
+		Address = 16'h8003;
+		DataWrite = 16'h0004;///L1	
+
 		#100;clk = 1;#100;clk = 0;	
+
+		WE = 0;
+		Address = 16'h0000;
+		
+		#100;clk = 1;#100;clk = 0;
+		#100;clk = 1;#100;clk = 0;
+		#100;clk = 1;#100;clk = 0;
 		
    end
 endmodule

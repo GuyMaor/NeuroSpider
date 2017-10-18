@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : mod_LayerRouter.vf
-// /___/   /\     Timestamp : 10/17/2017 03:50:43
+// /___/   /\     Timestamp : 10/17/2017 23:40:28
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -164,7 +164,6 @@ module mod_LayerRouter(cacheSecond,
    output [15:0] proc2_DataOut;
    output [15:0] user_DataOut;
    
-   wire reverse;
    wire [15:0] XLXN_5;
    wire [15:0] XLXN_7;
    wire [15:0] XLXN_16;
@@ -239,7 +238,7 @@ module mod_LayerRouter(cacheSecond,
                                               
          .proc2_DataIn(proc2_DataIn[15:0]), 
                                               .proc2_WE(proc2_WE), 
-                                              .sel(reverse), 
+                                              .sel(ReverseWrite), 
                                               .cache_Addr(XLXN_30[15:0]), 
                                               .cache_DataIn(XLXN_31[15:0]), 
                                               .cache_WE(XLXN_29), 
@@ -262,15 +261,12 @@ module mod_LayerRouter(cacheSecond,
                                               .proc2_DataOut(XLXN_17[15:0]));
    mod_Mux16  XLXI_10 (.inPort1(XLXN_17[15:0]), 
                       .inPort2(XLXN_16[15:0]), 
-                      .sel(reverse), 
+                      .sel(ReverseWrite), 
                       .outPort(proc2_DataOut[15:0]));
    mod_Mux16  XLXI_11 (.inPort1(XLXN_19[15:0]), 
                       .inPort2(XLXN_18[15:0]), 
-                      .sel(reverse), 
+                      .sel(ReverseWrite), 
                       .outPort(proc1_DataOut[15:0]));
-   mod_DLatch  XLXI_15 (.crit(critical), 
-                       .dataIn(ReverseWrite), 
-                       .dataOut(reverse));
-   INV  XLXI_16 (.I(reverse), 
+   INV  XLXI_16 (.I(ReverseWrite), 
                 .O(XLXN_80));
 endmodule

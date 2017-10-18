@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : mod_ParamRouter.vf
-// /___/   /\     Timestamp : 10/17/2017 03:50:44
+// /___/   /\     Timestamp : 10/17/2017 23:40:29
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -124,7 +124,8 @@ module mod_ParamRouter(cache0_DataOut,
                        proce_Addr, 
                        proce_DataIn, 
                        proce_WE, 
-                       sel, 
+                       procSel, 
+                       userSel, 
                        user_Addr, 
                        user_DataIn, 
                        user_WE, 
@@ -151,7 +152,8 @@ module mod_ParamRouter(cache0_DataOut,
     input [15:0] proce_Addr;
     input [15:0] proce_DataIn;
     input proce_WE;
-    input [1:0] sel;
+    input [1:0] procSel;
+    input [1:0] userSel;
     input [15:0] user_Addr;
     input [15:0] user_DataIn;
     input user_WE;
@@ -174,6 +176,7 @@ module mod_ParamRouter(cache0_DataOut,
    wire [15:0] proc_DataIn;
    wire [15:0] proc_DataOut;
    wire proc_WE;
+   wire [1:0] sel;
    wire [15:0] XLXN_3;
    wire [15:0] XLXN_4;
    wire [15:0] XLXN_5;
@@ -184,8 +187,6 @@ module mod_ParamRouter(cache0_DataOut,
    wire [15:0] XLXN_12;
    wire XLXN_21;
    wire XLXN_34;
-   wire XLXN_73;
-   wire XLXN_74;
    
    mod_ProcMux_MUSER_mod_ParamRouter  XLXI_16 
          (.cache1_DataOut(cache0_DataOut[15:0]), 
@@ -236,14 +237,8 @@ module mod_ParamRouter(cache0_DataOut,
                                               
          .proc_DataOut(proc_DataOut[15:0]));
    joinWires  XLXI_20 (.in10(sel[1:0]), 
-                      .out0(XLXN_74), 
-                      .out1(XLXN_73));
-   mod_DLatch  XLXI_25 (.crit(critical), 
-                       .dataIn(XLXN_74), 
-                       .dataOut(XLXN_34));
-   mod_DLatch  XLXI_26 (.crit(critical), 
-                       .dataIn(XLXN_73), 
-                       .dataOut(XLXN_21));
+                      .out0(XLXN_34), 
+                      .out1(XLXN_21));
    mod_CacheMux_MUSER_mod_ParamRouter  XLXI_27 
          (.cache_DataOut(proc_DataOut[15:0]), 
                                                .proc1_Addr(user_Addr[15:0]), 
@@ -263,4 +258,8 @@ module mod_ParamRouter(cache0_DataOut,
          .proc1_DataOut(user_DataOut[15:0]), 
                                                
          .proc2_DataOut(proce_DataOut[15:0]));
+   MUX2  XLXI_29 (.inPort1(userSel[1:0]), 
+                 .inPort2(procSel[1:0]), 
+                 .sel(critical), 
+                 .outPort(sel[1:0]));
 endmodule

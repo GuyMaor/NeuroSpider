@@ -1,0 +1,343 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : mod_Layers.vf
+// /___/   /\     Timestamp : 10/17/2017 23:40:25
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Layers.vf" -w "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Layers.sch"
+//Design Name: mod_Layers
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module mod_CacheMux_MUSER_mod_Layers(cache_DataOut, 
+                                     proc1_Addr, 
+                                     proc1_DataIn, 
+                                     proc1_WE, 
+                                     proc2_Addr, 
+                                     proc2_DataIn, 
+                                     proc2_WE, 
+                                     sel, 
+                                     cache_Addr, 
+                                     cache_DataIn, 
+                                     cache_WE, 
+                                     proc1_DataOut, 
+                                     proc2_DataOut);
+
+    input [15:0] cache_DataOut;
+    input [15:0] proc1_Addr;
+    input [15:0] proc1_DataIn;
+    input proc1_WE;
+    input [15:0] proc2_Addr;
+    input [15:0] proc2_DataIn;
+    input proc2_WE;
+    input sel;
+   output [15:0] cache_Addr;
+   output [15:0] cache_DataIn;
+   output cache_WE;
+   output [15:0] proc1_DataOut;
+   output [15:0] proc2_DataOut;
+   
+   
+   mod_Demux16  XLXI_1 (.inPort(cache_DataOut[15:0]), 
+                       .sel(sel), 
+                       .outPort1(proc1_DataOut[15:0]), 
+                       .outPort2(proc2_DataOut[15:0]));
+   mod_Mux16  XLXI_2 (.inPort1(proc1_DataIn[15:0]), 
+                     .inPort2(proc2_DataIn[15:0]), 
+                     .sel(sel), 
+                     .outPort(cache_DataIn[15:0]));
+   mod_Mux16  XLXI_3 (.inPort1(proc1_Addr[15:0]), 
+                     .inPort2(proc2_Addr[15:0]), 
+                     .sel(sel), 
+                     .outPort(cache_Addr[15:0]));
+   mod_Mux  XLXI_4 (.in1(proc1_WE), 
+                   .in2(proc2_WE), 
+                   .sel(sel), 
+                   .outVal(cache_WE));
+endmodule
+`timescale 1ns / 1ps
+
+module mod_ProcMux_MUSER_mod_Layers(cache1_DataOut, 
+                                    cache2_DataOut, 
+                                    proc_Addr, 
+                                    proc_DataIn, 
+                                    proc_WE, 
+                                    sel, 
+                                    cache1_Addr, 
+                                    cache1_DataIn, 
+                                    cache1_WE, 
+                                    cache2_Addr, 
+                                    cache2_DataIn, 
+                                    cache2_WE, 
+                                    proc_DataOut);
+
+    input [15:0] cache1_DataOut;
+    input [15:0] cache2_DataOut;
+    input [15:0] proc_Addr;
+    input [15:0] proc_DataIn;
+    input proc_WE;
+    input sel;
+   output [15:0] cache1_Addr;
+   output [15:0] cache1_DataIn;
+   output cache1_WE;
+   output [15:0] cache2_Addr;
+   output [15:0] cache2_DataIn;
+   output cache2_WE;
+   output [15:0] proc_DataOut;
+   
+   
+   mod_Demux16  XLXI_1 (.inPort(proc_DataIn[15:0]), 
+                       .sel(sel), 
+                       .outPort1(cache1_DataIn[15:0]), 
+                       .outPort2(cache2_DataIn[15:0]));
+   mod_Demux16  XLXI_2 (.inPort(proc_Addr[15:0]), 
+                       .sel(sel), 
+                       .outPort1(cache1_Addr[15:0]), 
+                       .outPort2(cache2_Addr[15:0]));
+   mod_Mux16  XLXI_3 (.inPort1(cache1_DataOut[15:0]), 
+                     .inPort2(cache2_DataOut[15:0]), 
+                     .sel(sel), 
+                     .outPort(proc_DataOut[15:0]));
+   mod_Demux  XLXI_4 (.inVal(proc_WE), 
+                     .sel(sel), 
+                     .out1(cache1_WE), 
+                     .out2(cache2_WE));
+endmodule
+`timescale 1ns / 1ps
+
+module mod_LayerRouter_MUSER_mod_Layers(cacheSecond, 
+                                        cache1_DataOut, 
+                                        cache2_DataOut, 
+                                        critical, 
+                                        proc1_Addr, 
+                                        proc1_DataIn, 
+                                        proc1_WE, 
+                                        proc2_Addr, 
+                                        proc2_DataIn, 
+                                        proc2_WE, 
+                                        ReverseWrite, 
+                                        user_Addr, 
+                                        user_DataIn, 
+                                        user_WE, 
+                                        cache1_Addr, 
+                                        cache1_DataIn, 
+                                        cache1_WE, 
+                                        cache2_Addr, 
+                                        cache2_DataIn, 
+                                        cache2_WE, 
+                                        proc1_DataOut, 
+                                        proc2_DataOut, 
+                                        user_DataOut);
+
+    input cacheSecond;
+    input [15:0] cache1_DataOut;
+    input [15:0] cache2_DataOut;
+    input critical;
+    input [15:0] proc1_Addr;
+    input [15:0] proc1_DataIn;
+    input proc1_WE;
+    input [15:0] proc2_Addr;
+    input [15:0] proc2_DataIn;
+    input proc2_WE;
+    input ReverseWrite;
+    input [15:0] user_Addr;
+    input [15:0] user_DataIn;
+    input user_WE;
+   output [15:0] cache1_Addr;
+   output [15:0] cache1_DataIn;
+   output cache1_WE;
+   output [15:0] cache2_Addr;
+   output [15:0] cache2_DataIn;
+   output cache2_WE;
+   output [15:0] proc1_DataOut;
+   output [15:0] proc2_DataOut;
+   output [15:0] user_DataOut;
+   
+   wire [15:0] XLXN_5;
+   wire [15:0] XLXN_7;
+   wire [15:0] XLXN_16;
+   wire [15:0] XLXN_17;
+   wire [15:0] XLXN_18;
+   wire [15:0] XLXN_19;
+   wire [15:0] XLXN_25;
+   wire XLXN_26;
+   wire XLXN_29;
+   wire [15:0] XLXN_30;
+   wire [15:0] XLXN_31;
+   wire [15:0] XLXN_34;
+   wire [15:0] XLXN_35;
+   wire [15:0] XLXN_37;
+   wire [15:0] XLXN_38;
+   wire [15:0] XLXN_39;
+   wire [15:0] XLXN_40;
+   wire XLXN_41;
+   wire XLXN_42;
+   wire [15:0] XLXN_74;
+   wire XLXN_80;
+   
+   mod_CacheMux_MUSER_mod_Layers  XLXI_1 (.cache_DataOut(cache1_DataOut[15:0]), 
+                                         .proc1_Addr(XLXN_39[15:0]), 
+                                         .proc1_DataIn(XLXN_37[15:0]), 
+                                         .proc1_WE(XLXN_41), 
+                                         .proc2_Addr(XLXN_30[15:0]), 
+                                         .proc2_DataIn(XLXN_31[15:0]), 
+                                         .proc2_WE(XLXN_29), 
+                                         .sel(critical), 
+                                         .cache_Addr(cache1_Addr[15:0]), 
+                                         .cache_DataIn(cache1_DataIn[15:0]), 
+                                         .cache_WE(cache1_WE), 
+                                         .proc1_DataOut(XLXN_7[15:0]), 
+                                         .proc2_DataOut(XLXN_5[15:0]));
+   mod_CacheMux_MUSER_mod_Layers  XLXI_2 (.cache_DataOut(cache2_DataOut[15:0]), 
+                                         .proc1_Addr(XLXN_40[15:0]), 
+                                         .proc1_DataIn(XLXN_38[15:0]), 
+                                         .proc1_WE(XLXN_42), 
+                                         .proc2_Addr(XLXN_34[15:0]), 
+                                         .proc2_DataIn(XLXN_35[15:0]), 
+                                         .proc2_WE(XLXN_26), 
+                                         .sel(critical), 
+                                         .cache_Addr(cache2_Addr[15:0]), 
+                                         .cache_DataIn(cache2_DataIn[15:0]), 
+                                         .cache_WE(cache2_WE), 
+                                         .proc1_DataOut(XLXN_25[15:0]), 
+                                         .proc2_DataOut(XLXN_74[15:0]));
+   mod_ProcMux_MUSER_mod_Layers  XLXI_5 (.cache1_DataOut(XLXN_7[15:0]), 
+                                        .cache2_DataOut(XLXN_25[15:0]), 
+                                        .proc_Addr(user_Addr[15:0]), 
+                                        .proc_DataIn(user_DataIn[15:0]), 
+                                        .proc_WE(user_WE), 
+                                        .sel(cacheSecond), 
+                                        .cache1_Addr(XLXN_39[15:0]), 
+                                        .cache1_DataIn(XLXN_37[15:0]), 
+                                        .cache1_WE(XLXN_41), 
+                                        .cache2_Addr(XLXN_40[15:0]), 
+                                        .cache2_DataIn(XLXN_38[15:0]), 
+                                        .cache2_WE(XLXN_42), 
+                                        .proc_DataOut(user_DataOut[15:0]));
+   mod_CacheMux_MUSER_mod_Layers  XLXI_6 (.cache_DataOut(XLXN_5[15:0]), 
+                                         .proc1_Addr(proc1_Addr[15:0]), 
+                                         .proc1_DataIn(proc1_DataIn[15:0]), 
+                                         .proc1_WE(proc1_WE), 
+                                         .proc2_Addr(proc2_Addr[15:0]), 
+                                         .proc2_DataIn(proc2_DataIn[15:0]), 
+                                         .proc2_WE(proc2_WE), 
+                                         .sel(ReverseWrite), 
+                                         .cache_Addr(XLXN_30[15:0]), 
+                                         .cache_DataIn(XLXN_31[15:0]), 
+                                         .cache_WE(XLXN_29), 
+                                         .proc1_DataOut(XLXN_19[15:0]), 
+                                         .proc2_DataOut(XLXN_16[15:0]));
+   mod_CacheMux_MUSER_mod_Layers  XLXI_7 (.cache_DataOut(XLXN_74[15:0]), 
+                                         .proc1_Addr(proc1_Addr[15:0]), 
+                                         .proc1_DataIn(proc1_DataIn[15:0]), 
+                                         .proc1_WE(proc1_WE), 
+                                         .proc2_Addr(proc2_Addr[15:0]), 
+                                         .proc2_DataIn(proc2_DataIn[15:0]), 
+                                         .proc2_WE(proc2_WE), 
+                                         .sel(XLXN_80), 
+                                         .cache_Addr(XLXN_34[15:0]), 
+                                         .cache_DataIn(XLXN_35[15:0]), 
+                                         .cache_WE(XLXN_26), 
+                                         .proc1_DataOut(XLXN_18[15:0]), 
+                                         .proc2_DataOut(XLXN_17[15:0]));
+   mod_Mux16  XLXI_10 (.inPort1(XLXN_17[15:0]), 
+                      .inPort2(XLXN_16[15:0]), 
+                      .sel(ReverseWrite), 
+                      .outPort(proc2_DataOut[15:0]));
+   mod_Mux16  XLXI_11 (.inPort1(XLXN_19[15:0]), 
+                      .inPort2(XLXN_18[15:0]), 
+                      .sel(ReverseWrite), 
+                      .outPort(proc1_DataOut[15:0]));
+   INV  XLXI_16 (.I(ReverseWrite), 
+                .O(XLXN_80));
+endmodule
+`timescale 1ns / 1ps
+
+module mod_Layers(cacheSecond, 
+                  clk, 
+                  critical, 
+                  proc1Addr, 
+                  proc1DataIn, 
+                  proc1WE, 
+                  proc2Addr, 
+                  proc2DataIn, 
+                  proc2WE, 
+                  ReverseWrite, 
+                  userAddr, 
+                  userDataIn, 
+                  userWE, 
+                  proc1DataOut, 
+                  proc2DataOut, 
+                  userDataOut);
+
+    input cacheSecond;
+    input clk;
+    input critical;
+    input [15:0] proc1Addr;
+    input [15:0] proc1DataIn;
+    input proc1WE;
+    input [15:0] proc2Addr;
+    input [15:0] proc2DataIn;
+    input proc2WE;
+    input ReverseWrite;
+    input [15:0] userAddr;
+    input [15:0] userDataIn;
+    input userWE;
+   output [15:0] proc1DataOut;
+   output [15:0] proc2DataOut;
+   output [15:0] userDataOut;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire [15:0] XLXN_4;
+   wire [15:0] XLXN_5;
+   wire [15:0] XLXN_6;
+   wire [15:0] XLXN_7;
+   wire [15:0] XLXN_8;
+   wire [15:0] XLXN_9;
+   
+   mod_LayerRouter_MUSER_mod_Layers  XLXI_1 (.cacheSecond(cacheSecond), 
+                                            .cache1_DataOut(XLXN_6[15:0]), 
+                                            .cache2_DataOut(XLXN_9[15:0]), 
+                                            .critical(critical), 
+                                            .proc1_Addr(proc1Addr[15:0]), 
+                                            .proc1_DataIn(proc1DataIn[15:0]), 
+                                            .proc1_WE(proc1WE), 
+                                            .proc2_Addr(proc2Addr[15:0]), 
+                                            .proc2_DataIn(proc2DataIn[15:0]), 
+                                            .proc2_WE(proc2WE), 
+                                            .ReverseWrite(ReverseWrite), 
+                                            .user_Addr(userAddr[15:0]), 
+                                            .user_DataIn(userDataIn[15:0]), 
+                                            .user_WE(userWE), 
+                                            .cache1_Addr(XLXN_5[15:0]), 
+                                            .cache1_DataIn(XLXN_4[15:0]), 
+                                            .cache1_WE(XLXN_1), 
+                                            .cache2_Addr(XLXN_8[15:0]), 
+                                            .cache2_DataIn(XLXN_7[15:0]), 
+                                            .cache2_WE(XLXN_2), 
+                                            .proc1_DataOut(proc1DataOut[15:0]), 
+                                            .proc2_DataOut(proc2DataOut[15:0]), 
+                                            .user_DataOut(userDataOut[15:0]));
+   mod_Cache  XLXI_2 (.addr(XLXN_5[15:0]), 
+                     .clk(clk), 
+                     .dataIn(XLXN_4[15:0]), 
+                     .WE(XLXN_1), 
+                     .dataOut(XLXN_6[15:0]));
+   mod_Cache  XLXI_3 (.addr(XLXN_8[15:0]), 
+                     .clk(clk), 
+                     .dataIn(XLXN_7[15:0]), 
+                     .WE(XLXN_2), 
+                     .dataOut(XLXN_9[15:0]));
+endmodule
