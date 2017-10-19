@@ -1,0 +1,2 @@
+vhdtdtfi -lib work {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControlRegistersUPDATE.v} -lang verilog -prj NeuroSpider -o mod_ControlRegistersUPDATE.spl -module mod_ControlRegistersUPDATE -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w mod_ControlRegistersUPDATE.spl {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControlRegistersUPDATE.sym} 

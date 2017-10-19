@@ -36,7 +36,6 @@
         <signal name="WE" />
         <signal name="Address(15:0)" />
         <signal name="DataWrite(15:0)" />
-        <signal name="XLXN_71(15:0)" />
         <signal name="XLXN_72(15:0)" />
         <signal name="XLXN_73(15:0)" />
         <signal name="XLXN_77(1:0)" />
@@ -48,6 +47,8 @@
         <signal name="XLXN_84(15:0)" />
         <signal name="XLXN_92(15:0)" />
         <signal name="XLXN_93" />
+        <signal name="XLXN_71(15:0)" />
+        <signal name="XLXN_94" />
         <port polarity="Input" name="clk" />
         <port polarity="Output" name="ReadyNextOperation" />
         <port polarity="Output" name="DataRead(15:0)" />
@@ -396,13 +397,18 @@
             <wire x2="2128" y1="1168" y2="1616" x1="2128" />
         </branch>
         <branch name="ReadyNextOperation">
-            <wire x2="1232" y1="1584" y2="1616" x1="1232" />
+            <wire x2="768" y1="1552" y2="1600" x1="768" />
+            <wire x2="1232" y1="1600" y2="1600" x1="768" />
+            <wire x2="1232" y1="1600" y2="1616" x1="1232" />
         </branch>
-        <iomarker fontsize="28" x="1232" y="1584" name="ReadyNextOperation" orien="R270" />
         <branch name="DataRead(15:0)">
-            <wire x2="1424" y1="1584" y2="1616" x1="1424" />
+            <wire x2="944" y1="1456" y2="1536" x1="944" />
+            <wire x2="1056" y1="1536" y2="1536" x1="944" />
+            <wire x2="1056" y1="1456" y2="1536" x1="1056" />
+            <wire x2="1424" y1="1456" y2="1456" x1="1056" />
+            <wire x2="1424" y1="1456" y2="1600" x1="1424" />
+            <wire x2="1424" y1="1600" y2="1616" x1="1424" />
         </branch>
-        <iomarker fontsize="28" x="1424" y="1584" name="DataRead(15:0)" orien="R270" />
         <instance x="2352" y="2224" name="XLXI_7" orien="R270">
         </instance>
         <branch name="XLXN_60(15:0)">
@@ -423,9 +429,9 @@
         </branch>
         <iomarker fontsize="28" x="1456" y="2256" name="StartOperation" orien="R90" />
         <branch name="WE">
-            <wire x2="1600" y1="2224" y2="2256" x1="1600" />
+            <wire x2="1600" y1="2224" y2="2240" x1="1600" />
+            <wire x2="1600" y1="2240" y2="2400" x1="1600" />
         </branch>
-        <iomarker fontsize="28" x="1600" y="2256" name="WE" orien="R90" />
         <branch name="Address(15:0)">
             <wire x2="1744" y1="2224" y2="2256" x1="1744" />
         </branch>
@@ -437,7 +443,9 @@
         <branch name="XLXN_71(15:0)">
             <wire x2="256" y1="224" y2="224" x1="128" />
             <wire x2="128" y1="224" y2="2240" x1="128" />
-            <wire x2="2032" y1="2240" y2="2240" x1="128" />
+            <wire x2="1608" y1="2240" y2="2240" x1="128" />
+            <wire x2="1616" y1="2240" y2="2240" x1="1608" />
+            <wire x2="2032" y1="2240" y2="2240" x1="1616" />
             <wire x2="2032" y1="2224" y2="2240" x1="2032" />
         </branch>
         <branch name="XLXN_72(15:0)">
@@ -577,5 +585,8 @@
             <wire x2="2400" y1="672" y2="1584" x1="2400" />
             <wire x2="2832" y1="672" y2="672" x1="2400" />
         </branch>
+        <iomarker fontsize="28" x="1600" y="2400" name="WE" orien="R90" />
+        <iomarker fontsize="28" x="768" y="1552" name="ReadyNextOperation" orien="R270" />
+        <iomarker fontsize="28" x="944" y="1456" name="DataRead(15:0)" orien="R270" />
     </sheet>
 </drawing>

@@ -1,0 +1,7 @@
+[Inputs]
+[Outputs]
+zero
+[BiDir]
+[ATTRIBUTES]
+VeriModel zeroVal
+

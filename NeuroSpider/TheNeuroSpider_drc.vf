@@ -1,0 +1,783 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : TheNeuroSpider_drc.vf
+// /___/   /\     Timestamp : 10/19/2017 05:53:41
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -intstyle ise -family spartan3e -verilog TheNeuroSpider_drc.vf -w "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/TheNeuroSpider.sch"
+//Design Name: TheNeuroSpider
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module mod_CacheMux_MUSER_TheNeuroSpider(cache_DataOut, 
+                                         proc1_Addr, 
+                                         proc1_DataIn, 
+                                         proc1_WE, 
+                                         proc2_Addr, 
+                                         proc2_DataIn, 
+                                         proc2_WE, 
+                                         sel, 
+                                         cache_Addr, 
+                                         cache_DataIn, 
+                                         cache_WE, 
+                                         proc1_DataOut, 
+                                         proc2_DataOut);
+
+    input [15:0] cache_DataOut;
+    input [15:0] proc1_Addr;
+    input [15:0] proc1_DataIn;
+    input proc1_WE;
+    input [15:0] proc2_Addr;
+    input [15:0] proc2_DataIn;
+    input proc2_WE;
+    input sel;
+   output [15:0] cache_Addr;
+   output [15:0] cache_DataIn;
+   output cache_WE;
+   output [15:0] proc1_DataOut;
+   output [15:0] proc2_DataOut;
+   
+   
+   mod_Demux16  XLXI_1 (.inPort(cache_DataOut[15:0]), 
+                       .sel(sel), 
+                       .outPort1(proc1_DataOut[15:0]), 
+                       .outPort2(proc2_DataOut[15:0]));
+   mod_Mux16  XLXI_2 (.inPort1(proc1_DataIn[15:0]), 
+                     .inPort2(proc2_DataIn[15:0]), 
+                     .sel(sel), 
+                     .outPort(cache_DataIn[15:0]));
+   mod_Mux16  XLXI_3 (.inPort1(proc1_Addr[15:0]), 
+                     .inPort2(proc2_Addr[15:0]), 
+                     .sel(sel), 
+                     .outPort(cache_Addr[15:0]));
+   mod_Mux  XLXI_4 (.in1(proc1_WE), 
+                   .in2(proc2_WE), 
+                   .sel(sel), 
+                   .outVal(cache_WE));
+endmodule
+`timescale 1ns / 1ps
+
+module mod_LayersUPDATE_MUSER_TheNeuroSpider(clk, 
+                                             critical, 
+                                             FetchAddr, 
+                                             procDataIn, 
+                                             procWE, 
+                                             StoreStageAddr, 
+                                             userAddr, 
+                                             userDataIn, 
+                                             userWE, 
+                                             DataOutUser, 
+                                             DataToFetchStage);
+
+    input clk;
+    input critical;
+    input [15:0] FetchAddr;
+    input [15:0] procDataIn;
+    input procWE;
+    input [15:0] StoreStageAddr;
+    input [15:0] userAddr;
+    input [15:0] userDataIn;
+    input userWE;
+   output [15:0] DataOutUser;
+   output [15:0] DataToFetchStage;
+   
+   wire [15:0] XLXN_1;
+   wire [15:0] XLXN_2;
+   wire [15:0] XLXN_3;
+   wire XLXN_4;
+   wire [15:0] XLXN_7;
+   
+   mod_CacheMux_MUSER_TheNeuroSpider  XLXI_1 (.cache_DataOut(XLXN_1[15:0]), 
+                                             .proc1_Addr(userAddr[15:0]), 
+                                             .proc1_DataIn(userDataIn[15:0]), 
+                                             .proc1_WE(userWE), 
+                                             .proc2_Addr(XLXN_7[15:0]), 
+                                             .proc2_DataIn(procDataIn[15:0]), 
+                                             .proc2_WE(procWE), 
+                                             .sel(critical), 
+                                             .cache_Addr(XLXN_3[15:0]), 
+                                             .cache_DataIn(XLXN_2[15:0]), 
+                                             .cache_WE(XLXN_4), 
+                                             .proc1_DataOut(DataOutUser[15:0]), 
+                                             
+         .proc2_DataOut(DataToFetchStage[15:0]));
+   mod_Cache  XLXI_2 (.addr(XLXN_3[15:0]), 
+                     .clk(clk), 
+                     .dataIn(XLXN_2[15:0]), 
+                     .WE(XLXN_4), 
+                     .dataOut(XLXN_1[15:0]));
+   mod_Mux16  XLXI_3 (.inPort1(FetchAddr[15:0]), 
+                     .inPort2(StoreStageAddr[15:0]), 
+                     .sel(procWE), 
+                     .outPort(XLXN_7[15:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module mod_ParamsUPDATE_MUSER_TheNeuroSpider(clk, 
+                                             critical, 
+                                             procAddr, 
+                                             userAddr, 
+                                             userDataIn, 
+                                             userWE, 
+                                             procDataOut, 
+                                             userDataOut);
+
+    input clk;
+    input critical;
+    input [15:0] procAddr;
+    input [15:0] userAddr;
+    input [15:0] userDataIn;
+    input userWE;
+   output [15:0] procDataOut;
+   output [15:0] userDataOut;
+   
+   wire XLXN_1;
+   wire [15:0] XLXN_2;
+   wire [15:0] XLXN_3;
+   wire [15:0] XLXN_4;
+   wire XLXN_11;
+   wire [15:0] XLXN_13;
+   
+   mod_Cache  XLXI_1 (.addr(XLXN_3[15:0]), 
+                     .clk(clk), 
+                     .dataIn(XLXN_2[15:0]), 
+                     .WE(XLXN_1), 
+                     .dataOut(XLXN_4[15:0]));
+   mod_CacheMux_MUSER_TheNeuroSpider  XLXI_2 (.cache_DataOut(XLXN_4[15:0]), 
+                                             .proc1_Addr(userAddr[15:0]), 
+                                             .proc1_DataIn(userDataIn[15:0]), 
+                                             .proc1_WE(userWE), 
+                                             .proc2_Addr(procAddr[15:0]), 
+                                             .proc2_DataIn(XLXN_13[15:0]), 
+                                             .proc2_WE(XLXN_11), 
+                                             .sel(critical), 
+                                             .cache_Addr(XLXN_3[15:0]), 
+                                             .cache_DataIn(XLXN_2[15:0]), 
+                                             .cache_WE(XLXN_1), 
+                                             .proc1_DataOut(userDataOut[15:0]), 
+                                             .proc2_DataOut(procDataOut[15:0]));
+   zeroVal  XLXI_3 (.zero(XLXN_11));
+endmodule
+`timescale 1ns / 1ps
+
+module mod_ParamFetchStage_MUSER_TheNeuroSpider(clk, 
+                                                IndexOffset, 
+                                                indexVal, 
+                                                inputVal, 
+                                                numInputs, 
+                                                offset, 
+                                                readyNextParam, 
+                                                rst, 
+                                                WeightOffset, 
+                                                weightVal, 
+                                                indexAddr, 
+                                                inputAddr, 
+                                                neuronInput, 
+                                                neuronWeight, 
+                                                paramsReady, 
+                                                weightAddr);
+
+    input clk;
+    input [15:0] IndexOffset;
+    input [15:0] indexVal;
+    input [15:0] inputVal;
+    input [15:0] numInputs;
+    input [15:0] offset;
+    input readyNextParam;
+    input rst;
+    input [15:0] WeightOffset;
+    input [15:0] weightVal;
+   output [15:0] indexAddr;
+   output [15:0] inputAddr;
+   output [15:0] neuronInput;
+   output [15:0] neuronWeight;
+   output paramsReady;
+   output [15:0] weightAddr;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire [15:0] XLXN_5;
+   wire [15:0] XLXN_6;
+   wire XLXN_9;
+   wire XLXN_11;
+   
+   REG16  XLXI_1 (.clk(clk), 
+                 .en(XLXN_2), 
+                 .inV(XLXN_6[15:0]), 
+                 .rst(rst), 
+                 .outV(neuronWeight[15:0]));
+   mod_TriStateMachine  XLXI_3 (.clk(clk), 
+                               .in0(XLXN_11), 
+                               .in1(XLXN_9), 
+                               .in2(readyNextParam), 
+                               .rst(rst), 
+                               .state0(XLXN_1), 
+                               .state1(XLXN_2), 
+                               .state2(paramsReady));
+   REG16  XLXI_4 (.clk(clk), 
+                 .en(XLXN_2), 
+                 .inV(XLXN_5[15:0]), 
+                 .rst(rst), 
+                 .outV(neuronInput[15:0]));
+   mod_ParamFetch  XLXI_5 (.clk(clk), 
+                          .indexOffset(IndexOffset[15:0]), 
+                          .indexVal(indexVal[15:0]), 
+                          .inputVal(inputVal[15:0]), 
+                          .numAdds(numInputs[15:0]), 
+                          .offset(offset[15:0]), 
+                          .rst(rst), 
+                          .startFetch(XLXN_1), 
+                          .weightOffset(WeightOffset[15:0]), 
+                          .weightVal(weightVal[15:0]), 
+                          .fsmReply(XLXN_11), 
+                          .indexAddr(indexAddr[15:0]), 
+                          .inputAddr(inputAddr[15:0]), 
+                          .outVal(XLXN_5[15:0]), 
+                          .outWeight(XLXN_6[15:0]), 
+                          .WE(XLXN_9), 
+                          .weightAddr(weightAddr[15:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module mod_MulStageNEW_MUSER_TheNeuroSpider(clk, 
+                                            destReady, 
+                                            in_A, 
+                                            in_B, 
+                                            rst, 
+                                            srcReady, 
+                                            multiplicationResult, 
+                                            outputReady, 
+                                            readyForInput);
+
+    input clk;
+    input destReady;
+    input [15:0] in_A;
+    input [15:0] in_B;
+    input rst;
+    input srcReady;
+   output [15:0] multiplicationResult;
+   output outputReady;
+   output readyForInput;
+   
+   wire out_Ready;
+   wire state1;
+   wire [15:0] XLXN_1;
+   wire readyForInput_DUMMY;
+   
+   assign readyForInput = readyForInput_DUMMY;
+   mod_TriStateMachine  XLXI_1 (.clk(clk), 
+                               .in0(srcReady), 
+                               .in1(out_Ready), 
+                               .in2(destReady), 
+                               .rst(rst), 
+                               .state0(readyForInput_DUMMY), 
+                               .state1(state1), 
+                               .state2(outputReady));
+   REG16  XLXI_6 (.clk(clk), 
+                 .en(state1), 
+                 .inV(XLXN_1[15:0]), 
+                 .rst(rst), 
+                 .outV(multiplicationResult[15:0]));
+   mod_Multiply  XLXI_8 (.clk(clk), 
+                        .in_A(in_A[15:0]), 
+                        .in_B(in_B[15:0]), 
+                        .in_En(readyForInput_DUMMY), 
+                        .rst(rst), 
+                        .out_Out(XLXN_1[15:0]), 
+                        .out_Ready(out_Ready));
+endmodule
+`timescale 1ns / 1ps
+
+module mod_AddStage_MUSER_TheNeuroSpider(clk, 
+                                         inReady, 
+                                         inValue, 
+                                         newNumAdds, 
+                                         rst, 
+                                         outReady, 
+                                         result, 
+                                         StartingAdd);
+
+    input clk;
+    input inReady;
+    input [15:0] inValue;
+    input [15:0] newNumAdds;
+    input rst;
+   output outReady;
+   output [15:0] result;
+   output StartingAdd;
+   
+   wire XLXN_2;
+   wire XLXN_11;
+   wire StartingAdd_DUMMY;
+   wire [15:0] result_DUMMY;
+   
+   assign result[15:0] = result_DUMMY[15:0];
+   assign StartingAdd = StartingAdd_DUMMY;
+   mod_AdderFSM  XLXI_1 (.clk(clk), 
+                        .inReady(inReady), 
+                        .lastAdd(XLXN_2), 
+                        .rst(rst), 
+                        .sinAddFin(XLXN_11), 
+                        .allAddsFin(outReady), 
+                        .startAdd(StartingAdd_DUMMY));
+   mod_Add  XLXI_2 (.clk(clk), 
+                   .in_A(inValue[15:0]), 
+                   .in_B(result_DUMMY[15:0]), 
+                   .in_En(StartingAdd_DUMMY), 
+                   .rst(rst), 
+                   .out_Out(result_DUMMY[15:0]), 
+                   .out_Ready(XLXN_11));
+   mod_numCounter  XLXI_3 (.clk(clk), 
+                          .dec(StartingAdd_DUMMY), 
+                          .inVal(newNumAdds[15:0]), 
+                          .rst(rst), 
+                          .isZero(XLXN_2));
+endmodule
+`timescale 1ns / 1ps
+
+module mod_OpUnitNEW_MUSER_TheNeuroSpider(actFuncSel, 
+                                          clk, 
+                                          indexDataIn, 
+                                          IndexOffset, 
+                                          inputDataIn, 
+                                          newNumInputs, 
+                                          offset, 
+                                          resultDestinationIn, 
+                                          rst, 
+                                          weightDataIn, 
+                                          WeightOffset, 
+                                          finalResult, 
+                                          finishedNeuronOp, 
+                                          indexAddr, 
+                                          inputAddr, 
+                                          resultDestinationOut, 
+                                          ResultWE, 
+                                          weightAddr);
+
+    input [1:0] actFuncSel;
+    input clk;
+    input [15:0] indexDataIn;
+    input [15:0] IndexOffset;
+    input [15:0] inputDataIn;
+    input [15:0] newNumInputs;
+    input [15:0] offset;
+    input [15:0] resultDestinationIn;
+    input rst;
+    input [15:0] weightDataIn;
+    input [15:0] WeightOffset;
+   output [15:0] finalResult;
+   output finishedNeuronOp;
+   output [15:0] indexAddr;
+   output [15:0] inputAddr;
+   output [15:0] resultDestinationOut;
+   output ResultWE;
+   output [15:0] weightAddr;
+   
+   wire XLXN_4;
+   wire XLXN_8;
+   wire [15:0] XLXN_10;
+   wire [15:0] XLXN_11;
+   wire [15:0] XLXN_12;
+   wire XLXN_15;
+   wire XLXN_16;
+   wire [15:0] XLXN_20;
+   wire XLXN_28;
+   
+   mod_ActivFuncStage  XLXI_5 (.clk(clk), 
+                              .inDest(resultDestinationIn[15:0]), 
+                              .inVal(XLXN_12[15:0]), 
+                              .inWE(XLXN_16), 
+                              .rst(rst), 
+                              .sel(actFuncSel[1:0]), 
+                              .finishedNeuronOp(finishedNeuronOp), 
+                              .outDest(resultDestinationOut[15:0]), 
+                              .outVal(finalResult[15:0]), 
+                              .outWE(ResultWE));
+   mod_AddStage_MUSER_TheNeuroSpider  XLXI_6 (.clk(clk), 
+                                             .inReady(XLXN_28), 
+                                             .inValue(XLXN_20[15:0]), 
+                                             .newNumAdds(newNumInputs[15:0]), 
+                                             .rst(rst), 
+                                             .outReady(XLXN_16), 
+                                             .result(XLXN_12[15:0]), 
+                                             .StartingAdd(XLXN_15));
+   mod_MulStageNEW_MUSER_TheNeuroSpider  XLXI_12 (.clk(clk), 
+                                                 .destReady(XLXN_15), 
+                                                 .in_A(XLXN_10[15:0]), 
+                                                 .in_B(XLXN_11[15:0]), 
+                                                 .rst(rst), 
+                                                 .srcReady(XLXN_4), 
+                                                 
+         .multiplicationResult(XLXN_20[15:0]), 
+                                                 .outputReady(XLXN_28), 
+                                                 .readyForInput(XLXN_8));
+   mod_ParamFetchStage_MUSER_TheNeuroSpider  XLXI_13 (.clk(clk), 
+                                                     
+         .IndexOffset(IndexOffset[15:0]), 
+                                                     
+         .indexVal(indexDataIn[15:0]), 
+                                                     
+         .inputVal(inputDataIn[15:0]), 
+                                                     
+         .numInputs(newNumInputs[15:0]), 
+                                                     .offset(offset[15:0]), 
+                                                     .readyNextParam(XLXN_8), 
+                                                     .rst(rst), 
+                                                     
+         .WeightOffset(WeightOffset[15:0]), 
+                                                     
+         .weightVal(weightDataIn[15:0]), 
+                                                     
+         .indexAddr(indexAddr[15:0]), 
+                                                     
+         .inputAddr(inputAddr[15:0]), 
+                                                     
+         .neuronInput(XLXN_10[15:0]), 
+                                                     
+         .neuronWeight(XLXN_11[15:0]), 
+                                                     .paramsReady(XLXN_4), 
+                                                     
+         .weightAddr(weightAddr[15:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module mod_ProcMux_MUSER_TheNeuroSpider(cache1_DataOut, 
+                                        cache2_DataOut, 
+                                        proc_Addr, 
+                                        proc_DataIn, 
+                                        proc_WE, 
+                                        sel, 
+                                        cache1_Addr, 
+                                        cache1_DataIn, 
+                                        cache1_WE, 
+                                        cache2_Addr, 
+                                        cache2_DataIn, 
+                                        cache2_WE, 
+                                        proc_DataOut);
+
+    input [15:0] cache1_DataOut;
+    input [15:0] cache2_DataOut;
+    input [15:0] proc_Addr;
+    input [15:0] proc_DataIn;
+    input proc_WE;
+    input sel;
+   output [15:0] cache1_Addr;
+   output [15:0] cache1_DataIn;
+   output cache1_WE;
+   output [15:0] cache2_Addr;
+   output [15:0] cache2_DataIn;
+   output cache2_WE;
+   output [15:0] proc_DataOut;
+   
+   
+   mod_Demux16  XLXI_1 (.inPort(proc_DataIn[15:0]), 
+                       .sel(sel), 
+                       .outPort1(cache1_DataIn[15:0]), 
+                       .outPort2(cache2_DataIn[15:0]));
+   mod_Demux16  XLXI_2 (.inPort(proc_Addr[15:0]), 
+                       .sel(sel), 
+                       .outPort1(cache1_Addr[15:0]), 
+                       .outPort2(cache2_Addr[15:0]));
+   mod_Mux16  XLXI_3 (.inPort1(cache1_DataOut[15:0]), 
+                     .inPort2(cache2_DataOut[15:0]), 
+                     .sel(sel), 
+                     .outPort(proc_DataOut[15:0]));
+   mod_Demux  XLXI_4 (.inVal(proc_WE), 
+                     .sel(sel), 
+                     .out1(cache1_WE), 
+                     .out2(cache2_WE));
+endmodule
+`timescale 1ns / 1ps
+
+module mod_ControllerUPDATE_MUSER_TheNeuroSpider(AddrIn, 
+                                                 CacheSel, 
+                                                 clk, 
+                                                 DataIn, 
+                                                 FinishedEverything, 
+                                                 IndexDataOut, 
+                                                 layersDataOut, 
+                                                 StartOperation, 
+                                                 weightDataOut, 
+                                                 WriteEnable, 
+                                                 actFuncSel, 
+                                                 critical, 
+                                                 Destination, 
+                                                 indexAddr, 
+                                                 indexDataIn, 
+                                                 indexOffset, 
+                                                 indexWE, 
+                                                 inputOffsetReg, 
+                                                 layersAddr, 
+                                                 layersDataIn, 
+                                                 layersWE, 
+                                                 NumOps, 
+                                                 OutData, 
+                                                 ReadyForNextOp, 
+                                                 rst, 
+                                                 weightAddr, 
+                                                 weightDataIn, 
+                                                 weightOffset, 
+                                                 weightWE);
+
+    input [15:0] AddrIn;
+    input [1:0] CacheSel;
+    input clk;
+    input [15:0] DataIn;
+    input FinishedEverything;
+    input [15:0] IndexDataOut;
+    input [15:0] layersDataOut;
+    input StartOperation;
+    input [15:0] weightDataOut;
+    input WriteEnable;
+   output [1:0] actFuncSel;
+   output critical;
+   output [15:0] Destination;
+   output [15:0] indexAddr;
+   output [15:0] indexDataIn;
+   output [15:0] indexOffset;
+   output indexWE;
+   output [15:0] inputOffsetReg;
+   output [15:0] layersAddr;
+   output [15:0] layersDataIn;
+   output layersWE;
+   output [15:0] NumOps;
+   output [15:0] OutData;
+   output ReadyForNextOp;
+   output rst;
+   output [15:0] weightAddr;
+   output [15:0] weightDataIn;
+   output [15:0] weightOffset;
+   output weightWE;
+   
+   wire XLXN_37;
+   wire XLXN_38;
+   wire [15:0] XLXN_39;
+   wire [15:0] XLXN_40;
+   wire [15:0] XLXN_42;
+   wire [15:0] XLXN_43;
+   wire XLXN_46;
+   wire XLXN_47;
+   wire XLXN_48;
+   wire [15:0] XLXN_49;
+   wire [15:0] XLXN_50;
+   wire XLXN_72;
+   wire critical_DUMMY;
+   
+   assign critical = critical_DUMMY;
+   mod_ControlRegistersUPDATE  XLXI_6 (.beginOp(StartOperation), 
+                                      .cacheDataOut(XLXN_42[15:0]), 
+                                      .cacheSelIn(CacheSel[1:0]), 
+                                      .clk(clk), 
+                                      .critical(critical_DUMMY), 
+                                      .fsmReadyForNextOp(XLXN_47), 
+                                      .inAddr(AddrIn[15:0]), 
+                                      .inData(DataIn[15:0]), 
+                                      .WE(WriteEnable), 
+                                      .actFuncSelReg(actFuncSel[1:0]), 
+                                      .cacheAddrIn(XLXN_49[15:0]), 
+                                      .cacheDataIn(XLXN_50[15:0]), 
+                                      .cacheSelOut0(XLXN_38), 
+                                      .cacheSelOut1(XLXN_37), 
+                                      .cacheWE(XLXN_48), 
+                                      .destReg(Destination[15:0]), 
+                                      .fsmBeginOp(XLXN_46), 
+                                      .indexOffsetReg(indexOffset[15:0]), 
+                                      .numOpsReg(NumOps[15:0]), 
+                                      .offsetReg(inputOffsetReg[15:0]), 
+                                      .outData(OutData[15:0]), 
+                                      .readyForNextOp(ReadyForNextOp), 
+                                      .weightOffsetReg(weightOffset[15:0]));
+   mod_ProcMux_MUSER_TheNeuroSpider  XLXI_7 (.cache1_DataOut(XLXN_43[15:0]), 
+                                            
+         .cache2_DataOut(weightDataOut[15:0]), 
+                                            .proc_Addr(XLXN_49[15:0]), 
+                                            .proc_DataIn(XLXN_50[15:0]), 
+                                            .proc_WE(XLXN_48), 
+                                            .sel(XLXN_37), 
+                                            .cache1_Addr(XLXN_40[15:0]), 
+                                            .cache1_DataIn(XLXN_39[15:0]), 
+                                            .cache1_WE(XLXN_72), 
+                                            .cache2_Addr(weightAddr[15:0]), 
+                                            .cache2_DataIn(weightDataIn[15:0]), 
+                                            .cache2_WE(weightWE), 
+                                            .proc_DataOut(XLXN_42[15:0]));
+   mod_ProcMux_MUSER_TheNeuroSpider  XLXI_8 
+         (.cache1_DataOut(layersDataOut[15:0]), 
+                                            
+         .cache2_DataOut(IndexDataOut[15:0]), 
+                                            .proc_Addr(XLXN_40[15:0]), 
+                                            .proc_DataIn(XLXN_39[15:0]), 
+                                            .proc_WE(XLXN_72), 
+                                            .sel(XLXN_38), 
+                                            .cache1_Addr(layersAddr[15:0]), 
+                                            .cache1_DataIn(layersDataIn[15:0]), 
+                                            .cache1_WE(layersWE), 
+                                            .cache2_Addr(indexAddr[15:0]), 
+                                            .cache2_DataIn(indexDataIn[15:0]), 
+                                            .cache2_WE(indexWE), 
+                                            .proc_DataOut(XLXN_43[15:0]));
+   mod_ControlFSM  XLXI_9 (.clk(clk), 
+                          .finishedOp(FinishedEverything), 
+                          .StartOp(XLXN_46), 
+                          .critical(critical_DUMMY), 
+                          .readyNextOp(XLXN_47), 
+                          .resetEverything(rst));
+endmodule
+`timescale 1ns / 1ps
+
+module TheNeuroSpider(Address, 
+                      CacheSelect, 
+                      clk, 
+                      InputData, 
+                      StartOperation, 
+                      WE, 
+                      OutputData, 
+                      ReadyForNextOp);
+
+    input [15:0] Address;
+    input [1:0] CacheSelect;
+    input clk;
+    input [15:0] InputData;
+    input StartOperation;
+    input WE;
+   output [15:0] OutputData;
+   output ReadyForNextOp;
+   
+   wire [15:0] XLXN_6;
+   wire [15:0] XLXN_7;
+   wire XLXN_10;
+   wire XLXN_11;
+   wire [15:0] XLXN_12;
+   wire [15:0] XLXN_13;
+   wire [15:0] XLXN_14;
+   wire XLXN_15;
+   wire [15:0] XLXN_16;
+   wire XLXN_17;
+   wire XLXN_18;
+   wire XLXN_19;
+   wire [15:0] XLXN_21;
+   wire [15:0] XLXN_22;
+   wire [15:0] XLXN_23;
+   wire [15:0] XLXN_24;
+   wire [15:0] XLXN_25;
+   wire [15:0] XLXN_26;
+   wire [15:0] XLXN_27;
+   wire [15:0] XLXN_28;
+   wire XLXN_30;
+   wire [15:0] XLXN_31;
+   wire [1:0] XLXN_33;
+   wire [15:0] XLXN_34;
+   wire [15:0] XLXN_35;
+   wire [15:0] XLXN_36;
+   wire [15:0] XLXN_40;
+   wire [15:0] XLXN_41;
+   wire [15:0] XLXN_43;
+   wire [15:0] XLXN_45;
+   
+   mod_ControllerUPDATE_MUSER_TheNeuroSpider  XLXI_1 (.AddrIn(Address[15:0]), 
+                                                     
+         .CacheSel(CacheSelect[1:0]), 
+                                                     .clk(clk), 
+                                                     .DataIn(InputData[15:0]), 
+                                                     
+         .FinishedEverything(XLXN_30), 
+                                                     
+         .IndexDataOut(XLXN_27[15:0]), 
+                                                     
+         .layersDataOut(XLXN_6[15:0]), 
+                                                     
+         .StartOperation(StartOperation), 
+                                                     
+         .weightDataOut(XLXN_28[15:0]), 
+                                                     .WriteEnable(WE), 
+                                                     .actFuncSel(XLXN_33[1:0]), 
+                                                     .critical(XLXN_18), 
+                                                     
+         .Destination(XLXN_34[15:0]), 
+                                                     .indexAddr(XLXN_25[15:0]), 
+                                                     
+         .indexDataIn(XLXN_26[15:0]), 
+                                                     
+         .indexOffset(XLXN_40[15:0]), 
+                                                     .indexWE(XLXN_19), 
+                                                     
+         .inputOffsetReg(XLXN_36[15:0]), 
+                                                     
+         .layersAddr(XLXN_16[15:0]), 
+                                                     
+         .layersDataIn(XLXN_13[15:0]), 
+                                                     .layersWE(XLXN_11), 
+                                                     .NumOps(XLXN_35[15:0]), 
+                                                     
+         .OutData(OutputData[15:0]), 
+                                                     
+         .ReadyForNextOp(ReadyForNextOp), 
+                                                     .rst(XLXN_10), 
+                                                     
+         .weightAddr(XLXN_22[15:0]), 
+                                                     
+         .weightDataIn(XLXN_23[15:0]), 
+                                                     
+         .weightOffset(XLXN_41[15:0]), 
+                                                     .weightWE(XLXN_17));
+   mod_OpUnitNEW_MUSER_TheNeuroSpider  XLXI_3 (.actFuncSel(XLXN_33[1:0]), 
+                                              .clk(clk), 
+                                              .indexDataIn(XLXN_45[15:0]), 
+                                              .IndexOffset(XLXN_40[15:0]), 
+                                              .inputDataIn(XLXN_7[15:0]), 
+                                              .newNumInputs(XLXN_35[15:0]), 
+                                              .offset(XLXN_36[15:0]), 
+                                              
+         .resultDestinationIn(XLXN_34[15:0]), 
+                                              .rst(XLXN_10), 
+                                              .weightDataIn(XLXN_43[15:0]), 
+                                              .WeightOffset(XLXN_41[15:0]), 
+                                              .finalResult(XLXN_14[15:0]), 
+                                              .finishedNeuronOp(XLXN_30), 
+                                              .indexAddr(XLXN_24[15:0]), 
+                                              .inputAddr(XLXN_12[15:0]), 
+                                              
+         .resultDestinationOut(XLXN_31[15:0]), 
+                                              .ResultWE(XLXN_15), 
+                                              .weightAddr(XLXN_21[15:0]));
+   mod_ParamsUPDATE_MUSER_TheNeuroSpider  XLXI_4 (.clk(clk), 
+                                                 .critical(XLXN_18), 
+                                                 .procAddr(XLXN_21[15:0]), 
+                                                 .userAddr(XLXN_22[15:0]), 
+                                                 .userDataIn(XLXN_23[15:0]), 
+                                                 .userWE(XLXN_17), 
+                                                 .procDataOut(XLXN_43[15:0]), 
+                                                 .userDataOut(XLXN_28[15:0]));
+   mod_ParamsUPDATE_MUSER_TheNeuroSpider  XLXI_5 (.clk(clk), 
+                                                 .critical(XLXN_18), 
+                                                 .procAddr(XLXN_24[15:0]), 
+                                                 .userAddr(XLXN_25[15:0]), 
+                                                 .userDataIn(XLXN_26[15:0]), 
+                                                 .userWE(XLXN_19), 
+                                                 .procDataOut(XLXN_45[15:0]), 
+                                                 .userDataOut(XLXN_27[15:0]));
+   mod_LayersUPDATE_MUSER_TheNeuroSpider  XLXI_6 (.clk(clk), 
+                                                 .critical(XLXN_18), 
+                                                 .FetchAddr(XLXN_12[15:0]), 
+                                                 .procDataIn(XLXN_14[15:0]), 
+                                                 .procWE(XLXN_15), 
+                                                 
+         .StoreStageAddr(XLXN_31[15:0]), 
+                                                 .userAddr(XLXN_16[15:0]), 
+                                                 .userDataIn(XLXN_13[15:0]), 
+                                                 .userWE(XLXN_11), 
+                                                 .DataOutUser(XLXN_6[15:0]), 
+                                                 
+         .DataToFetchStage(XLXN_7[15:0]));
+endmodule

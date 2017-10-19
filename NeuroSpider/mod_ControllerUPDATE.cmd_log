@@ -1,0 +1,3 @@
+sch2hdl -intstyle ise -family spartan3e -verilog mod_ControllerUPDATE_drc.vf -w {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControllerUPDATE.sch} 
+sch2sym -intstyle ise -family spartan3e -w -refsym mod_ControllerUPDATE {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControllerUPDATE.sch} {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControllerUPDATE.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym mod_ControllerUPDATE {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControllerUPDATE.sch} {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControllerUPDATE.sym} 

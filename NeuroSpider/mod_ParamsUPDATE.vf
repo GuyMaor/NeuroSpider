@@ -1,0 +1,117 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : mod_ParamsUPDATE.vf
+// /___/   /\     Timestamp : 10/19/2017 06:06:34
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamsUPDATE.vf" -w "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamsUPDATE.sch"
+//Design Name: mod_ParamsUPDATE
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module mod_CacheMux_MUSER_mod_ParamsUPDATE(cache_DataOut, 
+                                           proc1_Addr, 
+                                           proc1_DataIn, 
+                                           proc1_WE, 
+                                           proc2_Addr, 
+                                           proc2_DataIn, 
+                                           proc2_WE, 
+                                           sel, 
+                                           cache_Addr, 
+                                           cache_DataIn, 
+                                           cache_WE, 
+                                           proc1_DataOut, 
+                                           proc2_DataOut);
+
+    input [15:0] cache_DataOut;
+    input [15:0] proc1_Addr;
+    input [15:0] proc1_DataIn;
+    input proc1_WE;
+    input [15:0] proc2_Addr;
+    input [15:0] proc2_DataIn;
+    input proc2_WE;
+    input sel;
+   output [15:0] cache_Addr;
+   output [15:0] cache_DataIn;
+   output cache_WE;
+   output [15:0] proc1_DataOut;
+   output [15:0] proc2_DataOut;
+   
+   
+   mod_Demux16  XLXI_1 (.inPort(cache_DataOut[15:0]), 
+                       .sel(sel), 
+                       .outPort1(proc1_DataOut[15:0]), 
+                       .outPort2(proc2_DataOut[15:0]));
+   mod_Mux16  XLXI_2 (.inPort1(proc1_DataIn[15:0]), 
+                     .inPort2(proc2_DataIn[15:0]), 
+                     .sel(sel), 
+                     .outPort(cache_DataIn[15:0]));
+   mod_Mux16  XLXI_3 (.inPort1(proc1_Addr[15:0]), 
+                     .inPort2(proc2_Addr[15:0]), 
+                     .sel(sel), 
+                     .outPort(cache_Addr[15:0]));
+   mod_Mux  XLXI_4 (.in1(proc1_WE), 
+                   .in2(proc2_WE), 
+                   .sel(sel), 
+                   .outVal(cache_WE));
+endmodule
+`timescale 1ns / 1ps
+
+module mod_ParamsUPDATE(clk, 
+                        critical, 
+                        procAddr, 
+                        userAddr, 
+                        userDataIn, 
+                        userWE, 
+                        procDataOut, 
+                        userDataOut);
+
+    input clk;
+    input critical;
+    input [15:0] procAddr;
+    input [15:0] userAddr;
+    input [15:0] userDataIn;
+    input userWE;
+   output [15:0] procDataOut;
+   output [15:0] userDataOut;
+   
+   wire XLXN_1;
+   wire [15:0] XLXN_2;
+   wire [15:0] XLXN_3;
+   wire [15:0] XLXN_4;
+   wire XLXN_11;
+   wire [15:0] XLXN_13;
+   
+   mod_Cache  XLXI_1 (.addr(XLXN_3[15:0]), 
+                     .clk(clk), 
+                     .dataIn(XLXN_2[15:0]), 
+                     .WE(XLXN_1), 
+                     .dataOut(XLXN_4[15:0]));
+   mod_CacheMux_MUSER_mod_ParamsUPDATE  XLXI_2 (.cache_DataOut(XLXN_4[15:0]), 
+                                               .proc1_Addr(userAddr[15:0]), 
+                                               .proc1_DataIn(userDataIn[15:0]), 
+                                               .proc1_WE(userWE), 
+                                               .proc2_Addr(procAddr[15:0]), 
+                                               .proc2_DataIn(XLXN_13[15:0]), 
+                                               .proc2_WE(XLXN_11), 
+                                               .sel(critical), 
+                                               .cache_Addr(XLXN_3[15:0]), 
+                                               .cache_DataIn(XLXN_2[15:0]), 
+                                               .cache_WE(XLXN_1), 
+                                               
+         .proc1_DataOut(userDataOut[15:0]), 
+                                               
+         .proc2_DataOut(procDataOut[15:0]));
+   zeroVal  XLXI_3 (.zero(XLXN_11));
+endmodule

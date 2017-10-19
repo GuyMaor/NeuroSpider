@@ -1,0 +1,2 @@
+sch2hdl -intstyle ise -family spartan3e -verilog TheNeuroSpider_drc.vf -w {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/TheNeuroSpider.sch} 
+sch2sym -intstyle ise -family spartan3e -w -refsym TheNeuroSpider {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/TheNeuroSpider.sch} {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/TheNeuroSpider.sym} 

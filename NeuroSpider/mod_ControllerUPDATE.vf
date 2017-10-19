@@ -1,0 +1,212 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : mod_ControllerUPDATE.vf
+// /___/   /\     Timestamp : 10/19/2017 06:06:35
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControllerUPDATE.vf" -w "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControllerUPDATE.sch"
+//Design Name: mod_ControllerUPDATE
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module mod_ProcMux_MUSER_mod_ControllerUPDATE(cache1_DataOut, 
+                                              cache2_DataOut, 
+                                              proc_Addr, 
+                                              proc_DataIn, 
+                                              proc_WE, 
+                                              sel, 
+                                              cache1_Addr, 
+                                              cache1_DataIn, 
+                                              cache1_WE, 
+                                              cache2_Addr, 
+                                              cache2_DataIn, 
+                                              cache2_WE, 
+                                              proc_DataOut);
+
+    input [15:0] cache1_DataOut;
+    input [15:0] cache2_DataOut;
+    input [15:0] proc_Addr;
+    input [15:0] proc_DataIn;
+    input proc_WE;
+    input sel;
+   output [15:0] cache1_Addr;
+   output [15:0] cache1_DataIn;
+   output cache1_WE;
+   output [15:0] cache2_Addr;
+   output [15:0] cache2_DataIn;
+   output cache2_WE;
+   output [15:0] proc_DataOut;
+   
+   
+   mod_Demux16  XLXI_1 (.inPort(proc_DataIn[15:0]), 
+                       .sel(sel), 
+                       .outPort1(cache1_DataIn[15:0]), 
+                       .outPort2(cache2_DataIn[15:0]));
+   mod_Demux16  XLXI_2 (.inPort(proc_Addr[15:0]), 
+                       .sel(sel), 
+                       .outPort1(cache1_Addr[15:0]), 
+                       .outPort2(cache2_Addr[15:0]));
+   mod_Mux16  XLXI_3 (.inPort1(cache1_DataOut[15:0]), 
+                     .inPort2(cache2_DataOut[15:0]), 
+                     .sel(sel), 
+                     .outPort(proc_DataOut[15:0]));
+   mod_Demux  XLXI_4 (.inVal(proc_WE), 
+                     .sel(sel), 
+                     .out1(cache1_WE), 
+                     .out2(cache2_WE));
+endmodule
+`timescale 1ns / 1ps
+
+module mod_ControllerUPDATE(AddrIn, 
+                            CacheSel, 
+                            clk, 
+                            DataIn, 
+                            FinishedEverything, 
+                            IndexDataOut, 
+                            layersDataOut, 
+                            StartOperation, 
+                            weightDataOut, 
+                            WriteEnable, 
+                            actFuncSel, 
+                            critical, 
+                            Destination, 
+                            indexAddr, 
+                            indexDataIn, 
+                            indexOffset, 
+                            indexWE, 
+                            inputOffsetReg, 
+                            layersAddr, 
+                            layersDataIn, 
+                            layersWE, 
+                            NumOps, 
+                            OutData, 
+                            ReadyForNextOp, 
+                            rst, 
+                            weightAddr, 
+                            weightDataIn, 
+                            weightOffset, 
+                            weightWE);
+
+    input [15:0] AddrIn;
+    input [1:0] CacheSel;
+    input clk;
+    input [15:0] DataIn;
+    input FinishedEverything;
+    input [15:0] IndexDataOut;
+    input [15:0] layersDataOut;
+    input StartOperation;
+    input [15:0] weightDataOut;
+    input WriteEnable;
+   output [1:0] actFuncSel;
+   output critical;
+   output [15:0] Destination;
+   output [15:0] indexAddr;
+   output [15:0] indexDataIn;
+   output [15:0] indexOffset;
+   output indexWE;
+   output [15:0] inputOffsetReg;
+   output [15:0] layersAddr;
+   output [15:0] layersDataIn;
+   output layersWE;
+   output [15:0] NumOps;
+   output [15:0] OutData;
+   output ReadyForNextOp;
+   output rst;
+   output [15:0] weightAddr;
+   output [15:0] weightDataIn;
+   output [15:0] weightOffset;
+   output weightWE;
+   
+   wire XLXN_37;
+   wire XLXN_38;
+   wire [15:0] XLXN_39;
+   wire [15:0] XLXN_40;
+   wire [15:0] XLXN_42;
+   wire [15:0] XLXN_43;
+   wire XLXN_46;
+   wire XLXN_47;
+   wire XLXN_48;
+   wire [15:0] XLXN_49;
+   wire [15:0] XLXN_50;
+   wire XLXN_72;
+   wire critical_DUMMY;
+   
+   assign critical = critical_DUMMY;
+   mod_ControlRegistersUPDATE  XLXI_6 (.beginOp(StartOperation), 
+                                      .cacheDataOut(XLXN_42[15:0]), 
+                                      .cacheSelIn(CacheSel[1:0]), 
+                                      .clk(clk), 
+                                      .critical(critical_DUMMY), 
+                                      .fsmReadyForNextOp(XLXN_47), 
+                                      .inAddr(AddrIn[15:0]), 
+                                      .inData(DataIn[15:0]), 
+                                      .WE(WriteEnable), 
+                                      .actFuncSelReg(actFuncSel[1:0]), 
+                                      .cacheAddrIn(XLXN_49[15:0]), 
+                                      .cacheDataIn(XLXN_50[15:0]), 
+                                      .cacheSelOut0(XLXN_38), 
+                                      .cacheSelOut1(XLXN_37), 
+                                      .cacheWE(XLXN_48), 
+                                      .destReg(Destination[15:0]), 
+                                      .fsmBeginOp(XLXN_46), 
+                                      .indexOffsetReg(indexOffset[15:0]), 
+                                      .numOpsReg(NumOps[15:0]), 
+                                      .offsetReg(inputOffsetReg[15:0]), 
+                                      .outData(OutData[15:0]), 
+                                      .readyForNextOp(ReadyForNextOp), 
+                                      .weightOffsetReg(weightOffset[15:0]));
+   mod_ProcMux_MUSER_mod_ControllerUPDATE  XLXI_7 
+         (.cache1_DataOut(XLXN_43[15:0]), 
+                                                  
+         .cache2_DataOut(weightDataOut[15:0]), 
+                                                  .proc_Addr(XLXN_49[15:0]), 
+                                                  .proc_DataIn(XLXN_50[15:0]), 
+                                                  .proc_WE(XLXN_48), 
+                                                  .sel(XLXN_37), 
+                                                  .cache1_Addr(XLXN_40[15:0]), 
+                                                  
+         .cache1_DataIn(XLXN_39[15:0]), 
+                                                  .cache1_WE(XLXN_72), 
+                                                  
+         .cache2_Addr(weightAddr[15:0]), 
+                                                  
+         .cache2_DataIn(weightDataIn[15:0]), 
+                                                  .cache2_WE(weightWE), 
+                                                  .proc_DataOut(XLXN_42[15:0]));
+   mod_ProcMux_MUSER_mod_ControllerUPDATE  XLXI_8 
+         (.cache1_DataOut(layersDataOut[15:0]), 
+                                                  
+         .cache2_DataOut(IndexDataOut[15:0]), 
+                                                  .proc_Addr(XLXN_40[15:0]), 
+                                                  .proc_DataIn(XLXN_39[15:0]), 
+                                                  .proc_WE(XLXN_72), 
+                                                  .sel(XLXN_38), 
+                                                  
+         .cache1_Addr(layersAddr[15:0]), 
+                                                  
+         .cache1_DataIn(layersDataIn[15:0]), 
+                                                  .cache1_WE(layersWE), 
+                                                  
+         .cache2_Addr(indexAddr[15:0]), 
+                                                  
+         .cache2_DataIn(indexDataIn[15:0]), 
+                                                  .cache2_WE(indexWE), 
+                                                  .proc_DataOut(XLXN_43[15:0]));
+   mod_ControlFSM  XLXI_9 (.clk(clk), 
+                          .finishedOp(FinishedEverything), 
+                          .StartOp(XLXN_46), 
+                          .critical(critical_DUMMY), 
+                          .readyNextOp(XLXN_47), 
+                          .resetEverything(rst));
+endmodule

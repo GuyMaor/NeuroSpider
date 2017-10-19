@@ -1,4 +1,4 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/NeuroSpider_NeuroSpider_sch_tb_isim_beh.exe -prj C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/NeuroSpider_NeuroSpider_sch_tb_beh.prj work.NeuroSpider_NeuroSpider_sch_tb work.glbl 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/TheNeuroSpider_TheNeuroSpider_sch_tb_isim_beh.exe -prj C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/TheNeuroSpider_TheNeuroSpider_sch_tb_beh.prj work.TheNeuroSpider_TheNeuroSpider_sch_tb work.glbl 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
@@ -6,42 +6,46 @@ Determining compilation order of HDL files
 Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_TanHFunc.v" into library work
 Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_StepFunc.v" into library work
 Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ReluFunc.v" into library work
-Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Mux16.v" into library work
-Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Mux.v" into library work
-Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Demux16.v" into library work
-Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Demux.v" into library work
 Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/calcShift.v" into library work
 Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/REG16.v" into library work
-Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/MUX2.v" into library work
 Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_TriStateMachine.v" into library work
-Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ProcMux.vf" into library work
 Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamFetch.v" into library work
 Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_numCounter.v" into library work
+Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Mux16.v" into library work
+Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Mux.v" into library work
 Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Multiply.v" into library work
-Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_CacheMux.vf" into library work
+Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Demux16.v" into library work
+Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Demux.v" into library work
 Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_AdderFSM.v" into library work
 Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Add.v" into library work
 Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ActivationFunc.v" into library work
-Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/joinWires.v" into library work
-Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamRouter.vf" into library work
+Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/zeroVal.v" into library work
+Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ProcMux.vf" into library work
 Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamFetchStage.vf" into library work
 Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_MulStageNEW.vf" into library work
-Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_LayerRouter.vf" into library work
-Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControlRegisters.v" into library work
+Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControlRegistersUPDATE.v" into library work
 Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControlFSM.v" into library work
+Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_CacheMux.vf" into library work
 Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Cache.v" into library work
 Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_AddStage.vf" into library work
 Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ActivFuncStage.v" into library work
-Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Params.vf" into library work
+Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamsUPDATE.vf" into library work
 Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_OpUnitNEW.vf" into library work
-Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Layers.vf" into library work
-Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControllerNEW.vf" into library work
-Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/NeuroSpider.vf" into library work
-Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/test_NeuroSpider.v" into library work
+Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_LayersUPDATE.vf" into library work
+Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControllerUPDATE.vf" into library work
+Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/TheNeuroSpider.vf" into library work
+Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/test_TheNeuroSpider.v" into library work
 Analyzing Verilog file "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_MulStage.vf" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
+Compiling module mod_ControlRegistersUPDATE
+Compiling module mod_Demux16
+Compiling module mod_Mux16
+Compiling module mod_Demux
+Compiling module mod_ProcMux_MUSER_TheNeuroSpider
+Compiling module mod_ControlFSM
+Compiling module mod_ControllerUPDATE_MUSER_TheNe...
 Compiling module mod_ReluFunc
 Compiling module mod_TanHFunc
 Compiling module mod_StepFunc
@@ -51,37 +55,26 @@ Compiling module mod_AdderFSM
 Compiling module calcShift
 Compiling module mod_Add
 Compiling module mod_numCounter
-Compiling module mod_AddStage_MUSER_NeuroSpider
+Compiling module mod_AddStage_MUSER_TheNeuroSpide...
 Compiling module mod_TriStateMachine
 Compiling module REG16
 Compiling module mod_Multiply
-Compiling module mod_MulStageNEW_MUSER_NeuroSpide...
+Compiling module mod_MulStageNEW_MUSER_TheNeuroSp...
 Compiling module mod_ParamFetch
-Compiling module mod_ParamFetchStage_MUSER_NeuroS...
-Compiling module mod_OpUnitNEW_MUSER_NeuroSpider
-Compiling module mod_Demux16
-Compiling module mod_Mux16
-Compiling module mod_Demux
-Compiling module mod_ProcMux_MUSER_NeuroSpider
-Compiling module joinWires
-Compiling module mod_Mux
-Compiling module mod_CacheMux_MUSER_NeuroSpider
-Compiling module MUX2
-Compiling module mod_ParamRouter_MUSER_NeuroSpide...
+Compiling module mod_ParamFetchStage_MUSER_TheNeu...
+Compiling module mod_OpUnitNEW_MUSER_TheNeuroSpid...
 Compiling module mod_Cache_default
-Compiling module mod_Params_MUSER_NeuroSpider
-Compiling module INV
-Compiling module mod_LayerRouter_MUSER_NeuroSpide...
-Compiling module mod_Layers_MUSER_NeuroSpider
-Compiling module mod_ControlFSM
-Compiling module mod_ControlRegisters
-Compiling module mod_ControllerNEW_MUSER_NeuroSpi...
-Compiling module NeuroSpider
-Compiling module NeuroSpider_NeuroSpider_sch_tb
+Compiling module mod_Mux
+Compiling module mod_CacheMux_MUSER_TheNeuroSpide...
+Compiling module zeroVal
+Compiling module mod_ParamsUPDATE_MUSER_TheNeuroS...
+Compiling module mod_LayersUPDATE_MUSER_TheNeuroS...
+Compiling module TheNeuroSpider
+Compiling module TheNeuroSpider_TheNeuroSpider_sc...
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 25 sub-compilation(s) to finish...
-Compiled 37 Verilog Units
-Built simulation executable C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/NeuroSpider_NeuroSpider_sch_tb_isim_beh.exe
-Fuse Memory Usage: 29624 KB
-Fuse CPU Usage: 999 ms
+Waiting for 18 sub-compilation(s) to finish...
+Compiled 33 Verilog Units
+Built simulation executable C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/TheNeuroSpider_TheNeuroSpider_sch_tb_isim_beh.exe
+Fuse Memory Usage: 28396 KB
+Fuse CPU Usage: 890 ms

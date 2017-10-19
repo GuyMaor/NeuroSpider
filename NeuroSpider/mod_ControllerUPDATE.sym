@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="mod_ControllerUPDATE">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2017-10-19T10:38:13</timestamp>
+    <pin polarity="Input" x="0" y="-1120" name="clk" />
+    <pin polarity="Input" x="0" y="-1008" name="WriteEnable" />
+    <pin polarity="Input" x="0" y="-896" name="StartOperation" />
+    <pin polarity="Input" x="0" y="-784" name="CacheSel(1:0)" />
+    <pin polarity="Input" x="0" y="-672" name="AddrIn(15:0)" />
+    <pin polarity="Input" x="0" y="-560" name="DataIn(15:0)" />
+    <pin polarity="Input" x="0" y="-448" name="IndexDataOut(15:0)" />
+    <pin polarity="Input" x="0" y="-336" name="layersDataOut(15:0)" />
+    <pin polarity="Input" x="0" y="-224" name="weightDataOut(15:0)" />
+    <pin polarity="Input" x="0" y="-112" name="FinishedEverything" />
+    <pin polarity="Output" x="560" y="-1120" name="ReadyForNextOp" />
+    <pin polarity="Output" x="560" y="-1056" name="actFuncSel(1:0)" />
+    <pin polarity="Output" x="560" y="-992" name="OutData(15:0)" />
+    <pin polarity="Output" x="560" y="-928" name="indexOffset(15:0)" />
+    <pin polarity="Output" x="560" y="-864" name="weightOffset(15:0)" />
+    <pin polarity="Output" x="560" y="-800" name="inputOffsetReg(15:0)" />
+    <pin polarity="Output" x="560" y="-736" name="Destination(15:0)" />
+    <pin polarity="Output" x="560" y="-672" name="NumOps(15:0)" />
+    <pin polarity="Output" x="560" y="-608" name="layersDataIn(15:0)" />
+    <pin polarity="Output" x="560" y="-544" name="indexDataIn(15:0)" />
+    <pin polarity="Output" x="560" y="-480" name="layersAddr(15:0)" />
+    <pin polarity="Output" x="560" y="-416" name="indexAddr(15:0)" />
+    <pin polarity="Output" x="560" y="-352" name="layersWE" />
+    <pin polarity="Output" x="560" y="-288" name="indexWE" />
+    <pin polarity="Output" x="560" y="-224" name="weightWE" />
+    <pin polarity="Output" x="560" y="-160" name="weightAddr(15:0)" />
+    <pin polarity="Output" x="560" y="-96" name="weightDataIn(15:0)" />
+    <pin polarity="Output" x="560" y="-32" name="rst" />
+    <pin polarity="Output" x="560" y="32" name="critical" />
+    <graph>
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="280" y="-1160" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1120" type="pin clk" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1008" type="pin WriteEnable" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-896" type="pin StartOperation" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-784" type="pin CacheSel(1:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-672" type="pin AddrIn(15:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-560" type="pin DataIn(15:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-448" type="pin IndexDataOut(15:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-336" type="pin layersDataOut(15:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-224" type="pin weightDataOut(15:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-112" type="pin FinishedEverything" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="488" y="-1120" type="pin ReadyForNextOp" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="488" y="-1056" type="pin actFuncSel(1:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="488" y="-992" type="pin OutData(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="488" y="-928" type="pin indexOffset(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="488" y="-864" type="pin weightOffset(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="488" y="-800" type="pin inputOffsetReg(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="488" y="-736" type="pin Destination(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="488" y="-672" type="pin NumOps(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="488" y="-608" type="pin layersDataIn(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="488" y="-544" type="pin indexDataIn(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="488" y="-480" type="pin layersAddr(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="488" y="-416" type="pin indexAddr(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="488" y="-352" type="pin layersWE" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="488" y="-288" type="pin indexWE" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="488" y="-224" type="pin weightWE" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="488" y="-160" type="pin weightAddr(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="488" y="-96" type="pin weightDataIn(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="488" y="-32" type="pin rst" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="488" y="32" type="pin critical" />
+        <line x2="560" y1="32" y2="32" x1="496" />
+        <line x2="0" y1="-1120" y2="-1120" x1="64" />
+        <line x2="0" y1="-1008" y2="-1008" x1="64" />
+        <line x2="0" y1="-896" y2="-896" x1="64" />
+        <rect width="64" x="0" y="-796" height="24" />
+        <line x2="0" y1="-784" y2="-784" x1="64" />
+        <rect width="64" x="0" y="-684" height="24" />
+        <line x2="0" y1="-672" y2="-672" x1="64" />
+        <rect width="64" x="0" y="-572" height="24" />
+        <line x2="0" y1="-560" y2="-560" x1="64" />
+        <rect width="64" x="0" y="-460" height="24" />
+        <line x2="0" y1="-448" y2="-448" x1="64" />
+        <rect width="64" x="0" y="-348" height="24" />
+        <line x2="0" y1="-336" y2="-336" x1="64" />
+        <rect width="64" x="0" y="-236" height="24" />
+        <line x2="0" y1="-224" y2="-224" x1="64" />
+        <line x2="0" y1="-112" y2="-112" x1="64" />
+        <line x2="560" y1="-1120" y2="-1120" x1="496" />
+        <rect width="64" x="496" y="-1068" height="24" />
+        <line x2="560" y1="-1056" y2="-1056" x1="496" />
+        <rect width="64" x="496" y="-1004" height="24" />
+        <line x2="560" y1="-992" y2="-992" x1="496" />
+        <rect width="64" x="496" y="-940" height="24" />
+        <line x2="560" y1="-928" y2="-928" x1="496" />
+        <rect width="64" x="496" y="-876" height="24" />
+        <line x2="560" y1="-864" y2="-864" x1="496" />
+        <rect width="64" x="496" y="-812" height="24" />
+        <line x2="560" y1="-800" y2="-800" x1="496" />
+        <rect width="64" x="496" y="-748" height="24" />
+        <line x2="560" y1="-736" y2="-736" x1="496" />
+        <rect width="64" x="496" y="-684" height="24" />
+        <line x2="560" y1="-672" y2="-672" x1="496" />
+        <rect width="64" x="496" y="-620" height="24" />
+        <line x2="560" y1="-608" y2="-608" x1="496" />
+        <rect width="64" x="496" y="-556" height="24" />
+        <line x2="560" y1="-544" y2="-544" x1="496" />
+        <rect width="64" x="496" y="-492" height="24" />
+        <line x2="560" y1="-480" y2="-480" x1="496" />
+        <rect width="64" x="496" y="-428" height="24" />
+        <line x2="560" y1="-416" y2="-416" x1="496" />
+        <line x2="560" y1="-352" y2="-352" x1="496" />
+        <line x2="560" y1="-288" y2="-288" x1="496" />
+        <line x2="560" y1="-224" y2="-224" x1="496" />
+        <rect width="64" x="496" y="-172" height="24" />
+        <line x2="560" y1="-160" y2="-160" x1="496" />
+        <rect width="64" x="496" y="-108" height="24" />
+        <line x2="560" y1="-96" y2="-96" x1="496" />
+        <line x2="560" y1="-32" y2="-32" x1="496" />
+        <rect width="432" x="64" y="-1152" height="1216" />
+    </graph>
+</symbol>

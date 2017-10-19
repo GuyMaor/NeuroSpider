@@ -1,0 +1,2 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym mod_ParamsUPDATE {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamsUPDATE.sch} {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamsUPDATE.sym} 
+sch2hdl -intstyle ise -family spartan3e -verilog mod_ParamsUPDATE_drc.vf -w {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamsUPDATE.sch} 
