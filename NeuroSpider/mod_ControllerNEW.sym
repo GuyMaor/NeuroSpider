@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="mod_ControllerNEW">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2017-10-18T23:57:6</timestamp>
+    <timestamp>2017-10-19T1:37:42</timestamp>
     <pin polarity="Input" x="0" y="-752" name="WriteEnable" />
     <pin polarity="Input" x="0" y="-896" name="StartNeuronOperation" />
     <pin polarity="Input" x="0" y="-608" name="AddressInput(15:0)" />
@@ -67,9 +67,9 @@
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="536" y="-1120" type="pin ReadyForNextOperation" />
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="536" y="-1184" type="pin rst" />
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="536" y="224" type="pin IndexOffsetReg(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="536" y="288" type="pin WeightOffsetReg(15:0)" />
         <rect width="64" x="544" y="212" height="24" />
         <line x2="608" y1="224" y2="224" x1="544" />
-        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="536" y="288" type="pin WeightOffsetReg(15:0)" />
         <rect width="64" x="544" y="276" height="24" />
         <line x2="608" y1="288" y2="288" x1="544" />
         <rect width="64" x="544" y="20" height="24" />

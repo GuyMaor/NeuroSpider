@@ -48,9 +48,6 @@
         <signal name="XLXN_2(15:0)" />
         <signal name="XLXN_76" />
         <signal name="XLXN_77" />
-        <signal name="XLXN_79">
-        </signal>
-        <signal name="XLXN_80" />
         <signal name="IndexOffsetReg(15:0)" />
         <signal name="WeightOffsetReg(15:0)" />
         <port polarity="Output" name="critical" />
@@ -86,7 +83,7 @@
         <port polarity="Output" name="IndexOffsetReg(15:0)" />
         <port polarity="Output" name="WeightOffsetReg(15:0)" />
         <blockdef name="mod_ControlRegisters">
-            <timestamp>2017-10-18T23:53:47</timestamp>
+            <timestamp>2017-10-19T1:36:58</timestamp>
             <rect width="64" x="480" y="532" height="24" />
             <line x2="544" y1="544" y2="544" x1="480" />
             <rect width="64" x="480" y="596" height="24" />
@@ -188,11 +185,11 @@
             <blockpin signalname="OutputData(15:0)" name="outData(15:0)" />
             <blockpin signalname="XLXN_48(15:0)" name="cacheDataIn(15:0)" />
             <blockpin signalname="XLXN_2(15:0)" name="cacheAddrIn(15:0)" />
+            <blockpin signalname="IndexOffsetReg(15:0)" name="indexOffsetReg(15:0)" />
+            <blockpin signalname="WeightOffsetReg(15:0)" name="weightOffsetReg(15:0)" />
             <blockpin signalname="offset(15:0)" name="offsetReg(15:0)" />
             <blockpin signalname="ResultDest(15:0)" name="destReg(15:0)" />
             <blockpin signalname="numOfOps(15:0)" name="numOpsReg(15:0)" />
-            <blockpin signalname="IndexOffsetReg(15:0)" name="indexOffsetReg(15:0)" />
-            <blockpin signalname="WeightOffsetReg(15:0)" name="weightOffsetReg(15:0)" />
         </block>
         <block symbolname="mod_ControlFSM" name="XLXI_5">
             <blockpin signalname="OpFinishMUXSIG" name="finishedOp" />

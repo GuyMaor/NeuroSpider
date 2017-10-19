@@ -6,12 +6,12 @@
 // /___/  \  /    Vendor: Xilinx 
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
-//  /   /         Filename : NeuroSpider.vf
-// /___/   /\     Timestamp : 10/18/2017 20:46:10
+//  /   /         Filename : NeuroSpider_drc.vf
+// /___/   /\     Timestamp : 10/18/2017 20:45:57
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/NeuroSpider.vf" -w "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/NeuroSpider.sch"
+//Command: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -intstyle ise -family spartan3e -verilog NeuroSpider_drc.vf -w "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/NeuroSpider.sch"
 //Design Name: NeuroSpider
 //Device: spartan3e
 //Purpose:

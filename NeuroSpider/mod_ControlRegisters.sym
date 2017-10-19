@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="mod_ControlRegisters">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2017-10-18T23:53:47</timestamp>
+    <timestamp>2017-10-19T1:36:58</timestamp>
     <attr value="mod_ControlRegisters" name="VeriModel" />
     <pin polarity="Input" x="0" y="-512" name="WE" />
     <pin polarity="Input" x="0" y="-416" name="beginOp" />
@@ -24,11 +24,11 @@
     <pin polarity="Output" x="544" y="-160" name="outData(15:0)" />
     <pin polarity="Output" x="544" y="-96" name="cacheDataIn(15:0)" />
     <pin polarity="Output" x="544" y="-32" name="cacheAddrIn(15:0)" />
+    <pin polarity="Output" x="544" y="544" name="indexOffsetReg(15:0)" />
+    <pin polarity="Output" x="544" y="608" name="weightOffsetReg(15:0)" />
     <pin polarity="Output" x="544" y="96" name="offsetReg(15:0)" />
     <pin polarity="Output" x="544" y="160" name="destReg(15:0)" />
     <pin polarity="Output" x="544" y="224" name="numOpsReg(15:0)" />
-    <pin polarity="Output" x="544" y="544" name="indexOffsetReg(15:0)" />
-    <pin polarity="Output" x="544" y="608" name="weightOffsetReg(15:0)" />
     <graph>
         <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="272" y="-648" type="symbol" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-512" type="pin WE" />
@@ -52,13 +52,13 @@
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="472" y="-160" type="pin outData(15:0)" />
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="472" y="-96" type="pin cacheDataIn(15:0)" />
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="472" y="-32" type="pin cacheAddrIn(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="472" y="544" type="pin indexOffsetReg(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="472" y="608" type="pin weightOffsetReg(15:0)" />
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="472" y="96" type="pin offsetReg(15:0)" />
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="472" y="160" type="pin destReg(15:0)" />
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="472" y="224" type="pin numOpsReg(15:0)" />
-        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="472" y="544" type="pin indexOffsetReg(15:0)" />
         <rect width="64" x="480" y="532" height="24" />
         <line x2="544" y1="544" y2="544" x1="480" />
-        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="472" y="608" type="pin weightOffsetReg(15:0)" />
         <rect width="64" x="480" y="596" height="24" />
         <line x2="544" y1="608" y2="608" x1="480" />
         <rect width="64" x="480" y="468" height="24" />

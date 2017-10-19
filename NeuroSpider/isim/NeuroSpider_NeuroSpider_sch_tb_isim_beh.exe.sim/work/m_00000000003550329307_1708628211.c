@@ -25,7 +25,7 @@
 
 
 
-extern void work_m_00000000003061997263_1708628211_init()
+extern void work_m_00000000003550329307_1708628211_init()
 {
-	xsi_register_didat("work_m_00000000003061997263_1708628211", "isim/NeuroSpider_NeuroSpider_sch_tb_isim_beh.exe.sim/work/m_00000000003061997263_1708628211.didat");
+	xsi_register_didat("work_m_00000000003550329307_1708628211", "isim/NeuroSpider_NeuroSpider_sch_tb_isim_beh.exe.sim/work/m_00000000003550329307_1708628211.didat");
 }

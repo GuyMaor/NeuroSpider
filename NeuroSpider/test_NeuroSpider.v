@@ -39,36 +39,39 @@ module NeuroSpider_NeuroSpider_sch_tb();
 // Initialize Inputs
    initial begin
 		clk = 0;
-		StartOperation = 0;
+		StartOperation = 0; 
+
+
+		/*SET ADDRESS OFFSETS*/
+		
 		
 		//Set input data address offset
 		WE =1;
 		Address = 16'h8000;
-		DataWrite = 16'd1;//To 0
-		//DataWrite = 16'd1;
+		DataWrite = 16'h0001;//To 1
 
 		#100;clk = 1;#100;clk = 0;
 
 		//Set weight address offset
 		WE =1;
 		Address = 16'h8006;
-		DataWrite = 16'd1;//To 0
-		//DataWrite = 16'd1;
-
+		DataWrite = 16'h0001;//To 1
+		
 		#100;clk = 1;#100;clk = 0;
 		
 		//Set index address offset
 		WE =1;
 		Address = 16'h8005;
-		DataWrite = 16'd1;//To 0
-		//DataWrite = 16'd1;
+		DataWrite = 16'd1;//To 1
 		
 		#100;clk = 1;#100;clk = 0;
+
+		/*OTHER CONTROLS*/
 		
 		//Set destination address
 		WE =1;
 		Address = 16'h8001;
-		DataWrite = 16'd1;//To loc 0
+		DataWrite = 16'd1;//To loc 1
 
 		#100;clk = 1;#100;clk = 0;
 
@@ -103,7 +106,7 @@ module NeuroSpider_NeuroSpider_sch_tb();
 
 		#100;clk = 1;#100;clk = 0;	
 
-		/*index*/
+		/*INDEX*/
 
 		//Write to I0 (first index cache)
 		WE =1;
@@ -115,14 +118,14 @@ module NeuroSpider_NeuroSpider_sch_tb();
 		//write first index
 		WE =1;
 		Address = 16'h0001;//loc 1
-		DataWrite = 16'h0001;//index1
+		DataWrite = 16'h0000;//index0
 		
 		#100;clk = 1;#100;clk = 0;
 		
 		//write second index
 		WE =1;
 		Address = 16'h0002;//loc 2
-		DataWrite = 16'h0002;//index 2
+		DataWrite = 16'h0001;//index 1
 
 		#100;clk = 1;#100;clk = 0;			
 
@@ -197,7 +200,7 @@ module NeuroSpider_NeuroSpider_sch_tb();
 
 		//Read from location 1
 		WE = 0;
-		Address = 16'h0001;
+		Address = 16'h0001;//good
 		
 		#100;clk = 1;#100;clk = 0;
 		#100;clk = 1;#100;clk = 0;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="NeuroSpider">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2017-10-19T0:6:47</timestamp>
+    <timestamp>2017-10-19T1:45:53</timestamp>
     <pin polarity="Input" x="0" y="-288" name="clk" />
     <pin polarity="Input" x="0" y="-224" name="StartOperation" />
     <pin polarity="Input" x="0" y="-160" name="WE" />
