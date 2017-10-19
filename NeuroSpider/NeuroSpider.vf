@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : NeuroSpider.vf
-// /___/   /\     Timestamp : 10/17/2017 23:40:27
+// /___/   /\     Timestamp : 10/18/2017 19:13:00
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -86,6 +86,7 @@ module mod_ControllerNEW_MUSER_NeuroSpider(AddressInput,
                                            DataInIndex, 
                                            DataInLayer, 
                                            DataInWeights, 
+                                           IndexOffsetReg, 
                                            IndexOpSel, 
                                            numOfOps, 
                                            offset, 
@@ -93,6 +94,7 @@ module mod_ControllerNEW_MUSER_NeuroSpider(AddressInput,
                                            ReadyForNextOperation, 
                                            ResultDest, 
                                            rst, 
+                                           WeightOffsetReg, 
                                            weightOpSel, 
                                            WEIndex, 
                                            WELayer, 
@@ -117,6 +119,7 @@ module mod_ControllerNEW_MUSER_NeuroSpider(AddressInput,
    output [15:0] DataInIndex;
    output [15:0] DataInLayer;
    output [15:0] DataInWeights;
+   output [15:0] IndexOffsetReg;
    output [1:0] IndexOpSel;
    output [15:0] numOfOps;
    output [15:0] offset;
@@ -124,6 +127,7 @@ module mod_ControllerNEW_MUSER_NeuroSpider(AddressInput,
    output ReadyForNextOperation;
    output [15:0] ResultDest;
    output rst;
+   output [15:0] WeightOffsetReg;
    output [1:0] weightOpSel;
    output WEIndex;
    output WELayer;
@@ -192,6 +196,7 @@ module mod_ControllerNEW_MUSER_NeuroSpider(AddressInput,
                                 .cacheWE(XLXN_50), 
                                 .destReg(ResultDest[15:0]), 
                                 .fsmBeginOp(StartOperation), 
+                                .indexOffsetReg(IndexOffsetReg[15:0]), 
                                 .indexOPSel(IndexOpSel[1:0]), 
                                 .numOpsReg(numOfOps[15:0]), 
                                 .offsetReg(offset[15:0]), 
@@ -199,6 +204,7 @@ module mod_ControllerNEW_MUSER_NeuroSpider(AddressInput,
                                 .paramNOTLayer(XLXN_9), 
                                 .readyForNextOp(ReadyForNextOperation), 
                                 .weightNOTIndex(XLXN_76), 
+                                .weightOffsetReg(WeightOffsetReg[15:0]), 
                                 .weightOPSel(weightOpSel[1:0]), 
                                 .writeReverse(WriteReverse));
 endmodule
@@ -715,12 +721,14 @@ endmodule
 `timescale 1ns / 1ps
 
 module mod_ParamFetchStage_MUSER_NeuroSpider(clk, 
+                                             IndexOffset, 
                                              indexVal, 
                                              inputVal, 
                                              numInputs, 
                                              offset, 
                                              readyNextParam, 
                                              rst, 
+                                             WeightOffset, 
                                              weightVal, 
                                              indexAddr, 
                                              inputAddr, 
@@ -730,12 +738,14 @@ module mod_ParamFetchStage_MUSER_NeuroSpider(clk,
                                              weightAddr);
 
     input clk;
+    input [15:0] IndexOffset;
     input [15:0] indexVal;
     input [15:0] inputVal;
     input [15:0] numInputs;
     input [15:0] offset;
     input readyNextParam;
     input rst;
+    input [15:0] WeightOffset;
     input [15:0] weightVal;
    output [15:0] indexAddr;
    output [15:0] inputAddr;
@@ -770,12 +780,14 @@ module mod_ParamFetchStage_MUSER_NeuroSpider(clk,
                  .rst(rst), 
                  .outV(neuronInput[15:0]));
    mod_ParamFetch  XLXI_5 (.clk(clk), 
+                          .indexOffset(IndexOffset[15:0]), 
                           .indexVal(indexVal[15:0]), 
                           .inputVal(inputVal[15:0]), 
                           .numAdds(numInputs[15:0]), 
                           .offset(offset[15:0]), 
                           .rst(rst), 
                           .startFetch(XLXN_1), 
+                          .weightOffset(WeightOffset[15:0]), 
                           .weightVal(weightVal[15:0]), 
                           .fsmReply(XLXN_11), 
                           .indexAddr(indexAddr[15:0]), 
@@ -886,12 +898,14 @@ endmodule
 module mod_OpUnitNEW_MUSER_NeuroSpider(actFuncSel, 
                                        clk, 
                                        indexDataIn, 
+                                       IndexOffset, 
                                        inputDataIn, 
                                        newNumInputs, 
                                        offset, 
                                        resultDestinationIn, 
                                        rst, 
                                        weightDataIn, 
+                                       WeightOffset, 
                                        finalResult, 
                                        finishedNeuronOp, 
                                        indexAddr, 
@@ -903,12 +917,14 @@ module mod_OpUnitNEW_MUSER_NeuroSpider(actFuncSel,
     input [1:0] actFuncSel;
     input clk;
     input [15:0] indexDataIn;
+    input [15:0] IndexOffset;
     input [15:0] inputDataIn;
     input [15:0] newNumInputs;
     input [15:0] offset;
     input [15:0] resultDestinationIn;
     input rst;
     input [15:0] weightDataIn;
+    input [15:0] WeightOffset;
    output [15:0] finalResult;
    output finishedNeuronOp;
    output [15:0] indexAddr;
@@ -956,6 +972,8 @@ module mod_OpUnitNEW_MUSER_NeuroSpider(actFuncSel,
                                               .outputReady(XLXN_28), 
                                               .readyForInput(XLXN_8));
    mod_ParamFetchStage_MUSER_NeuroSpider  XLXI_13 (.clk(clk), 
+                                                  
+         .IndexOffset(IndexOffset[15:0]), 
                                                   .indexVal(indexDataIn[15:0]), 
                                                   .inputVal(inputDataIn[15:0]), 
                                                   
@@ -963,6 +981,8 @@ module mod_OpUnitNEW_MUSER_NeuroSpider(actFuncSel,
                                                   .offset(offset[15:0]), 
                                                   .readyNextParam(XLXN_8), 
                                                   .rst(rst), 
+                                                  
+         .WeightOffset(WeightOffset[15:0]), 
                                                   
          .weightVal(weightDataIn[15:0]), 
                                                   .indexAddr(indexAddr[15:0]), 
@@ -997,7 +1017,6 @@ module NeuroSpider(Address,
    wire XLXN_5;
    wire [15:0] XLXN_6;
    wire [15:0] XLXN_7;
-   wire XLXN_8;
    wire [15:0] XLXN_12;
    wire [15:0] XLXN_13;
    wire [15:0] XLXN_14;
@@ -1023,16 +1042,21 @@ module NeuroSpider(Address,
    wire [15:0] XLXN_73;
    wire [1:0] XLXN_77;
    wire [1:0] XLXN_78;
+   wire XLXN_82;
+   wire [15:0] XLXN_83;
+   wire [15:0] XLXN_84;
    
    mod_OpUnitNEW_MUSER_NeuroSpider  XLXI_1 (.actFuncSel(ActFuncSel[1:0]), 
                                            .clk(clk), 
                                            .indexDataIn(XLXN_27[15:0]), 
+                                           .IndexOffset(XLXN_84[15:0]), 
                                            .inputDataIn(XLXN_66[15:0]), 
                                            .newNumInputs(XLXN_29[15:0]), 
                                            .offset(XLXN_63[15:0]), 
                                            .resultDestinationIn(XLXN_60[15:0]), 
                                            .rst(XLXN_3), 
                                            .weightDataIn(XLXN_12[15:0]), 
+                                           .WeightOffset(XLXN_83[15:0]), 
                                            .finalResult(XLXN_31[15:0]), 
                                            .finishedNeuronOp(XLXN_33), 
                                            .indexAddr(XLXN_23[15:0]), 
@@ -1065,7 +1089,7 @@ module NeuroSpider(Address,
                                         .ReverseWrite(XLXN_51), 
                                         .userAddr(XLXN_7[15:0]), 
                                         .userDataIn(XLXN_6[15:0]), 
-                                        .userWE(XLXN_8), 
+                                        .userWE(XLXN_82), 
                                         .proc1DataOut(XLXN_66[15:0]), 
                                         .proc2DataOut(), 
                                         .userDataOut(XLXN_71[15:0]));
@@ -1100,6 +1124,7 @@ module NeuroSpider(Address,
                                                .DataInIndex(XLXN_20[15:0]), 
                                                .DataInLayer(XLXN_6[15:0]), 
                                                .DataInWeights(XLXN_13[15:0]), 
+                                               .IndexOffsetReg(XLXN_84[15:0]), 
                                                .IndexOpSel(XLXN_78[1:0]), 
                                                .numOfOps(XLXN_29[15:0]), 
                                                .offset(XLXN_63[15:0]), 
@@ -1108,9 +1133,10 @@ module NeuroSpider(Address,
          .ReadyForNextOperation(ReadyNextOperation), 
                                                .ResultDest(XLXN_60[15:0]), 
                                                .rst(XLXN_3), 
+                                               .WeightOffsetReg(XLXN_83[15:0]), 
                                                .weightOpSel(XLXN_77[1:0]), 
                                                .WEIndex(XLXN_24), 
-                                               .WELayer(XLXN_8), 
+                                               .WELayer(XLXN_82), 
                                                .WEWeights(XLXN_17), 
                                                .WriteReverse(XLXN_51));
 endmodule

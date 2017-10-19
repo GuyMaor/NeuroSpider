@@ -1,1 +1,2 @@
 verilog work "mod_ParamFetch.v"
+verilog work "mod_Controller.vf"

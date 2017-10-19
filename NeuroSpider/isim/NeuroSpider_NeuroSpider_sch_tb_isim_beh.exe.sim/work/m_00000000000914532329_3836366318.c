@@ -25,7 +25,7 @@ static const char *ng0 = "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/Ne
 
 
 
-static void Cont_862_0(char *t0)
+static void Cont_874_0(char *t0)
 {
     char t3[8];
     char *t1;
@@ -60,7 +60,7 @@ LAB0:    t1 = (t0 + 3968U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(862, ng0);
+LAB2:    xsi_set_current_line(874, ng0);
     t2 = (t0 + 2808U);
     t4 = *((char **)t2);
     memset(t3, 0, 8);
@@ -101,7 +101,7 @@ LAB2:    xsi_set_current_line(862, ng0);
 LAB1:    return;
 }
 
-static void Cont_863_1(char *t0)
+static void Cont_875_1(char *t0)
 {
     char *t1;
     char *t2;
@@ -127,7 +127,7 @@ LAB0:    t1 = (t0 + 4216U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(863, ng0);
+LAB2:    xsi_set_current_line(875, ng0);
     t2 = (t0 + 2648U);
     t3 = *((char **)t2);
     t2 = (t0 + 4696);
@@ -158,7 +158,7 @@ LAB1:    return;
 
 extern void work_m_00000000000914532329_3836366318_init()
 {
-	static char *pe[] = {(void *)Cont_862_0,(void *)Cont_863_1};
+	static char *pe[] = {(void *)Cont_874_0,(void *)Cont_875_1};
 	xsi_register_didat("work_m_00000000000914532329_3836366318", "isim/NeuroSpider_NeuroSpider_sch_tb_isim_beh.exe.sim/work/m_00000000000914532329_3836366318.didat");
 	xsi_register_executes(pe);
 }

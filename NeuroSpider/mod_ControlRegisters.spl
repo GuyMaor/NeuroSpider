@@ -21,6 +21,8 @@ readyForNextOp
 =outData[15:0]=
 =cacheDataIn[15:0]=
 =cacheAddrIn[15:0]=
+=indexOffsetReg[15:0]=
+=weightOffsetReg[15:0]=
 =offsetReg[15:0]=
 =destReg[15:0]=
 =numOpsReg[15:0]=

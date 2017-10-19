@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Parameter xsthdpdir set to C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
 
@@ -18,18 +18,21 @@ Total CPU time to Xst completion: 0.11 secs
 *                          HDL Compilation                              *
 =========================================================================
 Compiling verilog file "mod_ParamFetch.v" in library work
+Compiling verilog file "mod_Controller.vf" in library work
 Module <mod_ParamFetch> compiled
+Module <mod_ProcMux_MUSER_mod_Controller> compiled
+Module <mod_Controller> compiled
 No errors in compilation
 Analysis of file <"mod_ParamFetch.prj"> succeeded.
  
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> 
 
-Total memory usage is 277124 kilobytes
+Total memory usage is 277204 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)

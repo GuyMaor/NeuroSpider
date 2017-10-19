@@ -1,2 +1,4 @@
 sch2sym -intstyle ise -family spartan3e -w -refsym mod_OpUnitNEW {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_OpUnitNEW.sch} {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_OpUnitNEW.sym} 
 sch2sym -intstyle ise -family spartan3e -w -refsym mod_OpUnitNEW {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_OpUnitNEW.sch} {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_OpUnitNEW.sym} 
+sch2hdl -intstyle ise -family spartan3e -verilog mod_OpUnitNEW_drc.vf -w {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_OpUnitNEW.sch} 
+sch2sym -intstyle ise -family spartan3e -w -refsym mod_OpUnitNEW {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_OpUnitNEW.sch} {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_OpUnitNEW.sym} 

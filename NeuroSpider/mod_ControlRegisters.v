@@ -5,6 +5,7 @@ module mod_ControlRegisters(cacheComSel,weightNOTIndex,paramNOTLayer,//Com
 							WE,inAddr,inData,outData,
 							cacheDataOut,cacheDataIn,cacheAddrIn,cacheWE,
 							beginOp,fsmBeginOp,readyForNextOp,fsmReadyForNextOp,
+							indexOffsetReg,weightOffsetReg,
 							offsetReg,destReg,numOpsReg,critical,clk);//CHANGE critical
 
 
@@ -14,6 +15,8 @@ module mod_ControlRegisters(cacheComSel,weightNOTIndex,paramNOTLayer,//Com
 		parameter numOpsRegAddr = 16'h8002;
 		parameter cacheComRegAddr = 16'h8003;
 		parameter controlRegAddr = 16'h8004;
+		parameter indexOffsetRegAddr = 16'h8005;
+		parameter weightOffsetRegAddr = 16'h8006;
 
 		//GOOD
 		input clk;
@@ -33,12 +36,17 @@ module mod_ControlRegisters(cacheComSel,weightNOTIndex,paramNOTLayer,//Com
 		output [15:0] offsetReg;
 		output [15:0] destReg;
 		output [15:0] numOpsReg;
+		output [15:0] indexOffsetReg;
+		output [15:0] weightOffsetReg;
 		reg [15:0] offsetReg;
 		reg [15:0] destReg;
 		reg [15:0] numOpsReg;
+		reg [15:0] indexOffsetReg;
+		reg [15:0] weightOffsetReg;		
 		//reg [6:0] cacheComReg;
 		reg [3:0] cacheComReg;
 		reg [6:0] controlReg;
+
 		
 		//User Interface
 		input WE;
@@ -92,6 +100,8 @@ module mod_ControlRegisters(cacheComSel,weightNOTIndex,paramNOTLayer,//Com
 				numOpsReg = 16'd0;
 				cacheComReg = 4'd0;
 				controlReg = 7'd0;
+				indexOffsetReg = 16'd0;
+				weightOffsetReg = 16'd0;
 		end
 
 		always @ (posedge clk)
@@ -104,6 +114,8 @@ module mod_ControlRegisters(cacheComSel,weightNOTIndex,paramNOTLayer,//Com
 					numOpsRegAddr :	numOpsReg = inData;
 					cacheComRegAddr : cacheComReg = inData[4:0];
 					controlRegAddr : controlReg = inData[6:0];
+					indexOffsetRegAddr : indexOffsetReg = inData;
+					weightOffsetRegAddr : weightOffsetReg = inData;
 				endcase
 			end
 		end
@@ -118,6 +130,8 @@ module mod_ControlRegisters(cacheComSel,weightNOTIndex,paramNOTLayer,//Com
 				numOpsRegAddr :	outData = numOpsReg;
 				cacheComRegAddr : outData = {12'd0,cacheComReg};
 				controlRegAddr : outData = {9'd0,controlReg[6:0]};
+				indexOffsetRegAddr : outData = indexOffsetReg;
+				weightOffsetRegAddr : outData = weightOffsetReg;
 				default: outData = cacheDataOut;
 			endcase
 		end		

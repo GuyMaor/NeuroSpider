@@ -48,6 +48,11 @@
         <signal name="XLXN_2(15:0)" />
         <signal name="XLXN_76" />
         <signal name="XLXN_77" />
+        <signal name="XLXN_79">
+        </signal>
+        <signal name="XLXN_80" />
+        <signal name="IndexOffsetReg(15:0)" />
+        <signal name="WeightOffsetReg(15:0)" />
         <port polarity="Output" name="critical" />
         <port polarity="Output" name="weightOpSel(1:0)" />
         <port polarity="Input" name="WriteEnable" />
@@ -78,8 +83,14 @@
         <port polarity="Input" name="OpFinishMUXSIG" />
         <port polarity="Output" name="rst" />
         <port polarity="Input" name="clk" />
+        <port polarity="Output" name="IndexOffsetReg(15:0)" />
+        <port polarity="Output" name="WeightOffsetReg(15:0)" />
         <blockdef name="mod_ControlRegisters">
-            <timestamp>2017-10-18T2:11:42</timestamp>
+            <timestamp>2017-10-18T23:53:47</timestamp>
+            <rect width="64" x="480" y="532" height="24" />
+            <line x2="544" y1="544" y2="544" x1="480" />
+            <rect width="64" x="480" y="596" height="24" />
+            <line x2="544" y1="608" y2="608" x1="480" />
             <rect width="64" x="480" y="468" height="24" />
             <line x2="544" y1="480" y2="480" x1="480" />
             <line x2="0" y1="288" y2="288" x1="64" />
@@ -117,7 +128,7 @@
             <line x2="544" y1="-96" y2="-96" x1="480" />
             <rect width="64" x="480" y="-44" height="24" />
             <line x2="544" y1="-32" y2="-32" x1="480" />
-            <rect width="416" x="64" y="-640" height="1152" />
+            <rect width="416" x="64" y="-640" height="1280" />
         </blockdef>
         <blockdef name="mod_ProcMux">
             <timestamp>2017-10-13T11:36:46</timestamp>
@@ -172,6 +183,7 @@
             <blockpin signalname="ReadyForNextOperation" name="readyForNextOp" />
             <blockpin signalname="cacheComSel(1:0)" name="cacheComSel(1:0)" />
             <blockpin signalname="actFuncSel(1:0)" name="actFuncSel(1:0)" />
+            <blockpin signalname="weightOpSel(1:0)" name="weightOPSel(1:0)" />
             <blockpin signalname="IndexOpSel(1:0)" name="indexOPSel(1:0)" />
             <blockpin signalname="OutputData(15:0)" name="outData(15:0)" />
             <blockpin signalname="XLXN_48(15:0)" name="cacheDataIn(15:0)" />
@@ -179,7 +191,8 @@
             <blockpin signalname="offset(15:0)" name="offsetReg(15:0)" />
             <blockpin signalname="ResultDest(15:0)" name="destReg(15:0)" />
             <blockpin signalname="numOfOps(15:0)" name="numOpsReg(15:0)" />
-            <blockpin signalname="weightOpSel(1:0)" name="weightOPSel(1:0)" />
+            <blockpin signalname="IndexOffsetReg(15:0)" name="indexOffsetReg(15:0)" />
+            <blockpin signalname="WeightOffsetReg(15:0)" name="weightOffsetReg(15:0)" />
         </block>
         <block symbolname="mod_ControlFSM" name="XLXI_5">
             <blockpin signalname="OpFinishMUXSIG" name="finishedOp" />
@@ -228,7 +241,6 @@
         </instance>
         <iomarker fontsize="28" x="2592" y="1760" name="IndexOpSel(1:0)" orien="R270" />
         <iomarker fontsize="28" x="2528" y="1776" name="cacheComSel(1:0)" orien="R270" />
-        <iomarker fontsize="28" x="2832" y="1744" name="offset(15:0)" orien="R270" />
         <iomarker fontsize="28" x="2160" y="1552" name="WriteReverse" orien="R270" />
         <iomarker fontsize="28" x="2400" y="1696" name="numOfOps(15:0)" orien="R270" />
         <iomarker fontsize="28" x="2336" y="1696" name="ResultDest(15:0)" orien="R270" />
@@ -263,8 +275,7 @@
             <wire x2="960" y1="2272" y2="2368" x1="960" />
             <wire x2="2096" y1="2368" y2="2368" x1="960" />
             <wire x2="2096" y1="2368" y2="2544" x1="2096" />
-            <wire x2="2448" y1="2544" y2="2544" x1="2096" />
-            <wire x2="2464" y1="2544" y2="2544" x1="2448" />
+            <wire x2="2464" y1="2544" y2="2544" x1="2096" />
             <wire x2="1296" y1="2272" y2="2272" x1="960" />
             <wire x2="1248" y1="880" y2="880" x1="1232" />
             <wire x2="1248" y1="864" y2="880" x1="1248" />
@@ -312,11 +323,6 @@
             <wire x2="2160" y1="1552" y2="1792" x1="2160" />
             <wire x2="2208" y1="1792" y2="1792" x1="2160" />
             <wire x2="2208" y1="1792" y2="1808" x1="2208" />
-        </branch>
-        <branch name="offset(15:0)">
-            <wire x2="2832" y1="1792" y2="1792" x1="2272" />
-            <wire x2="2272" y1="1792" y2="1808" x1="2272" />
-            <wire x2="2832" y1="1744" y2="1792" x1="2832" />
         </branch>
         <branch name="ResultDest(15:0)">
             <wire x2="2336" y1="1696" y2="1808" x1="2336" />
@@ -454,5 +460,19 @@
             <wire x2="2592" y1="1328" y2="1328" x1="2016" />
             <wire x2="2592" y1="976" y2="1328" x1="2592" />
         </branch>
+        <branch name="offset(15:0)">
+            <wire x2="2272" y1="1792" y2="1808" x1="2272" />
+            <wire x2="2832" y1="1792" y2="1792" x1="2272" />
+            <wire x2="2832" y1="1712" y2="1792" x1="2832" />
+        </branch>
+        <iomarker fontsize="28" x="2832" y="1712" name="offset(15:0)" orien="R270" />
+        <branch name="IndexOffsetReg(15:0)">
+            <wire x2="2720" y1="1776" y2="1808" x1="2720" />
+        </branch>
+        <iomarker fontsize="28" x="2720" y="1776" name="IndexOffsetReg(15:0)" orien="R270" />
+        <branch name="WeightOffsetReg(15:0)">
+            <wire x2="2784" y1="1776" y2="1808" x1="2784" />
+        </branch>
+        <iomarker fontsize="28" x="2784" y="1776" name="WeightOffsetReg(15:0)" orien="R270" />
     </sheet>
 </drawing>

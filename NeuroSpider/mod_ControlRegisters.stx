@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.27 secs
  
 --> Parameter xsthdpdir set to C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.27 secs
  
 --> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
 
@@ -18,18 +18,21 @@ Total CPU time to Xst completion: 0.11 secs
 *                          HDL Compilation                              *
 =========================================================================
 Compiling verilog file "mod_ControlRegisters.v" in library work
+Compiling verilog file "mod_Controller.vf" in library work
 Module <mod_ControlRegisters> compiled
+Module <mod_ProcMux_MUSER_mod_Controller> compiled
+Module <mod_Controller> compiled
 No errors in compilation
 Analysis of file <"mod_ControlRegisters.prj"> succeeded.
  
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.31 secs
  
 --> 
 
-Total memory usage is 277220 kilobytes
+Total memory usage is 277184 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)

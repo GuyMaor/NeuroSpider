@@ -1,0 +1,301 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : mod_OpUnitNEW_drc.vf
+// /___/   /\     Timestamp : 10/18/2017 19:02:58
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -intstyle ise -family spartan3e -verilog mod_OpUnitNEW_drc.vf -w "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_OpUnitNEW.sch"
+//Design Name: mod_OpUnitNEW
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module mod_ParamFetchStage_MUSER_mod_OpUnitNEW(clk, 
+                                               IndexOffset, 
+                                               indexVal, 
+                                               inputVal, 
+                                               numInputs, 
+                                               offset, 
+                                               readyNextParam, 
+                                               rst, 
+                                               WeightOffset, 
+                                               weightVal, 
+                                               indexAddr, 
+                                               inputAddr, 
+                                               neuronInput, 
+                                               neuronWeight, 
+                                               paramsReady, 
+                                               weightAddr);
+
+    input clk;
+    input [15:0] IndexOffset;
+    input [15:0] indexVal;
+    input [15:0] inputVal;
+    input [15:0] numInputs;
+    input [15:0] offset;
+    input readyNextParam;
+    input rst;
+    input [15:0] WeightOffset;
+    input [15:0] weightVal;
+   output [15:0] indexAddr;
+   output [15:0] inputAddr;
+   output [15:0] neuronInput;
+   output [15:0] neuronWeight;
+   output paramsReady;
+   output [15:0] weightAddr;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire [15:0] XLXN_5;
+   wire [15:0] XLXN_6;
+   wire XLXN_9;
+   wire XLXN_11;
+   
+   REG16  XLXI_1 (.clk(clk), 
+                 .en(XLXN_2), 
+                 .inV(XLXN_6[15:0]), 
+                 .rst(rst), 
+                 .outV(neuronWeight[15:0]));
+   mod_TriStateMachine  XLXI_3 (.clk(clk), 
+                               .in0(XLXN_11), 
+                               .in1(XLXN_9), 
+                               .in2(readyNextParam), 
+                               .rst(rst), 
+                               .state0(XLXN_1), 
+                               .state1(XLXN_2), 
+                               .state2(paramsReady));
+   REG16  XLXI_4 (.clk(clk), 
+                 .en(XLXN_2), 
+                 .inV(XLXN_5[15:0]), 
+                 .rst(rst), 
+                 .outV(neuronInput[15:0]));
+   mod_ParamFetch  XLXI_5 (.clk(clk), 
+                          .indexOffset(IndexOffset[15:0]), 
+                          .indexVal(indexVal[15:0]), 
+                          .inputVal(inputVal[15:0]), 
+                          .numAdds(numInputs[15:0]), 
+                          .offset(offset[15:0]), 
+                          .rst(rst), 
+                          .startFetch(XLXN_1), 
+                          .weightOffset(WeightOffset[15:0]), 
+                          .weightVal(weightVal[15:0]), 
+                          .fsmReply(XLXN_11), 
+                          .indexAddr(indexAddr[15:0]), 
+                          .inputAddr(inputAddr[15:0]), 
+                          .outVal(XLXN_5[15:0]), 
+                          .outWeight(XLXN_6[15:0]), 
+                          .WE(XLXN_9), 
+                          .weightAddr(weightAddr[15:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module mod_MulStageNEW_MUSER_mod_OpUnitNEW(clk, 
+                                           destReady, 
+                                           in_A, 
+                                           in_B, 
+                                           rst, 
+                                           srcReady, 
+                                           multiplicationResult, 
+                                           outputReady, 
+                                           readyForInput);
+
+    input clk;
+    input destReady;
+    input [15:0] in_A;
+    input [15:0] in_B;
+    input rst;
+    input srcReady;
+   output [15:0] multiplicationResult;
+   output outputReady;
+   output readyForInput;
+   
+   wire out_Ready;
+   wire state1;
+   wire [15:0] XLXN_1;
+   wire readyForInput_DUMMY;
+   
+   assign readyForInput = readyForInput_DUMMY;
+   mod_TriStateMachine  XLXI_1 (.clk(clk), 
+                               .in0(srcReady), 
+                               .in1(out_Ready), 
+                               .in2(destReady), 
+                               .rst(rst), 
+                               .state0(readyForInput_DUMMY), 
+                               .state1(state1), 
+                               .state2(outputReady));
+   REG16  XLXI_6 (.clk(clk), 
+                 .en(state1), 
+                 .inV(XLXN_1[15:0]), 
+                 .rst(rst), 
+                 .outV(multiplicationResult[15:0]));
+   mod_Multiply  XLXI_8 (.clk(clk), 
+                        .in_A(in_A[15:0]), 
+                        .in_B(in_B[15:0]), 
+                        .in_En(readyForInput_DUMMY), 
+                        .rst(rst), 
+                        .out_Out(XLXN_1[15:0]), 
+                        .out_Ready(out_Ready));
+endmodule
+`timescale 1ns / 1ps
+
+module mod_AddStage_MUSER_mod_OpUnitNEW(clk, 
+                                        inReady, 
+                                        inValue, 
+                                        newNumAdds, 
+                                        rst, 
+                                        outReady, 
+                                        result, 
+                                        StartingAdd);
+
+    input clk;
+    input inReady;
+    input [15:0] inValue;
+    input [15:0] newNumAdds;
+    input rst;
+   output outReady;
+   output [15:0] result;
+   output StartingAdd;
+   
+   wire XLXN_2;
+   wire XLXN_11;
+   wire StartingAdd_DUMMY;
+   wire [15:0] result_DUMMY;
+   
+   assign result[15:0] = result_DUMMY[15:0];
+   assign StartingAdd = StartingAdd_DUMMY;
+   mod_AdderFSM  XLXI_1 (.clk(clk), 
+                        .inReady(inReady), 
+                        .lastAdd(XLXN_2), 
+                        .rst(rst), 
+                        .sinAddFin(XLXN_11), 
+                        .allAddsFin(outReady), 
+                        .startAdd(StartingAdd_DUMMY));
+   mod_Add  XLXI_2 (.clk(clk), 
+                   .in_A(inValue[15:0]), 
+                   .in_B(result_DUMMY[15:0]), 
+                   .in_En(StartingAdd_DUMMY), 
+                   .rst(rst), 
+                   .out_Out(result_DUMMY[15:0]), 
+                   .out_Ready(XLXN_11));
+   mod_numCounter  XLXI_3 (.clk(clk), 
+                          .dec(StartingAdd_DUMMY), 
+                          .inVal(newNumAdds[15:0]), 
+                          .rst(rst), 
+                          .isZero(XLXN_2));
+endmodule
+`timescale 1ns / 1ps
+
+module mod_OpUnitNEW(actFuncSel, 
+                     clk, 
+                     indexDataIn, 
+                     IndexOffset, 
+                     inputDataIn, 
+                     newNumInputs, 
+                     offset, 
+                     resultDestinationIn, 
+                     rst, 
+                     weightDataIn, 
+                     WeightOffset, 
+                     finalResult, 
+                     finishedNeuronOp, 
+                     indexAddr, 
+                     inputAddr, 
+                     resultDestinationOut, 
+                     ResultWE, 
+                     weightAddr);
+
+    input [1:0] actFuncSel;
+    input clk;
+    input [15:0] indexDataIn;
+    input [15:0] IndexOffset;
+    input [15:0] inputDataIn;
+    input [15:0] newNumInputs;
+    input [15:0] offset;
+    input [15:0] resultDestinationIn;
+    input rst;
+    input [15:0] weightDataIn;
+    input [15:0] WeightOffset;
+   output [15:0] finalResult;
+   output finishedNeuronOp;
+   output [15:0] indexAddr;
+   output [15:0] inputAddr;
+   output [15:0] resultDestinationOut;
+   output ResultWE;
+   output [15:0] weightAddr;
+   
+   wire XLXN_4;
+   wire XLXN_8;
+   wire [15:0] XLXN_10;
+   wire [15:0] XLXN_11;
+   wire [15:0] XLXN_12;
+   wire XLXN_15;
+   wire XLXN_16;
+   wire [15:0] XLXN_20;
+   wire XLXN_28;
+   
+   mod_ActivFuncStage  XLXI_5 (.clk(clk), 
+                              .inDest(resultDestinationIn[15:0]), 
+                              .inVal(XLXN_12[15:0]), 
+                              .inWE(XLXN_16), 
+                              .rst(rst), 
+                              .sel(actFuncSel[1:0]), 
+                              .finishedNeuronOp(finishedNeuronOp), 
+                              .outDest(resultDestinationOut[15:0]), 
+                              .outVal(finalResult[15:0]), 
+                              .outWE(ResultWE));
+   mod_AddStage_MUSER_mod_OpUnitNEW  XLXI_6 (.clk(clk), 
+                                            .inReady(XLXN_28), 
+                                            .inValue(XLXN_20[15:0]), 
+                                            .newNumAdds(newNumInputs[15:0]), 
+                                            .rst(rst), 
+                                            .outReady(XLXN_16), 
+                                            .result(XLXN_12[15:0]), 
+                                            .StartingAdd(XLXN_15));
+   mod_MulStageNEW_MUSER_mod_OpUnitNEW  XLXI_12 (.clk(clk), 
+                                                .destReady(XLXN_15), 
+                                                .in_A(XLXN_10[15:0]), 
+                                                .in_B(XLXN_11[15:0]), 
+                                                .rst(rst), 
+                                                .srcReady(XLXN_4), 
+                                                
+         .multiplicationResult(XLXN_20[15:0]), 
+                                                .outputReady(XLXN_28), 
+                                                .readyForInput(XLXN_8));
+   mod_ParamFetchStage_MUSER_mod_OpUnitNEW  XLXI_13 (.clk(clk), 
+                                                    
+         .IndexOffset(IndexOffset[15:0]), 
+                                                    
+         .indexVal(indexDataIn[15:0]), 
+                                                    
+         .inputVal(inputDataIn[15:0]), 
+                                                    
+         .numInputs(newNumInputs[15:0]), 
+                                                    .offset(offset[15:0]), 
+                                                    .readyNextParam(XLXN_8), 
+                                                    .rst(rst), 
+                                                    
+         .WeightOffset(WeightOffset[15:0]), 
+                                                    
+         .weightVal(weightDataIn[15:0]), 
+                                                    
+         .indexAddr(indexAddr[15:0]), 
+                                                    
+         .inputAddr(inputAddr[15:0]), 
+                                                    
+         .neuronInput(XLXN_10[15:0]), 
+                                                    
+         .neuronWeight(XLXN_11[15:0]), 
+                                                    .paramsReady(XLXN_4), 
+                                                    
+         .weightAddr(weightAddr[15:0]));
+endmodule

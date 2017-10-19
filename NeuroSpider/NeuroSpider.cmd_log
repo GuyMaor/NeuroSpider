@@ -1,1 +1,2 @@
 sch2sym -intstyle ise -family spartan3e -w -refsym NeuroSpider {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/NeuroSpider.sch} {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/NeuroSpider.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym NeuroSpider {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/NeuroSpider.sch} {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/NeuroSpider.sym} 

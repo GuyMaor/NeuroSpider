@@ -31,6 +31,8 @@
         <signal name="indexAddr(15:0)" />
         <signal name="inputAddr(15:0)" />
         <signal name="weightAddr(15:0)" />
+        <signal name="IndexOffset(15:0)" />
+        <signal name="WeightOffset(15:0)" />
         <port polarity="Input" name="rst" />
         <port polarity="Input" name="actFuncSel(1:0)" />
         <port polarity="Input" name="resultDestinationIn(15:0)" />
@@ -47,6 +49,8 @@
         <port polarity="Output" name="indexAddr(15:0)" />
         <port polarity="Output" name="inputAddr(15:0)" />
         <port polarity="Output" name="weightAddr(15:0)" />
+        <port polarity="Input" name="IndexOffset(15:0)" />
+        <port polarity="Input" name="WeightOffset(15:0)" />
         <blockdef name="mod_ActivFuncStage">
             <timestamp>2017-10-18T2:3:31</timestamp>
             <rect width="64" x="400" y="20" height="24" />
@@ -98,8 +102,11 @@
             <line x2="512" y1="-32" y2="-32" x1="448" />
         </blockdef>
         <blockdef name="mod_ParamFetchStage">
-            <timestamp>2017-10-18T2:4:25</timestamp>
-            <rect width="384" x="64" y="-512" height="512" />
+            <timestamp>2017-10-19T0:1:25</timestamp>
+            <rect width="64" x="0" y="20" height="24" />
+            <line x2="0" y1="32" y2="32" x1="64" />
+            <rect width="64" x="0" y="84" height="24" />
+            <line x2="0" y1="96" y2="96" x1="64" />
             <line x2="0" y1="-480" y2="-480" x1="64" />
             <line x2="0" y1="-416" y2="-416" x1="64" />
             <line x2="0" y1="-352" y2="-352" x1="64" />
@@ -124,6 +131,7 @@
             <rect width="64" x="448" y="-172" height="24" />
             <line x2="512" y1="-160" y2="-160" x1="448" />
             <line x2="512" y1="-80" y2="-80" x1="448" />
+            <rect width="384" x="64" y="-512" height="640" />
         </blockdef>
         <block symbolname="mod_ActivFuncStage" name="XLXI_5">
             <blockpin signalname="XLXN_16" name="inWE" />
@@ -173,6 +181,8 @@
             <blockpin signalname="indexAddr(15:0)" name="indexAddr(15:0)" />
             <blockpin signalname="inputAddr(15:0)" name="inputAddr(15:0)" />
             <blockpin signalname="XLXN_4" name="paramsReady" />
+            <blockpin signalname="IndexOffset(15:0)" name="IndexOffset(15:0)" />
+            <blockpin signalname="WeightOffset(15:0)" name="WeightOffset(15:0)" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -328,5 +338,13 @@
             <wire x2="2256" y1="576" y2="576" x1="2048" />
         </branch>
         <iomarker fontsize="28" x="2256" y="576" name="weightAddr(15:0)" orien="R0" />
+        <branch name="IndexOffset(15:0)">
+            <wire x2="1536" y1="928" y2="928" x1="1504" />
+        </branch>
+        <iomarker fontsize="28" x="1504" y="928" name="IndexOffset(15:0)" orien="R180" />
+        <branch name="WeightOffset(15:0)">
+            <wire x2="1536" y1="992" y2="992" x1="1504" />
+        </branch>
+        <iomarker fontsize="28" x="1504" y="992" name="WeightOffset(15:0)" orien="R180" />
     </sheet>
 </drawing>

@@ -18,10 +18,12 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module mod_ParamFetch(numAdds,offset,startFetch,weightAddr,weightVal,indexAddr,
+module mod_ParamFetch(numAdds,offset,indexOffset,weightOffset,startFetch,weightAddr,weightVal,indexAddr,
 				indexVal,inputAddr,inputVal,outVal,outWeight,fsmReply,WE,rst,clk);
 				input [15:0] numAdds;
 				input [15:0] offset;
+				input [15:0] indexOffset;
+				input [15:0] weightOffset;
 				input startFetch;
 				input [15:0] weightVal;
 				output [15:0] weightAddr;
@@ -84,8 +86,8 @@ module mod_ParamFetch(numAdds,offset,startFetch,weightAddr,weightVal,indexAddr,
 					end
 				end*/
 				
-				wire [15:0] weightAddr = newAddr;
-				wire [15:0] indexAddr = newAddr;
+				wire [15:0] weightAddr = newAddr+weightOffset;
+				wire [15:0] indexAddr = newAddr+indexOffset;
 				
 				reg [15:0] oldOutWeight;
 				reg [15:0] indexReg;

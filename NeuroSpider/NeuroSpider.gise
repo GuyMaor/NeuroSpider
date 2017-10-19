@@ -161,6 +161,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="mod_Controller.xst"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_ControllerNEW.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_ControllerNEW.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_ControllerNEW_drc.vf"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_Controller_drc.vf"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="mod_Controller_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="mod_Controller_guide.ncd" xil_pn:origination="imported"/>
@@ -243,6 +244,7 @@
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_Mux16.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_OpUnitNEW.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_OpUnitNEW.vf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_OpUnitNEW_drc.vf"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="mod_ParamFetch.prj"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="mod_ParamFetch.spl"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="mod_ParamFetch.stx"/>
@@ -304,7 +306,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1508307004" xil_pn:in_ck="6747217230225723850" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1508307004">
+    <transform xil_pn:end_ts="1508372810" xil_pn:in_ck="6747217230225723850" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1508372810">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="MUX2.v"/>
@@ -355,7 +357,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1508301630" xil_pn:in_ck="4916957789627934606" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-9009590651647261622" xil_pn:start_ts="1508301622">
+    <transform xil_pn:end_ts="1508371982" xil_pn:in_ck="4916957789627934606" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-9009590651647261622" xil_pn:start_ts="1508371975">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="NeuroSpider.vf"/>
@@ -375,7 +377,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1508307005" xil_pn:in_ck="-2906939081103356735" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1508307004">
+    <transform xil_pn:end_ts="1508372810" xil_pn:in_ck="-2906939081103356735" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1508372810">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="MUX2.v"/>
@@ -435,7 +437,7 @@
       <outfile xil_pn:name="test_TriStateMachine.v"/>
       <outfile xil_pn:name="test_numCounter.v"/>
     </transform>
-    <transform xil_pn:end_ts="1508307009" xil_pn:in_ck="-2906939081103356735" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4945339614329575439" xil_pn:start_ts="1508307005">
+    <transform xil_pn:end_ts="1508372815" xil_pn:in_ck="-2906939081103356735" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4945339614329575439" xil_pn:start_ts="1508372810">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="NeuroSpider_NeuroSpider_sch_tb_beh.prj"/>
@@ -445,7 +447,7 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1508307010" xil_pn:in_ck="-3007684891970322782" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-6019322928214541820" xil_pn:start_ts="1508307009">
+    <transform xil_pn:end_ts="1508372815" xil_pn:in_ck="-3007684891970322782" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-6019322928214541820" xil_pn:start_ts="1508372815">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="NeuroSpider_NeuroSpider_sch_tb_isim_beh.wdb"/>

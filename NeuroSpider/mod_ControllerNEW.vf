@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : mod_ControllerNEW.vf
-// /___/   /\     Timestamp : 10/17/2017 23:40:26
+// /___/   /\     Timestamp : 10/18/2017 19:12:59
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -86,6 +86,7 @@ module mod_ControllerNEW(AddressInput,
                          DataInIndex, 
                          DataInLayer, 
                          DataInWeights, 
+                         IndexOffsetReg, 
                          IndexOpSel, 
                          numOfOps, 
                          offset, 
@@ -93,6 +94,7 @@ module mod_ControllerNEW(AddressInput,
                          ReadyForNextOperation, 
                          ResultDest, 
                          rst, 
+                         WeightOffsetReg, 
                          weightOpSel, 
                          WEIndex, 
                          WELayer, 
@@ -117,6 +119,7 @@ module mod_ControllerNEW(AddressInput,
    output [15:0] DataInIndex;
    output [15:0] DataInLayer;
    output [15:0] DataInWeights;
+   output [15:0] IndexOffsetReg;
    output [1:0] IndexOpSel;
    output [15:0] numOfOps;
    output [15:0] offset;
@@ -124,6 +127,7 @@ module mod_ControllerNEW(AddressInput,
    output ReadyForNextOperation;
    output [15:0] ResultDest;
    output rst;
+   output [15:0] WeightOffsetReg;
    output [1:0] weightOpSel;
    output WEIndex;
    output WELayer;
@@ -199,6 +203,7 @@ module mod_ControllerNEW(AddressInput,
                                 .cacheWE(XLXN_50), 
                                 .destReg(ResultDest[15:0]), 
                                 .fsmBeginOp(StartOperation), 
+                                .indexOffsetReg(IndexOffsetReg[15:0]), 
                                 .indexOPSel(IndexOpSel[1:0]), 
                                 .numOpsReg(numOfOps[15:0]), 
                                 .offsetReg(offset[15:0]), 
@@ -206,6 +211,7 @@ module mod_ControllerNEW(AddressInput,
                                 .paramNOTLayer(XLXN_9), 
                                 .readyForNextOp(ReadyForNextOperation), 
                                 .weightNOTIndex(XLXN_76), 
+                                .weightOffsetReg(WeightOffsetReg[15:0]), 
                                 .weightOPSel(weightOpSel[1:0]), 
                                 .writeReverse(WriteReverse));
 endmodule

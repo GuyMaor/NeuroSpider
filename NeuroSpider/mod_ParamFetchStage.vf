@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : mod_ParamFetchStage.vf
-// /___/   /\     Timestamp : 10/17/2017 23:40:25
+// /___/   /\     Timestamp : 10/18/2017 19:12:57
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -21,12 +21,14 @@
 `timescale 1ns / 1ps
 
 module mod_ParamFetchStage(clk, 
+                           IndexOffset, 
                            indexVal, 
                            inputVal, 
                            numInputs, 
                            offset, 
                            readyNextParam, 
                            rst, 
+                           WeightOffset, 
                            weightVal, 
                            indexAddr, 
                            inputAddr, 
@@ -36,12 +38,14 @@ module mod_ParamFetchStage(clk,
                            weightAddr);
 
     input clk;
+    input [15:0] IndexOffset;
     input [15:0] indexVal;
     input [15:0] inputVal;
     input [15:0] numInputs;
     input [15:0] offset;
     input readyNextParam;
     input rst;
+    input [15:0] WeightOffset;
     input [15:0] weightVal;
    output [15:0] indexAddr;
    output [15:0] inputAddr;
@@ -76,12 +80,14 @@ module mod_ParamFetchStage(clk,
                  .rst(rst), 
                  .outV(neuronInput[15:0]));
    mod_ParamFetch  XLXI_5 (.clk(clk), 
+                          .indexOffset(IndexOffset[15:0]), 
                           .indexVal(indexVal[15:0]), 
                           .inputVal(inputVal[15:0]), 
                           .numAdds(numInputs[15:0]), 
                           .offset(offset[15:0]), 
                           .rst(rst), 
                           .startFetch(XLXN_1), 
+                          .weightOffset(WeightOffset[15:0]), 
                           .weightVal(weightVal[15:0]), 
                           .fsmReply(XLXN_11), 
                           .indexAddr(indexAddr[15:0]), 

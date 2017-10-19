@@ -16,3 +16,5 @@ vhdtdtfi -lib work {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpi
 spl2sym -intstyle ise -family spartan3e -w mod_ParamFetch.spl {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamFetch.sym} 
 vhdtdtfi -lib work {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamFetch.v} -lang verilog -prj NeuroSpider -o mod_ParamFetch.spl -module mod_ParamFetch -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
 spl2sym -intstyle ise -family spartan3e -w mod_ParamFetch.spl {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamFetch.sym} 
+vhdtdtfi -lib work {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamFetch.v} -lang verilog -prj NeuroSpider -o mod_ParamFetch.spl -module mod_ParamFetch -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w mod_ParamFetch.spl {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ParamFetch.sym} 
