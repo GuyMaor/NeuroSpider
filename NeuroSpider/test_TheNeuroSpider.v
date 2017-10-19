@@ -14,6 +14,7 @@ module TheNeuroSpider_TheNeuroSpider_sch_tb();
 		
 		parameter floatNum1 = 16'h3c00;
 		parameter floatNum2 = 16'h4000;
+		parameter floatNum3 = 16'h4200;
 		parameter floatNegNum2 = 16'hc000; 
 // Inputs
    reg clk;
@@ -83,7 +84,7 @@ module TheNeuroSpider_TheNeuroSpider_sch_tb();
 		//Set number of neuron inputs
 		WE =1;
 		Address = numOpsRegAddr;
-		InputData = 16'd2;
+		InputData = 16'd3;
 
 		#100;clk = 1;#100;clk = 0;
 		
@@ -108,6 +109,11 @@ module TheNeuroSpider_TheNeuroSpider_sch_tb();
 
 		#100;clk = 1;#100;clk = 0;	
 
+		//Write third input
+		WE =1;
+		Address = 16'h0003;//loc 3
+		InputData = floatNum3;//val 3
+
 		/*INDEX*/
 
 		#100;clk = 1;#100;clk = 0;
@@ -127,6 +133,12 @@ module TheNeuroSpider_TheNeuroSpider_sch_tb();
 
 		#100;clk = 1;#100;clk = 0;			
 
+		//write third index
+		WE =1;
+		Address = 16'h0003;//loc 3
+		InputData = 16'h0002;//index 1
+
+		#100;clk = 1;#100;clk = 0;		
 		/*weights*/
 		
 		//write first weight
@@ -141,6 +153,13 @@ module TheNeuroSpider_TheNeuroSpider_sch_tb();
 		WE =1;
 		Address = 16'h0002;//loc 2
 		InputData = floatNum2;//val 2
+		
+		#100;clk = 1;#100;clk = 0;
+		
+		//write third weight
+		WE =1;
+		Address = 16'h0003;//loc 2
+		InputData = floatNum3;//val 2
 		
 		#100;clk = 1;#100;clk = 0;
 

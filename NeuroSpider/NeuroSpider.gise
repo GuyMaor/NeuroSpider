@@ -320,7 +320,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1508411484" xil_pn:in_ck="469585474430124295" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1508411484">
+    <transform xil_pn:end_ts="1508412265" xil_pn:in_ck="469585474430124295" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1508412265">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="REG16.v"/>
@@ -388,9 +388,10 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1508411485" xil_pn:in_ck="951095052840798396" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1508411484">
+    <transform xil_pn:end_ts="1508412265" xil_pn:in_ck="-5144146526078673515" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1508412265">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="NeuroSpider.vf"/>
       <outfile xil_pn:name="REG16.v"/>
       <outfile xil_pn:name="TheNeuroSpider.vf"/>
       <outfile xil_pn:name="calcShift.v"/>
@@ -403,9 +404,12 @@
       <outfile xil_pn:name="mod_CacheMux.vf"/>
       <outfile xil_pn:name="mod_ControlFSM.v"/>
       <outfile xil_pn:name="mod_ControlRegistersUPDATE.v"/>
+      <outfile xil_pn:name="mod_ControllerNEW.vf"/>
       <outfile xil_pn:name="mod_ControllerUPDATE.vf"/>
       <outfile xil_pn:name="mod_Demux.v"/>
       <outfile xil_pn:name="mod_Demux16.v"/>
+      <outfile xil_pn:name="mod_LayerRouter.vf"/>
+      <outfile xil_pn:name="mod_Layers.vf"/>
       <outfile xil_pn:name="mod_LayersUPDATE.vf"/>
       <outfile xil_pn:name="mod_MulStage.vf"/>
       <outfile xil_pn:name="mod_MulStageNEW.vf"/>
@@ -415,6 +419,8 @@
       <outfile xil_pn:name="mod_OpUnitNEW.vf"/>
       <outfile xil_pn:name="mod_ParamFetch.v"/>
       <outfile xil_pn:name="mod_ParamFetchStage.vf"/>
+      <outfile xil_pn:name="mod_ParamRouter.vf"/>
+      <outfile xil_pn:name="mod_Params.vf"/>
       <outfile xil_pn:name="mod_ParamsUPDATE.vf"/>
       <outfile xil_pn:name="mod_ProcMux.vf"/>
       <outfile xil_pn:name="mod_ReluFunc.v"/>
@@ -445,11 +451,9 @@
       <outfile xil_pn:name="test_numCounter.v"/>
       <outfile xil_pn:name="zeroVal.v"/>
     </transform>
-    <transform xil_pn:end_ts="1508411489" xil_pn:in_ck="951095052840798396" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4926102395457820875" xil_pn:start_ts="1508411485">
+    <transform xil_pn:end_ts="1508412270" xil_pn:in_ck="-5144146526078673515" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4926102395457820875" xil_pn:start_ts="1508412265">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="TheNeuroSpider_TheNeuroSpider_sch_tb_beh.prj"/>
       <outfile xil_pn:name="TheNeuroSpider_TheNeuroSpider_sch_tb_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
@@ -457,7 +461,7 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1508411589" xil_pn:in_ck="-4224999764194722716" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-1739657210427209144" xil_pn:start_ts="1508411589">
+    <transform xil_pn:end_ts="1508412270" xil_pn:in_ck="-5911388705443357756" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-1739657210427209144" xil_pn:start_ts="1508412270">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="TheNeuroSpider_TheNeuroSpider_sch_tb_isim_beh.wdb"/>
