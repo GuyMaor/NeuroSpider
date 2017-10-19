@@ -1,2 +1,5 @@
 verilog work "calcShift.v"
 verilog work "mod_Add.v"
+verilog work "mod_Controller.vf"
+verilog work "mod_LayerRouter.vf"
+verilog work "mod_ParamRouter.vf"

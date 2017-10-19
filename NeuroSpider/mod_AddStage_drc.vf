@@ -1,0 +1,67 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : mod_AddStage_drc.vf
+// /___/   /\     Timestamp : 10/19/2017 16:34:23
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -intstyle ise -family spartan3e -verilog mod_AddStage_drc.vf -w "C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_AddStage.sch"
+//Design Name: mod_AddStage
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module mod_AddStage(clk, 
+                    inReady, 
+                    inValue, 
+                    newNumAdds, 
+                    rst, 
+                    outReady, 
+                    result, 
+                    StartingAdd);
+
+    input clk;
+    input inReady;
+    input [15:0] inValue;
+    input [15:0] newNumAdds;
+    input rst;
+   output outReady;
+   output [15:0] result;
+   output StartingAdd;
+   
+   wire XLXN_2;
+   wire XLXN_11;
+   wire StartingAdd_DUMMY;
+   wire [15:0] result_DUMMY;
+   
+   assign result[15:0] = result_DUMMY[15:0];
+   assign StartingAdd = StartingAdd_DUMMY;
+   mod_AdderFSM  XLXI_1 (.clk(clk), 
+                        .inReady(inReady), 
+                        .lastAdd(XLXN_2), 
+                        .rst(rst), 
+                        .sinAddFin(XLXN_11), 
+                        .allAddsFin(outReady), 
+                        .startAdd(StartingAdd_DUMMY));
+   mod_Add  XLXI_2 (.clk(clk), 
+                   .in_A(inValue[15:0]), 
+                   .in_B(result_DUMMY[15:0]), 
+                   .in_En(StartingAdd_DUMMY), 
+                   .rst(rst), 
+                   .out_Out(result_DUMMY[15:0]), 
+                   .out_Ready(XLXN_11));
+   mod_numCounter  XLXI_3 (.clk(clk), 
+                          .dec(StartingAdd_DUMMY), 
+                          .inVal(newNumAdds[15:0]), 
+                          .rst(rst), 
+                          .isZero(XLXN_2));
+endmodule

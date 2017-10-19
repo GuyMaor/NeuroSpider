@@ -1,0 +1,50 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "calcShift.v" in library work
+Compiling verilog file "mod_Add.v" in library work
+Module <calcShift> compiled
+Compiling verilog file "mod_Controller.vf" in library work
+Module <mod_Add> compiled
+Module <mod_ProcMux_MUSER_mod_Controller> compiled
+Compiling verilog file "mod_LayerRouter.vf" in library work
+Module <mod_Controller> compiled
+Module <mod_CacheMux_MUSER_mod_LayerRouter> compiled
+Module <mod_ProcMux_MUSER_mod_LayerRouter> compiled
+Compiling verilog file "mod_ParamRouter.vf" in library work
+Module <mod_LayerRouter> compiled
+Module <mod_CacheMux_MUSER_mod_ParamRouter> compiled
+Module <mod_ProcMux_MUSER_mod_ParamRouter> compiled
+Module <mod_ParamRouter> compiled
+No errors in compilation
+Analysis of file <"mod_Add.prj"> succeeded.
+ 
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> 
+
+Total memory usage is 277172 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

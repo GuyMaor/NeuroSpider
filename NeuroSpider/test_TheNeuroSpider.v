@@ -168,7 +168,7 @@ module TheNeuroSpider_TheNeuroSpider_sch_tb();
 		//set activation function.
 		WE =1;
 		Address = actFuncSelRegAddr;
-		InputData = 16'd0;//No Act Func
+		InputData = 16'd0;//No Act Func 
 
 		#100;clk = 1;#100;clk = 0;
 		

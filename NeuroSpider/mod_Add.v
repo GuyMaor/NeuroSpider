@@ -43,6 +43,8 @@ module mod_Add(in_A,in_B,in_En,out_Out,out_Ready,clk,rst);
 	 reg [4:0] diff;
 	 reg [4:0] exponentMax;
 	 reg [9:0] valL;
+	 reg notZeroL;
+	 reg notZeroS;
 	 reg [9:0] valS;
 	 reg signL;
 	 reg signS;
@@ -87,8 +89,8 @@ module mod_Add(in_A,in_B,in_En,out_Out,out_Ready,clk,rst);
 	 end*/
 	 
 	 
-	 wire [12:0] valL2 = signL ? -{3'b001,valL}: {3'b001,valL};
-	 wire [12:0] valS2 = signS ? -({3'b001,valS}>>diff):{3'b001,valS}>>diff;
+	 wire [12:0] valL2 = signL ? -{2'b00,notZeroL,valL}: {2'b00,notZeroL,valL};
+	 wire [12:0] valS2 = signS ? -({2'b00,notZeroS,valS}>>diff):{2'b00,notZeroS,valS}>>diff;
 
 	 
 	 //PERFORM OPERATION
@@ -175,6 +177,8 @@ module mod_Add(in_A,in_B,in_En,out_Out,out_Ready,clk,rst);
 			signL = 1'b0;
 			signS = 1'b0;
 			oldOldReady = 1'b0;
+			notZeroL = 15'b0;
+			notZeroS = 15'b0;
 		end
 		else if(in_En)
 		begin
@@ -186,7 +190,9 @@ module mod_Add(in_A,in_B,in_En,out_Out,out_Ready,clk,rst);
 				valL = in_B[9:0];
 				valS = in_A[9:0];
 				signL = in_B[15];
-				signS = in_A[15];			
+				signS = in_A[15];
+				notZeroL = in_B[14:0]!=15'd0;
+				notZeroS = in_A[14:0]!=15'd0;				
 			end
 			else
 			begin
@@ -196,6 +202,8 @@ module mod_Add(in_A,in_B,in_En,out_Out,out_Ready,clk,rst);
 				valS = in_B[9:0];
 				signL = in_A[15];
 				signS = in_B[15];
+				notZeroL = in_A[14:0]!=15'd0;
+				notZeroS = in_B[14:0]!=15'd0;
 			end
 		end
 		else

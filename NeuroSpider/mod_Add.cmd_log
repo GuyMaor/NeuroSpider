@@ -5,3 +5,7 @@ par -w -intstyle ise -ol high -t 1 mod_Add_map.ncd mod_Add.ncd mod_Add.pcf
 trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml mod_Add.twx mod_Add.ncd -o mod_Add.twr mod_Add.pcf 
 vhdtdtfi -lib work {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Add.v} -lang verilog -prj NeuroSpider -o mod_Add.spl -module mod_Add -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
 spl2sym -intstyle ise -family spartan3e mod_Add.spl {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Add.sym} 
+vhdtdtfi -lib work {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Add.v} -lang verilog -prj NeuroSpider -o mod_Add.spl -module mod_Add -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w mod_Add.spl {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Add.sym} 
+vhdtdtfi -lib work {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Add.v} -lang verilog -prj NeuroSpider -o mod_Add.spl -module mod_Add -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w mod_Add.spl {C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_Add.sym} 

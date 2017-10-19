@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="mod_OpUnitNEW">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2017-10-19T1:44:27</timestamp>
+    <timestamp>2017-10-19T21:35:7</timestamp>
     <pin polarity="Input" x="0" y="-544" name="rst" />
     <pin polarity="Input" x="0" y="-480" name="actFuncSel(1:0)" />
     <pin polarity="Input" x="0" y="-416" name="resultDestinationIn(15:0)" />
