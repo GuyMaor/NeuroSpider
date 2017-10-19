@@ -24,8 +24,6 @@
   <files xmlns="http://www.xilinx.com/XMLSchema">
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="MUX2.spl"/>
-    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="MUX2.sym" xil_pn:origination="imported"/>
-    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="NeuroSpider.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="NeuroSpider.vf"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="NeuroSpider_NeuroSpider_sch_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="NeuroSpider_NeuroSpider_sch_tb_isim_beh.exe"/>
@@ -56,7 +54,6 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="joinWires.prj"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="joinWires.spl"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="joinWires.stx"/>
-    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="joinWires.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="joinWires.xst"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="mod_ActivFuncStage.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="mod_ActivFuncStage.cmd_log"/>
@@ -143,7 +140,6 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="mod_ControlRegisters.prj"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="mod_ControlRegisters.spl"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="mod_ControlRegisters.stx"/>
-    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_ControlRegisters.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="mod_ControlRegisters.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="mod_ControlRegistersUPDATE.prj"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="mod_ControlRegistersUPDATE.spl"/>
@@ -172,7 +168,6 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_Controller.vf"/>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="mod_Controller.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="mod_Controller.xst"/>
-    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_ControllerNEW.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_ControllerNEW.vf"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_ControllerNEW_drc.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_ControllerUPDATE.sym" xil_pn:origination="imported"/>
@@ -197,7 +192,6 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="mod_DLatch.prj"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="mod_DLatch.spl"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="mod_DLatch.stx"/>
-    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_DLatch.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="mod_DLatch.xst"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="mod_DLatch_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="mod_DLatch_stx_beh.prj"/>
@@ -205,14 +199,12 @@
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_Demux.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="mod_Demux16.spl"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_Demux16.sym" xil_pn:origination="imported"/>
-    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_LayerRouter.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_LayerRouter.vf">
       <branch xil_pn:name="Implementation"/>
       <branch xil_pn:name="BehavioralSim"/>
     </file>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_LayerRouter_drc.vf"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="mod_LayerRouter_mod_LayerRouter_sch_tb_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_Layers.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_Layers.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_LayersUPDATE.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_LayersUPDATE.vf"/>
@@ -275,14 +267,12 @@
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_ParamFetchStage_drc.vf"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="mod_ParamFetchStage_mod_ParamFetchStage_sch_tb_isim_beh.exe"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="mod_ParamFetch_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_ParamRouter.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_ParamRouter.vf">
       <branch xil_pn:name="Implementation"/>
       <branch xil_pn:name="BehavioralSim"/>
     </file>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_ParamRouter_drc.vf"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="mod_ParamRouter_mod_ParamRouter_sch_tb_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_Params.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_Params.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mod_ParamsUPDATE.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mod_ParamsUPDATE.vf"/>
@@ -330,22 +320,18 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1508411142" xil_pn:in_ck="5979366648196833060" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1508411142">
+    <transform xil_pn:end_ts="1508411484" xil_pn:in_ck="469585474430124295" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1508411484">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="MUX2.v"/>
       <outfile xil_pn:name="REG16.v"/>
       <outfile xil_pn:name="calcShift.v"/>
-      <outfile xil_pn:name="joinWires.v"/>
       <outfile xil_pn:name="mod_ActivFuncStage.v"/>
       <outfile xil_pn:name="mod_ActivationFunc.v"/>
       <outfile xil_pn:name="mod_Add.v"/>
       <outfile xil_pn:name="mod_AdderFSM.v"/>
       <outfile xil_pn:name="mod_Cache.v"/>
       <outfile xil_pn:name="mod_ControlFSM.v"/>
-      <outfile xil_pn:name="mod_ControlRegisters.v"/>
       <outfile xil_pn:name="mod_ControlRegistersUPDATE.v"/>
-      <outfile xil_pn:name="mod_DLatch.v"/>
       <outfile xil_pn:name="mod_Demux.v"/>
       <outfile xil_pn:name="mod_Demux16.v"/>
       <outfile xil_pn:name="mod_Multiply.v"/>
@@ -384,7 +370,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1508411197" xil_pn:in_ck="-3808024196503014611" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-681234166801983604" xil_pn:start_ts="1508411193">
+    <transform xil_pn:end_ts="1508411453" xil_pn:in_ck="-4695718101365834946" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-681234166801983604" xil_pn:start_ts="1508411450">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="TheNeuroSpider.vf"/>
@@ -398,18 +384,16 @@
       <outfile xil_pn:name="mod_ParamsUPDATE.vf"/>
       <outfile xil_pn:name="mod_ProcMux.vf"/>
     </transform>
-    <transform xil_pn:end_ts="1508377186" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-8857873558208577299" xil_pn:start_ts="1508377186">
+    <transform xil_pn:end_ts="1508411453" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="6611394693268711470" xil_pn:start_ts="1508411453">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1508411197" xil_pn:in_ck="-6082054121845442791" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1508411197">
+    <transform xil_pn:end_ts="1508411485" xil_pn:in_ck="951095052840798396" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1508411484">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="MUX2.v"/>
       <outfile xil_pn:name="REG16.v"/>
       <outfile xil_pn:name="TheNeuroSpider.vf"/>
       <outfile xil_pn:name="calcShift.v"/>
-      <outfile xil_pn:name="joinWires.v"/>
       <outfile xil_pn:name="mod_ActivFuncStage.v"/>
       <outfile xil_pn:name="mod_ActivationFunc.v"/>
       <outfile xil_pn:name="mod_Add.v"/>
@@ -418,10 +402,8 @@
       <outfile xil_pn:name="mod_Cache.v"/>
       <outfile xil_pn:name="mod_CacheMux.vf"/>
       <outfile xil_pn:name="mod_ControlFSM.v"/>
-      <outfile xil_pn:name="mod_ControlRegisters.v"/>
       <outfile xil_pn:name="mod_ControlRegistersUPDATE.v"/>
       <outfile xil_pn:name="mod_ControllerUPDATE.vf"/>
-      <outfile xil_pn:name="mod_DLatch.v"/>
       <outfile xil_pn:name="mod_Demux.v"/>
       <outfile xil_pn:name="mod_Demux16.v"/>
       <outfile xil_pn:name="mod_LayersUPDATE.vf"/>
@@ -463,9 +445,11 @@
       <outfile xil_pn:name="test_numCounter.v"/>
       <outfile xil_pn:name="zeroVal.v"/>
     </transform>
-    <transform xil_pn:end_ts="1508411202" xil_pn:in_ck="-6082054121845442791" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4926102395457820875" xil_pn:start_ts="1508411197">
+    <transform xil_pn:end_ts="1508411489" xil_pn:in_ck="951095052840798396" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4926102395457820875" xil_pn:start_ts="1508411485">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="TheNeuroSpider_TheNeuroSpider_sch_tb_beh.prj"/>
       <outfile xil_pn:name="TheNeuroSpider_TheNeuroSpider_sch_tb_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
@@ -473,7 +457,7 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1508411202" xil_pn:in_ck="-4224999764194722716" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-1739657210427209144" xil_pn:start_ts="1508411202">
+    <transform xil_pn:end_ts="1508411589" xil_pn:in_ck="-4224999764194722716" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-1739657210427209144" xil_pn:start_ts="1508411589">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="TheNeuroSpider_TheNeuroSpider_sch_tb_isim_beh.wdb"/>

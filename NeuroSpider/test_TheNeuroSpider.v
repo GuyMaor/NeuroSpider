@@ -14,7 +14,7 @@ module TheNeuroSpider_TheNeuroSpider_sch_tb();
 		
 		parameter floatNum1 = 16'h3c00;
 		parameter floatNum2 = 16'h4000;
-		parameter floatNegNum2 = 16'hc000;
+		parameter floatNegNum2 = 16'hc000; 
 // Inputs
    reg clk;
    reg [15:0] InputData;

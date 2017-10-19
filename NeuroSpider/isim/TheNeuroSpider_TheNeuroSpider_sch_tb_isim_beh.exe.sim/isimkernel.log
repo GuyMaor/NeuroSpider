@@ -2,9 +2,28 @@ Command line:
    TheNeuroSpider_TheNeuroSpider_sch_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  58258
+     -socket  58286
 
-Thu Oct 19 06:06:45 2017
+Thu Oct 19 06:13:11 2017
 
 
- Elaboration Time: 0.078125 sec
+ Elaboration Time: 0.0625 sec
+
+ Current Memory Usage: 1003.4 Meg
+
+ Total Signals          : 483
+ Total Nets             : 1080
+ Total Signal Drivers   : 119
+ Total Blocks           : 60
+ Total Primitive Blocks : 42
+ Total Processes        : 173
+ Total Traceable Variables  : 124
+ Total Scalar Nets and Variables : 1575403
+Total Line Count : 596
+
+ Total Simulation Time: 0.1875 sec
+
+ Current Memory Usage: 1317.97 Meg
+
+Thu Oct 19 06:14:04 2017
+
