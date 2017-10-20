@@ -78,8 +78,8 @@ Compiling module TheNeuroSpider
 Compiling module TheNeuroSpider_TheNeuroSpider_sc...
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 24 sub-compilation(s) to finish...
+Waiting for 11 sub-compilation(s) to finish...
 Compiled 33 Verilog Units
 Built simulation executable C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/TheNeuroSpider_TheNeuroSpider_sch_tb_isim_beh.exe
-Fuse Memory Usage: 28748 KB
-Fuse CPU Usage: 921 ms
+Fuse Memory Usage: 29560 KB
+Fuse CPU Usage: 953 ms

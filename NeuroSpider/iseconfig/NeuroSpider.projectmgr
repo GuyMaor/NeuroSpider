@@ -26,9 +26,13 @@
          <ClosedNode>/NeuroSpider C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|NeuroSpider.sch/XLXI_5 - mod_Params/XLXI_1 - mod_ParamRouter</ClosedNode>
          <ClosedNode>/NeuroSpider C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|NeuroSpider.sch/XLXI_7 - mod_ControllerNEW/XLXI_2 - mod_ProcMux</ClosedNode>
          <ClosedNode>/NeuroSpider C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|NeuroSpider.sch/XLXI_7 - mod_ControllerNEW/XLXI_3 - mod_ProcMux</ClosedNode>
+         <ClosedNode>/TheNeuroSpider C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|TheNeuroSpider.sch/XLXI_1 - mod_ControllerUPDATE</ClosedNode>
          <ClosedNode>/TheNeuroSpider C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|TheNeuroSpider.sch/XLXI_1 - mod_ControllerUPDATE/XLXI_7 - mod_ProcMux</ClosedNode>
          <ClosedNode>/TheNeuroSpider C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|TheNeuroSpider.sch/XLXI_1 - mod_ControllerUPDATE/XLXI_8 - mod_ProcMux</ClosedNode>
-         <ClosedNode>/TheNeuroSpider C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|TheNeuroSpider.sch/XLXI_3 - mod_OpUnitNEW</ClosedNode>
+         <ClosedNode>/TheNeuroSpider C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|TheNeuroSpider.sch/XLXI_3 - mod_OpUnitNEW/XLXI_12 - mod_MulStageNEW</ClosedNode>
+         <ClosedNode>/TheNeuroSpider C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|TheNeuroSpider.sch/XLXI_3 - mod_OpUnitNEW/XLXI_13 - mod_ParamFetchStage</ClosedNode>
+         <ClosedNode>/TheNeuroSpider C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|TheNeuroSpider.sch/XLXI_3 - mod_OpUnitNEW/XLXI_5 - mod_ActivFuncStage</ClosedNode>
+         <ClosedNode>/TheNeuroSpider C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|TheNeuroSpider.sch/XLXI_3 - mod_OpUnitNEW/XLXI_6 - mod_AddStage/XLXI_2 - mod_Add</ClosedNode>
          <ClosedNode>/TheNeuroSpider C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|TheNeuroSpider.sch/XLXI_4 - mod_ParamsUPDATE</ClosedNode>
          <ClosedNode>/TheNeuroSpider C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|TheNeuroSpider.sch/XLXI_5 - mod_ParamsUPDATE</ClosedNode>
          <ClosedNode>/TheNeuroSpider C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|TheNeuroSpider.sch/XLXI_6 - mod_LayersUPDATE/XLXI_1 - mod_CacheMux</ClosedNode>
@@ -51,14 +55,12 @@
          <ClosedNode>/mod_Params C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|mod_Params.sch</ClosedNode>
          <ClosedNode>/mod_Params C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|mod_Params.sch/XLXI_1 - mod_ParamRouter</ClosedNode>
       </ClosedNodes>
-      <SelectedItems>
-         <SelectedItem>XLXI_6 - mod_ControlRegistersUPDATE (C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControlRegistersUPDATE.v)</SelectedItem>
-      </SelectedItems>
+      <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001ef000000020000000000000000000000000200000064ffffffff000000810000000300000002000001ef0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001b3000000020000000000000000000000000200000064ffffffff000000810000000300000002000001b30000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>XLXI_6 - mod_ControlRegistersUPDATE (C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_ControlRegistersUPDATE.v)</CurrentItem>
+      <CurrentItem>XLXI_3 - mod_OpUnitNEW (C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/mod_OpUnitNEW.sch)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -66,13 +68,13 @@
          <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000178000000010000000100000000000000000000000064ffffffff000000810000000000000001000001780000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
@@ -121,7 +123,6 @@
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/NeuroSpider_NeuroSpider_sch_tb C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|test2_NeuroSPider.v</ClosedNode>
-         <ClosedNode>/NeuroSpider_NeuroSpider_sch_tb C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|test_NeuroSpider.v</ClosedNode>
          <ClosedNode>/NeuroSpider_NeuroSpider_sch_tb C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|test_NeuroSpider.v/UUT - NeuroSpider/XLXI_1 - mod_OpUnitNEW</ClosedNode>
          <ClosedNode>/NeuroSpider_NeuroSpider_sch_tb C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|test_NeuroSpider.v/UUT - NeuroSpider/XLXI_2 - mod_Params</ClosedNode>
          <ClosedNode>/NeuroSpider_NeuroSpider_sch_tb C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|test_NeuroSpider.v/UUT - NeuroSpider/XLXI_3 - mod_Layers</ClosedNode>
@@ -129,6 +130,7 @@
          <ClosedNode>/NeuroSpider_NeuroSpider_sch_tb C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|test_NeuroSpider.v/UUT - NeuroSpider/XLXI_7 - mod_ControllerNEW/XLXI_2 - mod_ProcMux</ClosedNode>
          <ClosedNode>/NeuroSpider_NeuroSpider_sch_tb C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|test_NeuroSpider.v/UUT - NeuroSpider/XLXI_7 - mod_ControllerNEW/XLXI_3 - mod_ProcMux</ClosedNode>
          <ClosedNode>/TheNeuroSpider C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|TheNeuroSpider.sch</ClosedNode>
+         <ClosedNode>/TheNeuroSpider_TheNeuroSpider_sch_tb C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|test_TheNeuroSpider.v/UUT - TheNeuroSpider/XLXI_1 - mod_ControllerUPDATE</ClosedNode>
          <ClosedNode>/TheNeuroSpider_TheNeuroSpider_sch_tb C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|test_TheNeuroSpider.v/UUT - TheNeuroSpider/XLXI_1 - mod_ControllerUPDATE/XLXI_7 - mod_ProcMux</ClosedNode>
          <ClosedNode>/TheNeuroSpider_TheNeuroSpider_sch_tb C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|test_TheNeuroSpider.v/UUT - TheNeuroSpider/XLXI_1 - mod_ControllerUPDATE/XLXI_8 - mod_ProcMux</ClosedNode>
          <ClosedNode>/TheNeuroSpider_TheNeuroSpider_sch_tb C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|test_TheNeuroSpider.v/UUT - TheNeuroSpider/XLXI_3 - mod_OpUnitNEW</ClosedNode>
@@ -155,7 +157,6 @@
          <ClosedNode>/mod_ProcMux_mod_ProcMux_sch_tb C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|test_ProcMux.v</ClosedNode>
          <ClosedNode>/test_ActivFuncStage C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|test_ActivFuncStage.v</ClosedNode>
          <ClosedNode>/test_ActivationFunc C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|test_ActivationFunc.v</ClosedNode>
-         <ClosedNode>/test_Add C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|test_Add.v</ClosedNode>
          <ClosedNode>/test_Add C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|test_Add.v/uut - mod_Add</ClosedNode>
          <ClosedNode>/test_AdderFSM C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|test_AdderFSM.v</ClosedNode>
          <ClosedNode>/test_Cache C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|test_Cache.v</ClosedNode>
@@ -166,32 +167,17 @@
          <ClosedNode>/test_TriStateMachine C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|test_TriStateMachine.v</ClosedNode>
          <ClosedNode>/test_numCounter C:|Users|Guy|Documents|Verilog Projects|NeuroSpider|NeuroSpider|test_numCounter.v</ClosedNode>
       </ClosedNodes>
-      <SelectedItems>
-         <SelectedItem>TheNeuroSpider_TheNeuroSpider_sch_tb (C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/test_TheNeuroSpider.v)</SelectedItem>
-      </SelectedItems>
+      <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000203000000020000000000000000000000000200000064ffffffff000000810000000300000002000002030000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001ec000000020000000000000000000000000200000064ffffffff000000810000000300000002000001ec0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>TheNeuroSpider_TheNeuroSpider_sch_tb (C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/test_TheNeuroSpider.v)</CurrentItem>
+      <CurrentItem>UUT - TheNeuroSpider (C:/Users/Guy/Documents/Verilog Projects/NeuroSpider/NeuroSpider/TheNeuroSpider.sch)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
          <ClosedNode>Design Utilities</ClosedNode>
-      </ClosedNodes>
-      <SelectedItems>
-         <SelectedItem/>
-      </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
-      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000178000000010000000100000000000000000000000064ffffffff000000810000000000000001000001780000000100000000</ViewHeaderState>
-      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
-   </ItemView>
-   <ItemView engineview="BehavioralSim" sourcetype="DESUT_VERILOG" guiview="Process" >
-      <ClosedNodes>
-         <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
          <SelectedItem></SelectedItem>
@@ -202,19 +188,32 @@
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="DESUT_VERILOG" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000178000000010000000100000000000000000000000064ffffffff000000810000000000000001000001780000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
+   </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_SCHEMATIC" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
          <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem>Create Schematic Symbol</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000167000000010000000100000000000000000000000064ffffffff000000810000000000000001000001670000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000178000000010000000100000000000000000000000064ffffffff000000810000000000000001000001780000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem>Create Schematic Symbol</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_SCHEMATIC" guiview="Process" >
       <ClosedNodes>
@@ -222,13 +221,13 @@
          <ClosedNode>ISim Simulator</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000178000000010000000100000000000000000000000064ffffffff000000810000000000000001000001780000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff0000000000000002000001980000008801000000050100000002</SourceProcessView>
    <CurrentView>Behavioral Simulation</CurrentView>

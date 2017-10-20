@@ -18,11 +18,6 @@
         <signal name="outputReady" />
         <signal name="destReady" />
         <signal name="multiplicationResult(15:0)" />
-        <signal name="XLXN_6" />
-        <signal name="XLXN_7" />
-        <signal name="XLXN_8" />
-        <signal name="XLXN_9(15:0)" />
-        <signal name="XLXN_10(15:0)" />
         <port polarity="Input" name="rst" />
         <port polarity="Input" name="clk" />
         <port polarity="Input" name="srcReady" />
@@ -56,7 +51,7 @@
             <rect width="256" x="64" y="-256" height="320" />
         </blockdef>
         <blockdef name="mod_Multiply">
-            <timestamp>2017-10-17T10:47:50</timestamp>
+            <timestamp>2017-10-20T1:48:38</timestamp>
             <rect width="320" x="64" y="-320" height="320" />
             <line x2="0" y1="-288" y2="-288" x1="64" />
             <line x2="0" y1="-224" y2="-224" x1="64" />

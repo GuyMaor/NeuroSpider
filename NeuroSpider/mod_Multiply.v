@@ -34,27 +34,16 @@ module mod_Multiply(in_A,in_B,in_En,out_Out,out_Ready,clk,rst);
 	 wire signWire = in_A[15] ^ in_B[15];
 	 wire [4:0] exponentWire = in_A[14:10] + in_B[14:10] - 5'b01111;
 	 
-	 //wire [5:0] Am = {1'b1,in_A[9:5]};
-	 //wire [5:0] Bm = {1'b1,in_B[9:5]};
-	 //wire [4:0] Al = in_A[4:0];
-	 //wire [4:0] Bl = in_B[4:0];
-	 //wire [21:0] beforeShift = {Am*Bm,10'd0}; + {Am*Bl,5'd0}+ {Al*Bm,5'd0} + Am*Bm;
-	 //wire [11:0] fractionWire = beforeShift>>10;
-	// wire [11:0] fractionWire = Am*Bm;
-	 
-	//Vers1
 	 wire [21:0] beforeShift = ({1'b1,in_A[9:0]}*{1'b1,in_B[9:0]});
 	 wire [11:0] fractionWire = beforeShift>>10; 
-	 //Vers2
-	 //wire [17:0] beforeShift = ({1'b1,in_A[9:2]}*{1'b1,in_B[9:2]}); 
-	 //wire [11:0] fractionWire = beforeShift>>6; 
 	 
-	 //Move to the second phase in the pipeline
+	 wire isZero = (in_A[14:0] == 15'd0) | (in_B[14:0] == 15'd0);
+
 	 reg signMidReg;
 	 reg [4:0] exponentMidReg;
 	 reg [11:0] fractionMidReg;
 	 reg readyMidReg;
-
+	 reg isZeroReg;
 	
 		
 	 always @ (posedge clk, posedge rst)
@@ -65,6 +54,7 @@ module mod_Multiply(in_A,in_B,in_En,out_Out,out_Ready,clk,rst);
 			exponentMidReg = 5'd0;
 			fractionMidReg = 12'd0;
 			readyMidReg = 1'b0;
+			isZeroReg = 1'b0;
 		end
 		else if(in_En)
 		begin
@@ -72,6 +62,7 @@ module mod_Multiply(in_A,in_B,in_En,out_Out,out_Ready,clk,rst);
 			exponentMidReg = exponentWire;
 			fractionMidReg = fractionWire;
 			readyMidReg = in_En;
+			isZeroReg = isZero;
 		end
 	 end
 	 
@@ -93,7 +84,7 @@ module mod_Multiply(in_A,in_B,in_En,out_Out,out_Ready,clk,rst);
 		end
 		else
 		begin
-			out_Out = {signMidReg,exponentWireOut,fractionWireOut};
+			out_Out = isZeroReg ? 16'd0 : {signMidReg,exponentWireOut,fractionWireOut};
 			out_Ready = in_En ? 0 : readyMidReg;
 		end
 	 end
